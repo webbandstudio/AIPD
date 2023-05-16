@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 100px 0;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  z-index: 0;
+}
+
+.navWrapper {
+  display: flex;
+  column-gap: 36px;
+}
+
+.link {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #FFFFFF;
+  z-index: 0;
+}
+
+.gradient {
+  position: absolute;
+  width: 1231px;
+  height: 405px;
+  left: -109px;
+  top: -398px;
+  background: linear-gradient(0deg, #34A1C3, #34A1C3), #9134C3;
+  filter: blur(147px);
+}
+
+.gradient1 {
+  position: absolute;
+  width: 1231px;
+  height: 405px;
+  left: 390px;
+  top: -398px;
+  background: linear-gradient(0deg, #9134C3, #9134C3), #9134C3;
+  filter: blur(147px);
+}
