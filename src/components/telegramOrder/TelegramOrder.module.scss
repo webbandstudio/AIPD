@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #5C2DF5;
+  border-radius: 90px;
+  height: 79px;
+  padding: 0 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6C3DFE;;
+  }
+}
+
+.text {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 40px;
+  }
+}

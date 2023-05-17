@@ -1,0 +1,25 @@
+@mixin text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.upText {
+  @include text;
+  font-weight: 700;
+}
+
+.downText {
+  @include text;
+  font-weight: 400;
+}
+
