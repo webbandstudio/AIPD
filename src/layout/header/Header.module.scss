@@ -32,7 +32,7 @@
   line-height: 18px;
   text-decoration: none;
   color: $white;
-  transition: opacity 0.3s;
+  transition: opacity $animationPeriod;
 
   &:hover {
     opacity: 0.5;

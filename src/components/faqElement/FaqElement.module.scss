@@ -1,0 +1,41 @@
+@import 'src/public/styles/variables.scss';
+
+.wrapper {
+  position: relative;
+  width: 950px;
+  height: 67px;
+  display: flex;
+  background: $mediumBlack;
+  border-radius: 12px;
+  transition: $animationPeriod;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    background: #252334;
+  }
+}
+
+.title {
+  margin: auto 0 auto 51px;
+  color: $white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+.text {
+  margin: 30px 60px 40px 30px;
+  line-height: 28px;
+  color: $white;
+  opacity: 0.8;
+  animation: fadeIn $animationPeriod;
+}

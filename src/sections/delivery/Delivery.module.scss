@@ -59,13 +59,13 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
 }
 
 .desktopImages {
-  transition: opacity 0.3s;
+  transition: opacity $animationPeriod;
   opacity: 1;
 }
 
 @media screen and (max-width: $desktop) {
   .desktopImages {
-    transition: opacity 0.3s;
+    transition: opacity $animationPeriod;
     opacity: 0.8;
   }
 }

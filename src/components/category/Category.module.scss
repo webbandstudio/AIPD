@@ -12,7 +12,7 @@
   @include containerForm;
   background-color: #090713;
   border-color: #C3C3C3;
-  transition: background-color 0.3s;
+  transition: background-color $animationPeriod;
 
   &:hover {
     background-color: #19152B;

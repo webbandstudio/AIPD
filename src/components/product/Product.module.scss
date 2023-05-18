@@ -4,7 +4,7 @@
   width: 345px;
   height: 450px;
   background-color: $blue;
-  transition: width 0.4s, height 0.4s;
+  transition: width $animationPeriod, height $animationPeriod;
   display: flex;
   flex-direction: column;
   padding: 30px;

@@ -9,7 +9,7 @@
   height: 79px;
   padding: 0 50px;
   cursor: pointer;
-  transition: background-color 0.4s;
+  transition: background-color $animationPeriod;
 
   &:hover {
     background-color: $middlePurple;
