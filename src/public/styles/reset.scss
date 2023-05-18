@@ -1,9 +1,10 @@
 @import 'src/public/styles/variables.scss';
 
-html, body {
+html,
+body {
   margin: 0;
   background-color: #1E1E1E;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 p {
@@ -33,10 +34,14 @@ h4 {
 }
 
 button {
-  font-family: $inter;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
+  border: none;
+
+  p {
+    font-family: $inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .p1 {

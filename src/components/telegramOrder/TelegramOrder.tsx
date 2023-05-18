@@ -5,10 +5,10 @@ import telegramIcon from '../../public/assets/images/telegramIcon.png';
 
 const TelegramOrder = ({ text }: { text: string }) => {
   return (
-    <div className={styles.container}>
+    <button className={styles.container}>
       <Image src={telegramIcon} alt='telegram icon' />
       <p className={styles.text}>{text}</p>
-    </div>
+    </button>
   );
 };
 

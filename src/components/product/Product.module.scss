@@ -1,0 +1,45 @@
+@import 'src/public/styles/variables.scss';
+
+.container {
+  width: 345px;
+  height: 450px;
+  background-color: $blue;
+  transition: width 0.4s, height 0.4s;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+
+  &:hover {
+    width: 332px;
+    height: 433px;
+  }
+}
+
+.title {
+  font-size: 25px;
+  line-height: 31px;
+  color: $white;
+}
+
+.productImage {
+  margin: auto;
+}
+
+@media screen and (max-width: 890px) {
+  .container {
+    width: 167px;
+    height: 231px;
+    padding: 16px;
+
+    &:hover {
+      width: 150px;
+      height: 220px;
+    }
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+}

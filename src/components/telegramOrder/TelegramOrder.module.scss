@@ -1,24 +1,23 @@
+@import 'src/public/styles/variables.scss';
+
 .container {
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #5C2DF5;
+  background-color: $purple;
   border-radius: 90px;
   height: 79px;
   padding: 0 50px;
   cursor: pointer;
+  transition: background-color 0.4s;
 
   &:hover {
-    background-color: #6C3DFE;;
+    background-color: $middlePurple;
   }
 }
 
 .text {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
   text-align: center;
   color: #FFFFFF;
 }
