@@ -1,0 +1,32 @@
+@import 'src/public/styles/variables.scss';
+
+@mixin containerForm {
+  width: fit-content;
+  padding: 16px 30px;
+  border-radius: 60px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.container {
+  @include containerForm;
+  background-color: #090713;
+  border-color: #C3C3C3;
+  transition: background-color $animationPeriod;
+
+  &:hover {
+    background-color: #19152B;
+  }
+}
+
+.activeContainer {
+  @include containerForm;
+  background-color: $purple;
+  border-color: $purple;
+}
+
+.name {
+  color: $white;
+  font-weight: 500;
+  line-height: 16px;
+}

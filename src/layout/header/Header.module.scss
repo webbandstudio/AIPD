@@ -1,4 +1,4 @@
-$white: #FFFFFF;
+@import "src/public/styles/variables";
 
 .header {
   display: flex;
@@ -15,6 +15,7 @@ $white: #FFFFFF;
   text-transform: uppercase;
   color: $white;
   z-index: 1;
+  text-decoration: none;
 }
 
 .navWrapper {
@@ -31,6 +32,11 @@ $white: #FFFFFF;
   line-height: 18px;
   text-decoration: none;
   color: $white;
+  transition: opacity $animationPeriod;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .gradient {
@@ -41,7 +47,13 @@ $white: #FFFFFF;
   top: -30px;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: $desktop) {
+  .header {
+    margin: 30px 40px 0;
+  }
+}
+
+@media screen and (max-width: $largeTablet) {
   .header {
     justify-content: center;
     margin: 30px 0 0;
@@ -52,7 +64,7 @@ $white: #FFFFFF;
   }
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: $largeMobile) {
   .title {
     font-size: 15px;
     line-height: 18px;

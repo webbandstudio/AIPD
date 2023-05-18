@@ -1,0 +1,22 @@
+@import 'src/public/styles/variables.scss';
+
+@mixin text {
+  color: $white;
+  opacity: 0.9;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.upText {
+  @include text;
+  font-weight: 700;
+}
+
+.downText {
+  @include text;
+}
+

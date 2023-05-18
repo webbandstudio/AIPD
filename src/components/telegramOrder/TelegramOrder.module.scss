@@ -1,0 +1,29 @@
+@import 'src/public/styles/variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: $purple;
+  border-radius: 90px;
+  height: 79px;
+  padding: 0 50px;
+  cursor: pointer;
+  transition: background-color $animationPeriod;
+
+  &:hover {
+    background-color: $middlePurple;
+  }
+}
+
+.text {
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: $mobile) {
+  .container {
+    padding: 0 40px;
+  }
+}

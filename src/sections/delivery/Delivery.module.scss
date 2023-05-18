@@ -1,0 +1,149 @@
+@import 'src/public/styles/variables.scss';
+
+$mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
+
+.wrapper {
+  margin-top: 80px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 45px auto 0;
+  max-width: 840px;
+  position: relative;
+  z-index: 1;
+}
+
+.routeImg {
+  position: relative;
+}
+
+.couponImg {
+  position: absolute;
+  left: 100px;
+  top: -40px;
+}
+
+.mainText {
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  margin: 20px 0 45px;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  justify-content: space-between;
+}
+
+.headPhonesImg {
+  position: absolute;
+  left: 0;
+}
+
+.sneakerImg {
+  position: absolute;
+  right: 0;
+  top: -130px;
+}
+
+.mobileImages {
+  display: none;
+}
+
+.desktopImages {
+  transition: opacity $animationPeriod;
+  opacity: 1;
+}
+
+@media screen and (max-width: $desktop) {
+  .desktopImages {
+    transition: opacity $animationPeriod;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: $largeTablet) {
+  .tags {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    row-gap: 40px;
+    align-items: flex-start;
+    max-width: 350px;
+  }
+
+  .starIcon {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .mainText {
+    font-size: 80px;
+    line-height: 96%;
+  }
+
+  .container {
+    margin: 45px 20px 0;
+  }
+
+  .desktopImages {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .mainText {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .mainText {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .wrapper {
+    margin-top: 0;
+  }
+
+  .mainText {
+    font-size: 50px;
+    margin-top: 0;
+  }
+
+  .routeImg {
+    display: none;
+  }
+
+  .mobileImages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 146px;
+  }
+
+  .container {
+    margin: 0 20px 0;
+  }
+
+  @for $i from 1 to 6 {
+    .mobileImgWrapper#{$i} {
+      width: nth($mobileImageWrapperWidth , $i);
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .mainText {
+    font-size: 40px;
+  }
+}
