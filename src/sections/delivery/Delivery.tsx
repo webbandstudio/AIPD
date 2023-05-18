@@ -56,7 +56,7 @@ const Delivery = () => {
   };
 
   return (
-    <section className={styles.main}>
+    <section className={styles.wrapper}>
       <div className={styles.desktopImages}>
         <Image className={styles.headPhonesImg} src={headPhonesImg} alt='' />
         <Image className={styles.sneakerImg} src={sneakerImg} alt='' />

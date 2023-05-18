@@ -1,3 +1,7 @@
+.wrapper {
+  margin-top: 80px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -53,8 +57,14 @@
   display: none;
 }
 
+.desktopImages {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1240px) {
   .desktopImages {
+    transition: opacity 0.3s;
     opacity: 0.8;
   }
 }
@@ -99,6 +109,10 @@
 }
 
 @media screen and (max-width: 520px) {
+  .wrapper {
+    margin-top: 0;
+  }
+
   .mainText {
     font-size: 50px;
     margin-top: 0;

@@ -1,0 +1,53 @@
+@import "src/public/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 269px;
+  height: 150px;
+  background: $white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    scale: 0.95;
+  }
+}
+
+.labelWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -17px auto 0 auto;
+  width: 70px;
+  height: 26px;
+  background: $white;
+  border: 3px solid $black;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.label {
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.imageWrapper {
+  position: relative;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 167px;
+  }
+
+  .labelWrapper {
+    border: 1px solid $black;
+    margin-top: -13px;
+  }
+}
+
+

@@ -15,6 +15,7 @@
   text-transform: uppercase;
   color: $white;
   z-index: 1;
+  text-decoration: none;
 }
 
 .navWrapper {
@@ -31,6 +32,11 @@
   line-height: 18px;
   text-decoration: none;
   color: $white;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .gradient {
