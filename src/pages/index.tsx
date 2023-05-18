@@ -3,7 +3,7 @@ import Delivery from "@/sections/delivery/Delivery";
 const Home = () => {
   return (
     <>
-    <Delivery />
+      <Delivery />
     </>
   );
 };
@@ -12,8 +12,6 @@ export default Home;
 
 export const getServerSideProps = () => {
   return {
-    props: {
-
-    },
+    props: {},
   };
 };
