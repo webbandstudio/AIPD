@@ -14,7 +14,6 @@ import parfumeImg from '../../public/assets/images/parfume.png';
 import mobileSneakerImg2 from '../../public/assets/images/mobileSneaker2.png';
 import playStationImg from '../../public/assets/images/playStation.png';
 import Tag from './tag/Tag';
-import Product from '@/components/product/Product';
 
 const tagsText = [
   {
