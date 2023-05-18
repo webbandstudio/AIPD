@@ -4,14 +4,14 @@
   width: 345px;
   height: 450px;
   background-color: $blue;
-  transition: width $animationPeriod, height $animationPeriod;
+  transition: scale $animationPeriod;
   display: flex;
   flex-direction: column;
   padding: 30px;
+  cursor: pointer;
 
   &:hover {
-    width: 332px;
-    height: 433px;
+    scale: 0.96;
   }
 }
 
@@ -30,11 +30,6 @@
     width: 167px;
     height: 231px;
     padding: 16px;
-
-    &:hover {
-      width: 150px;
-      height: 220px;
-    }
   }
 
   .title {
