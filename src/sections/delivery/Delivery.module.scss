@@ -4,6 +4,7 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
 
 .wrapper {
   margin-top: 80px;
+  position: relative;
 }
 
 .container {
@@ -50,7 +51,7 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
 .sneakerImg {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -130px;
 }
 
 .mobileImages {
@@ -62,14 +63,14 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   opacity: 1;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: $desktop) {
   .desktopImages {
     transition: opacity 0.3s;
     opacity: 0.8;
   }
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: $largeTablet) {
   .tags {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
@@ -97,19 +98,19 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: $tablet) {
   .mainText {
     font-size: 70px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $smallTablet) {
   .mainText {
     font-size: 60px;
   }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: $largeMobile) {
   .wrapper {
     margin-top: 0;
   }

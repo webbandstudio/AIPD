@@ -12,7 +12,6 @@ export const useQuery = () => {
   const isSmDesktop = useMediaQuery({ maxWidth: 1025 });
   const isDesktop = useMediaQuery({ maxWidth: 1281 });
   const isLgDesktop = useMediaQuery({ maxWidth: 1441 });
-  const isMxLgDesktop = useMediaQuery({ maxWidth: 2300 });
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

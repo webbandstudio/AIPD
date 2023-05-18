@@ -22,7 +22,7 @@
   color: #FFFFFF;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: $mobile) {
   .container {
     padding: 0 40px;
   }
