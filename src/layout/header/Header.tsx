@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from './Header.module.scss';
 import { HEADER_LINKS } from "@/constants/links";
-import gradient from '../../public/assets/images/gradient.png';
+import gradient from '../../public/assets/images/png/gradient.png';
 
 const Header = () => {
   return (

@@ -1,0 +1,130 @@
+@import "src/public/styles/variables";
+
+@mixin shopCard {
+  width: 260px;
+  height: 150px;
+  border: 1px solid #312E4A;
+  border-radius: 20px;
+  background-color: $black;
+  cursor: pointer;
+
+  @media screen and (max-width: $smallTablet) {
+    width: 155px;
+  }
+}
+
+.shopsSection {
+  margin-top: 90px;
+}
+
+.title {
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.shopsWrapper {
+  max-width: 1141px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 90px auto 0;
+  gap: 25px 20px;
+}
+
+.allShops {
+  @include shopCard;
+  z-index: 4;
+  margin-right: 10px;
+  position: relative;
+  transition: $animationPeriod;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    background-color: #1B1929;
+  }
+}
+
+.allShops1 {
+  @include shopCard;
+  margin-top: -152px;
+  margin-left: 5px;
+  position: relative;
+  z-index: 2;
+}
+
+.allShops2 {
+  @include shopCard;
+  margin-top: -152px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.otherShops {
+  width: 118px;
+  height: 26px;
+  background-color: $black;
+  border: 1px solid #312E4A;
+  border-radius: 78px;
+  color: $lightPurple;
+  white-space: nowrap;
+  margin: 20px 20px 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  padding: 4px 10px 6px 12px;
+}
+
+.textWrapper {
+  display: flex;
+  margin-top: auto;
+}
+
+.text {
+  width: 129px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  margin: auto 0 20px 20px;
+  color: $white;
+}
+
+.arrow {
+  margin: 0 20px 20px auto;
+}
+
+@media screen and (max-width: $largeTablet) {
+  .shopsWrapper {
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 58px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .shopsWrapper {
+    gap: 20px 15px;
+    padding: 0 13px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .arrow {
+    display: none;
+  }
+}

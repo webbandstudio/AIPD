@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import styles from './Shop.module.scss';
-import mockedImage from '../../public/assets/images/allegro.png';
+import mockedImage from '../../public/assets/images/png/allegro.png';
 
 interface Shop {
   label: string;
