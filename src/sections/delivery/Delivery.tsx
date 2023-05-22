@@ -2,17 +2,17 @@ import Image from 'next/image';
 
 import { useQuery } from '@/hooks/use-query';
 import styles from './Delivery.module.scss';
-import routeImg from '../../public/assets/images/route.png';
-import couponImg from '../../public/assets/images/routeCoupon.png';
-import starIcon from '../../public/assets/images/starIcon.png';
-import headPhonesImg from '../../public/assets/images/headPhonesBackground.png';
-import sneakerImg from '../../public/assets/images/sneakerBackground.png';
+import routeImg from '../../public/assets/images/png/route.png';
+import couponImg from '../../public/assets/images/png/routeCoupon.png';
+import starIcon from '../../public/assets/images/png/starIcon.png';
+import headPhonesImg from '../../public/assets/images/png/headPhonesBackground.png';
+import sneakerImg from '../../public/assets/images/png/sneakerBackground.png';
 import TelegramOrder from '@/components/telegramOrder/TelegramOrder';
-import littleHeadPhones from '../../public/assets/images/littleHeadPhones.png';
-import mobileSneakerImg1 from '../../public/assets/images/mobileSneaker1.png';
-import parfumeImg from '../../public/assets/images/parfume.png';
-import mobileSneakerImg2 from '../../public/assets/images/mobileSneaker2.png';
-import playStationImg from '../../public/assets/images/playStation.png';
+import littleHeadPhones from '../../public/assets/images/png/littleHeadPhones.png';
+import mobileSneakerImg1 from '../../public/assets/images/png/mobileSneaker1.png';
+import parfumeImg from '../../public/assets/images/png/parfume.png';
+import mobileSneakerImg2 from '../../public/assets/images/png/mobileSneaker2.png';
+import playStationImg from '../../public/assets/images/png/playStation.png';
 import Tag from './tag/Tag';
 
 const tagsText = [

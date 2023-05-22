@@ -1,0 +1,151 @@
+@import "src/public/styles/variables";
+
+.footerWrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 1440px;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.priceSticker {
+  position: absolute;
+  margin-top: auto;
+  left: -45px;
+  bottom: 60px;
+}
+
+.dateSticker {
+  position: absolute;
+  margin-top: auto;
+  left: 20px;
+  bottom: -20px;
+}
+
+.barcodeSticker {
+  position: absolute;
+  right: 0;
+  margin: 0 -105px 0 0;
+  bottom: -10px;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1085px;
+  margin: 100px 150px 26px;
+}
+
+.shopInfo {
+  display: flex;
+  width: 100%;
+  column-gap: 120px;
+}
+
+.otherInfo {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  opacity: 0.5;
+  margin-top: 50px;
+
+  p {
+    opacity: 0.5;
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstGroup {
+  display: flex;
+}
+
+.title {
+  color: $white;
+}
+
+.groupContent {
+  display: flex;
+  margin: 16px 0 0 0;
+
+  &:nth-child(1) {
+    margin: 16px 40px 0 0;
+  }
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  color: $white;
+  opacity: 0.5;
+  row-gap: 8px;
+  white-space: nowrap;
+
+  p {
+    opacity: 0.5;
+  }
+
+  a {
+    text-decoration: none;
+    font-family: $inter;
+    font-size: 15px;
+    line-height: 18px;
+    color: $white;
+    font-weight: 400;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .shopInfo {
+    display: flex;
+    width: 100%;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .shopInfo {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet + 20px) {
+  .shopInfo {
+    grid-template-columns: 1fr;
+  }
+
+  .otherInfo {
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .dateSticker {
+    left: 93px;
+  }
+
+  .priceSticker {
+    left: -60px;
+    bottom: -20px;
+  }
+
+  .barcodeSticker {
+    margin: 0 -70px 0 0;
+    bottom: -85px;
+  }
+
+  .infoWrapper {
+    margin: 100px 20px 144px;
+  }
+}
