@@ -52,36 +52,36 @@ const Delivery = () => {
 
   const drawStarIcon = (id: number) => {
     if (isLgTablet && id === 4) return null;
-    return (<Image className={styles.starIcon} src={starIcon} alt='' />);
+    return (<Image className={styles.starIcon} src={starIcon} alt='divider' />);
   };
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.desktopImages}>
-        <Image className={styles.headPhonesImg} src={headPhonesImg} alt='' />
-        <Image className={styles.sneakerImg} src={sneakerImg} alt='' />
+        <Image className={styles.headPhonesImg} src={headPhonesImg} alt='background headphones' />
+        <Image className={styles.sneakerImg} src={sneakerImg} alt='background sneaker' />
       </div>
       <div className={styles.mobileImages}>
         <div className={styles.mobileImgWrapper1}>
-          <Image src={littleHeadPhones} alt='' />
+          <Image src={littleHeadPhones} alt='headphones' />
         </div>
         <div className={styles.mobileImgWrapper2}>
-          <Image src={mobileSneakerImg1} alt='' />
+          <Image src={mobileSneakerImg1} alt='sneaker' />
         </div>
         <div className={styles.mobileImgWrapper3}>
-          <Image src={parfumeImg} alt='' />
+          <Image src={parfumeImg} alt='parfume' />
         </div>
         <div className={styles.mobileImgWrapper4}>
-          <Image src={mobileSneakerImg2} alt='' />
+          <Image src={mobileSneakerImg2} alt='sneaker' />
         </div>
         <div className={styles.mobileImgWrapper5}>
-          <Image src={playStationImg} alt='' />
+          <Image src={playStationImg} alt='playstation 5' />
         </div>
       </div>
       <div className={styles.container}>
         <div className={styles.routeImg}>
-          <Image src={routeImg} alt='' />
-          <Image className={styles.couponImg} src={couponImg} alt='' />
+          <Image src={routeImg} alt='route' />
+          <Image className={styles.couponImg} src={couponImg} alt='coupon' />
         </div>
         <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
         <TelegramOrder text={isTablet ? 'Оформить заказ' : 'Оформить заказ в Телеграм'} />

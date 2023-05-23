@@ -1,0 +1,226 @@
+@import '../../public/styles/variables.scss';
+
+.header {
+  color: $white;
+  max-width: 1141px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  text-transform: uppercase;
+}
+
+.instructionContainer {
+  margin-top: -200px;
+}
+
+.instructionImages {
+  position: relative;
+  z-index: 10;
+  padding: 0 40px;
+}
+
+.hyperStickerWrapper {
+  position: relative;
+  margin-right: 260px;
+}
+
+.hyperSticker {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headlineShadow {
+  position: absolute;
+  width: 100%;
+  height: 749px;
+  background: linear-gradient(180deg, $black 45.83%, rgba(9, 7, 19, 0) 96.35%);
+  z-index: 5;
+}
+
+.phoneWrapper {
+  position: relative;
+  z-index: 3;
+  // bottom: 227px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.purpleEllipse {
+  position: absolute;
+  width: 1231px;
+  height: 405px;
+  z-index: -2;
+  bottom: -70px;
+  background: linear-gradient(0deg, #9134C3, #9134C3), #9134C3;
+  filter: blur(147px);
+}
+
+.fiveYearSticker {
+  position: absolute;
+  bottom: 70px;
+  left: calc(50% - 480px);
+}
+
+.commissionSticker {
+  position: absolute;
+  bottom: 300px;
+  left: calc(50% + 160px);
+}
+
+.instructionWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1210px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.horizontalLine {
+  width: 81%;
+  height: 100%;
+}
+
+.verticalLine {
+  display: none;
+}
+
+.instructions {
+  position: relative;
+  z-index: 10;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 35px;
+  padding: 0 40px;
+  margin-top: -30px;
+}
+
+.telegramWrapper {
+  margin-top: 100px;
+}
+
+@media screen and (max-width: $largeTablet) {
+  .instructions {
+    column-gap: 20px;
+  }
+
+  .iphone {
+    width: 350px;
+    height: 709px;
+  }
+
+  .header {
+    font-size: 50px;
+    line-height: 56px;
+  }
+
+  .hyperStickerWrapper {
+    margin-right: 220px;
+  }
+
+  .hyperSticker {
+    height: 56px;
+    width: 228px;
+  }
+
+  .fiveYearSticker {
+    display: none;
+  }
+
+  .commissionSticker {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header {
+    font-size: 40px;
+    line-height: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .hyperStickerWrapper {
+    margin-right: 174px;
+  }
+
+  .hyperSticker {
+    height: 45px;
+    width: 180px;
+  }
+
+  .iphone {
+    width: 306px;
+    height: 620px;
+  }
+
+  .headlineShadow {
+    height: 610px;
+  }
+
+  .horizontalLine {
+    display: none;
+  }
+
+  .verticalLine {
+    display: block;
+  }
+
+  .instructionImages {
+    padding: 0;
+  }
+  .instructionWrapper {
+    flex-direction: row;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  .instructions {
+    grid-template-columns: 1fr;
+    grid-template-rows: 164px 148px 164px;
+    padding: 0 40px 0 20px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .header {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .hyperStickerWrapper {
+    margin-right: 122px;
+  }
+
+  .hyperSticker {
+    height: 36px;
+    width: 128px;
+  }
+
+ .instructionContainer {
+  margin-top: -100px;
+ }
+}
+
+@media screen and (max-width: $mobile) {
+  .iphone {
+    width: 262px;
+    height: 532px;
+  }
+
+  .telegramWrapper {
+    display: none;
+  }
+}
