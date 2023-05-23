@@ -2,11 +2,26 @@
 
 .footerWrapper {
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100%;
   max-width: 1440px;
   bottom: 0;
   overflow: hidden;
+
+  a {
+    text-decoration: none;
+    font-family: $inter;
+    font-size: 15px;
+    line-height: 18px;
+    color: $white;
+    font-weight: 400;
+    opacity: 0.5;
+    transition: $animationPeriod;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .priceSticker {
@@ -65,6 +80,15 @@
   display: flex;
 }
 
+.specialGroupContent {
+  display: flex;
+  margin: 16px 0 0 0;
+}
+
+.specialGroup {
+  display: none;
+}
+
 .title {
   color: $white;
 }
@@ -90,16 +114,6 @@
   p {
     opacity: 0.5;
   }
-
-  a {
-    text-decoration: none;
-    font-family: $inter;
-    font-size: 15px;
-    line-height: 18px;
-    color: $white;
-    font-weight: 400;
-    opacity: 0.5;
-  }
 }
 
 @media screen and (max-width: $desktop) {
@@ -116,11 +130,25 @@
     grid-template-columns: 1.5fr 0.5fr;
     row-gap: 20px;
   }
+
+  .specialGroupContent {
+    display: none;
+  }
+
+  .specialGroup {
+    display: flex;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: $tablet + 20px) {
   .shopInfo {
     grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .specialGroup {
+    margin-top: -40px;
   }
 
   .otherInfo {

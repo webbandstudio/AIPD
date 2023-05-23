@@ -9,12 +9,8 @@ import house from '../../public/assets/images/svg/icons/house.svg';
 import account from '../../public/assets/images/svg/icons/account.svg';
 import address from '../../public/assets/images/svg/icons/address.svg';
 import instagram from '../../public/assets/images/svg/icons/instagram.svg';
-import { useQuery } from "@/hooks/use-query";
-
 
 const Footer = () => {
-  const { isSmDesktop } = useQuery();
-
   return (
     <footer className={styles.footerWrapper}>
       <Image src={price} alt="price sticker" className={styles.priceSticker} />
@@ -26,14 +22,14 @@ const Footer = () => {
               Контакты
             </p>
             <div className={styles.firstGroup}>
-              {!isSmDesktop && <div className={styles.groupContent}>
+              <div className={styles.groupContent}>
                 <Image src={house} alt="house" />
                 <div className={styles.contentText}>
                   <p>Склад в польше:</p>
                   <Link href="tel:48571352966">+48 571 352 966</Link>
                 </div>
-              </div>}
-              <div className={styles.groupContent}>
+              </div>
+              <div className={styles.specialGroupContent}>
                 <Image src={account} alt="account" />
                 <div className={styles.contentText}>
                   <p>Менеджер в Беларуси:</p>
@@ -42,15 +38,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          {isSmDesktop && <div className={styles.group}>
+          <div className={styles.specialGroup}>
             <div className={styles.groupContent}>
-              <Image src={house} alt="house" />
+              <Image src={account} alt="account" />
               <div className={styles.contentText}>
-                <p>Склад в польше:</p>
-                <Link href="tel:48571352966">+48 571 352 966</Link>
+                <p>Менеджер в Беларуси:</p>
+                <Link href="tel:375339933473">+375 (33) 99 33 473</Link>
               </div>
             </div>
-          </div>}
+          </div>
           <div className={styles.group}>
             <p className={styles.title}>
               Адрес
@@ -70,7 +66,9 @@ const Footer = () => {
             <div className={styles.groupContent}>
               <Image src={instagram} alt="instagram" />
               <div className={styles.contentText}>
-                <Link href="">Instagram</Link>
+                <Link href="" target="_blank">
+                  Instagram
+                </Link>
               </div>
             </div>
           </div>
@@ -79,9 +77,9 @@ const Footer = () => {
           <p>
             AIPD © 2023 Условия использования
           </p>
-          <p>
+          <Link href="https://zametniy.com/" target="_blank">
             Дизайн – Zametniy.com
-          </p>
+          </Link>
         </div>
       </div>
       <Image src={barcode} alt="barcode sticker" className={styles.barcodeSticker} />
