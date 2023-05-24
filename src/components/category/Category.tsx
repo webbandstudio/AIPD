@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import styles from './Category.module.scss';
 
 interface ICategory {
   name: string,
-};
+}
 
 const Category: React.FC<ICategory> = ({ name }) => {
   const [activeCategory, setActiveCategory] = useState(false);

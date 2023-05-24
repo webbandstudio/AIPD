@@ -1,0 +1,172 @@
+.footerWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    font-family: $font-face-secondary;
+    font-size: 15px;
+    line-height: 18px;
+    color: $white;
+    font-weight: 400;
+    opacity: 0.5;
+    transition: $animationPeriod;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.priceSticker {
+  position: absolute;
+  left: -45px;
+  bottom: 60px;
+}
+
+.dateSticker {
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+}
+
+.barcodeSticker {
+  position: absolute;
+  right: -105px;
+  bottom: -10px;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1085px;
+  margin: 100px 150px 26px;
+}
+
+.shopInfo {
+  display: flex;
+  width: 100%;
+  column-gap: 120px;
+}
+
+.otherInfo {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  opacity: 0.5;
+  margin-top: 50px;
+
+  p {
+    opacity: 0.5;
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstGroup {
+  display: flex;
+}
+
+.specialGroupContent {
+  display: flex;
+  margin: 16px 0 0 0;
+}
+
+.specialGroup {
+  display: none;
+}
+
+.title {
+  color: $white;
+}
+
+.groupContent {
+  display: flex;
+  margin: 16px 0 0 0;
+
+  &:nth-child(1) {
+    margin: 16px 40px 0 0;
+  }
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  color: $white;
+  opacity: 0.5;
+  row-gap: 8px;
+  white-space: nowrap;
+
+  p {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .shopInfo {
+    display: flex;
+    width: 100%;
+    column-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .shopInfo {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    row-gap: 20px;
+  }
+
+  .specialGroupContent {
+    display: none;
+  }
+
+  .specialGroup {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: $tablet + 20px) {
+  .shopInfo {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .specialGroup {
+    margin-top: -40px;
+  }
+
+  .otherInfo {
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .dateSticker {
+    left: 93px;
+  }
+
+  .priceSticker {
+    left: -60px;
+    bottom: -20px;
+  }
+
+  .barcodeSticker {
+    right: -70px;
+    bottom: -100px;
+  }
+
+  .infoWrapper {
+    margin: 100px 20px 144px;
+  }
+}

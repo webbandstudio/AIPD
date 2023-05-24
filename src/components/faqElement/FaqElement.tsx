@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 import styles from './FaqElement.module.scss';
 
-interface FaqElement {
+interface IFaqElement {
   title: string;
   text: string;
 }
 
-const FaqElement:React.FC<FaqElement> = ({ title, text}) => {
+const FaqElement:React.FC<IFaqElement> = ({ title, text}) => {
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
   const handleOpenDropdown = () => setIsOpenDropdown(prevState => !prevState);
 

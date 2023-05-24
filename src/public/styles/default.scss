@@ -1,0 +1,72 @@
+html,
+body {
+  margin: 0;
+  background-color: $black;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+//Typography
+h1 {
+  font-family: $font-face-primary;
+  font-weight: $extra-bold;
+  font-size: 92px;
+  line-height: 88px;
+}
+
+h2 {
+  font-family: $font-face-primary;
+  font-weight: $extra-bold;
+  font-size: 60px;
+  line-height: 68px;
+  margin: 0;
+}
+
+h4 {
+  font-family: $font-face-secondary;
+  font-weight: $bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+button {
+  border: none;
+
+  p {
+    font-family: $font-face-secondary;
+    font-weight: $semi-bold;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.p1 {
+  font-family: $font-face-secondary;
+  font-weight: $regular;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.p2 {
+  font-family: $font-face-secondary;
+  font-weight: $regular;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+p {
+  font-family: $font-face-secondary;
+  font-weight: $regular;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+label {
+  font-family: $font-face-secondary;
+  font-weight: $medium;
+  font-size: 13px;
+  line-height: 16px;
+}

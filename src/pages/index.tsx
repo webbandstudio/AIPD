@@ -1,12 +1,14 @@
-import Delivery from "@/sections/delivery/Delivery";
-import Calculator from "@/sections/calculator/Calculator";
+import Delivery from '@sections/delivery/Delivery';
+import Shops from '@sections/shops/Shops';
+import Calculator from "@sections/calculator/Calculator";
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Delivery />
+      <Shops />
       <Calculator />
-    </main>
+    </>
   );
 };
 
