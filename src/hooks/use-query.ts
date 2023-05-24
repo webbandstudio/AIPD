@@ -9,7 +9,7 @@ export const useQuery = () => {
   const isSmallTablet = useMediaQuery({ maxWidth: 820 });
   const isLgTablet = useMediaQuery({ maxWidth: 890 });
   const isTabletDesktop = useMediaQuery({ maxWidth: 960 });
-  const isSmDesktop = useMediaQuery({ maxWidth: 1025 });
+  const isSmDesktop = useMediaQuery({ maxWidth: 1080 });
   const isDesktop = useMediaQuery({ maxWidth: 1281 });
   const isLgDesktop = useMediaQuery({ maxWidth: 1441 });
 
