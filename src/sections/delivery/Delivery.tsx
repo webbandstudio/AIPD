@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import { useQuery } from '../../hooks/use-query';
 import styles from './Delivery.module.scss';
 import routeImg from '@assets/images/png/route.png';
 import couponImg from '@assets/images/png/routeCoupon.png';
@@ -47,46 +46,104 @@ const tagsText = [
   },
 ];
 
+const mobileImages = [
+  {
+    style: styles.mobileImgWrapper1,
+    image: littleHeadPhones,
+    alt: 'headphones',
+    id: 100,
+  },
+  {
+    style: styles.mobileImgWrapper2,
+    image: mobileSneakerImg1,
+    alt: 'sneaker',
+    id: 101,
+  },
+  {
+    style: styles.mobileImgWrapper3,
+    image: parfumeImg,
+    alt: 'parfume',
+    id: 102,
+  },
+  {
+    style: styles.mobileImgWrapper4,
+    image: mobileSneakerImg2,
+    alt: 'mobileSneakerImg2',
+    id: 103,
+  },
+  {
+    style: styles.mobileImgWrapper5,
+    image: playStationImg,
+    alt: 'playstation 5',
+    id: 104,
+  },
+];
+
+const desktopImages = [
+  {
+    style: styles.headPhonesImg,
+    image: headPhonesImg,
+    alt: 'background headphones',
+    id: 201,
+  },
+  {
+    style: styles.sneakerImg,
+    image: sneakerImg,
+    alt: 'background sneaker',
+    id: 202,
+  },
+];
+
 const Delivery = () => {
-  const { isLgTablet, isTablet } = useQuery();
+  const tagsTextMobile = tagsText.filter(elem => elem.id !== 4);
 
   const drawStarIcon = (id: number) => {
-    if (isLgTablet && id === 4) return null;
-    return (<Image className={styles.starIcon} src={starIcon} alt='' />);
+    return (<Image className={styles.starIcon} src={starIcon} alt="divider" />);
   };
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.desktopImages}>
-        <Image className={styles.headPhonesImg} src={headPhonesImg} alt='' />
-        <Image className={styles.sneakerImg} src={sneakerImg} alt='' />
+        {desktopImages.map(elem =>
+          <Image
+            key={elem.id}
+            className={elem.style}
+            src={elem.image}
+            alt={elem.alt}
+          />
+        )}
       </div>
       <div className={styles.mobileImages}>
-        <div className={styles.mobileImgWrapper1}>
-          <Image src={littleHeadPhones} alt='' />
-        </div>
-        <div className={styles.mobileImgWrapper2}>
-          <Image src={mobileSneakerImg1} alt='' />
-        </div>
-        <div className={styles.mobileImgWrapper3}>
-          <Image src={parfumeImg} alt='' />
-        </div>
-        <div className={styles.mobileImgWrapper4}>
-          <Image src={mobileSneakerImg2} alt='' />
-        </div>
-        <div className={styles.mobileImgWrapper5}>
-          <Image src={playStationImg} alt='' />
-        </div>
+        {mobileImages.map(elem =>
+          <div key={elem.id} className={elem.style}>
+            <Image src={elem.image} alt={elem.alt} />
+          </div>
+        )}
       </div>
       <div className={styles.container}>
         <div className={styles.routeImg}>
-          <Image src={routeImg} alt='' />
-          <Image className={styles.couponImg} src={couponImg} alt='' />
+          <Image src={routeImg} alt="route" />
+          <Image className={styles.couponImg} src={couponImg} alt="coupon" />
         </div>
         <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
-        <TelegramOrder text={isTablet ? 'Оформить заказ' : 'Оформить заказ в Телеграм'} />
+        <div className={styles.telegramWrapperDesktop}>
+          <TelegramOrder text='Оформить заказ в Телеграм' />
+        </div>
+        <div className={styles.telegramWrapperMobile}>
+          <TelegramOrder text='Оформить заказ' />
+        </div>
         <div className={styles.tags}>
           {tagsText.map(elem => elem.id % 2 === 0
+            ? drawStarIcon(elem.id)
+            : <Tag
+              upText={elem.upText || ''}
+              downText={elem.downText || ''}
+              key={elem.id}
+            />
+          )}
+        </div>
+        <div className={styles.tagsMobile}>
+          {tagsTextMobile.map(elem => elem.id % 2 === 0
             ? drawStarIcon(elem.id)
             : <Tag
               upText={elem.upText || ''}

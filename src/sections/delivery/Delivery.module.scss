@@ -1,4 +1,10 @@
-$mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
+$mobileImageWrapperWidth: (
+  62px,
+  100px,
+  38px,
+  88px,
+  89px
+);
 
 .wrapper {
   margin-top: 80px;
@@ -41,15 +47,19 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   justify-content: space-between;
 }
 
+.tagsMobile {
+  display: none;
+}
+
 .headPhonesImg {
   position: absolute;
-  left: 0;
+  left: -180px;
 }
 
 .sneakerImg {
   position: absolute;
-  right: 0;
-  top: -130px;
+  right: -295px;
+  top: -210px;
 }
 
 .mobileImages {
@@ -61,6 +71,10 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   opacity: 1;
 }
 
+.telegramWrapperMobile {
+  display: none;
+}
+
 @media screen and (max-width: $desktop) {
   .desktopImages {
     transition: opacity $animationPeriod;
@@ -68,13 +82,24 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   }
 }
 
+@media screen and (max-width: $smallDesktop) {
+  .desktopImages {
+    display: none;
+  }
+}
+
 @media screen and (max-width: $largeTablet) {
-  .tags {
+  .tagsMobile {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     row-gap: 40px;
     align-items: flex-start;
     max-width: 350px;
+    margin-top: 55px;
+  }
+
+  .tags {
+    display: none;
   }
 
   .starIcon {
@@ -90,15 +115,19 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
   .container {
     margin: 45px 20px 0;
   }
-
-  .desktopImages {
-    display: none;
-  }
 }
 
 @media screen and (max-width: $tablet) {
   .mainText {
     font-size: 70px;
+  }
+
+  .telegramWrapperMobile {
+    display: block;
+  }
+
+  .telegramWrapperDesktop {
+    display: none;
   }
 }
 
@@ -126,7 +155,7 @@ $mobileImageWrapperWidth: (62px, 100px, 38px, 88px, 89px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 146px;
+    height: 145px;
   }
 
   .container {

@@ -1,12 +1,10 @@
 .container {
-  width: 345px;
-  height: 450px;
-  background-color: $blue;
+  width: 285px;
+  height: 390px;
   transition: scale $animationPeriod;
   display: flex;
   flex-direction: column;
   padding: 30px;
-  cursor: pointer;
 
   &:hover {
     scale: 0.96;
