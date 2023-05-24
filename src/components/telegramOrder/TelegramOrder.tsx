@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import styles from './TelegramOrder.module.scss';
-import telegramIcon from '../../public/assets/images/png/telegramIcon.png';
+import telegramIcon from '@assets/images/png/telegramIcon.png';
 
 const TelegramOrder = ({ text }: { text: string }) => {
   return (

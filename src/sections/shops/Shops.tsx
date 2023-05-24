@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import styles from './Shops.module.scss';
-import { SHOPS } from "@/constants/mockData";
-import Shop from "@/components/shop/Shop";
-import arrow from '../../public/assets/images/svg/shopsArrow.svg';
+import { SHOPS } from "@constants/mockData";
+import Shop from "@components/shop/Shop";
+import arrow from '@assets/images/svg/shopsArrow.svg';
 
 const Shops = () => {
   return (

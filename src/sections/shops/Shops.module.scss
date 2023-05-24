@@ -1,18 +1,3 @@
-@import "src/public/styles/variables";
-
-@mixin shopCard {
-  width: 260px;
-  height: 150px;
-  border: 1px solid #312E4A;
-  border-radius: 20px;
-  background-color: $black;
-  cursor: pointer;
-
-  @media screen and (max-width: $smallTablet) {
-    width: 155px;
-  }
-}
-
 .shopsSection {
   margin-top: 90px;
 }
@@ -25,7 +10,7 @@
 }
 
 .shopsWrapper {
-  max-width: 1141px;
+  max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -64,7 +49,7 @@
 }
 
 .otherShops {
-  width: 118px;
+  width: 120px;
   height: 26px;
   background-color: $black;
   border: 1px solid #312E4A;
@@ -87,11 +72,11 @@
 }
 
 .text {
-  width: 129px;
-  height: 44px;
+  width: 130px;
+  height: 45px;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: $medium;
   margin: auto 0 20px 20px;
   color: $white;
 }

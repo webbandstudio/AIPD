@@ -1,5 +1,5 @@
-import Delivery from "@/sections/delivery/Delivery";
-import Shops from "@/sections/shops/Shops";
+import Delivery from '@sections/delivery/Delivery';
+import Shops from '@sections/shops/Shops';
 
 const Home = () => {
   return (

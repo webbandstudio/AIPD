@@ -1,18 +1,17 @@
 import React, { FC, ReactNode } from 'react';
 
-import Header from "../layout/header/Header";
-import styles from "./Layout.module.scss";
+import Header from '@layouts/header/Header';
+import styles from './Layout.module.scss';
 
-interface LayoutProps {
+interface ILayoutProps {
   children: ReactNode;
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC<ILayoutProps> = ({ children }) => {
   return (
     <section className={styles.section}>
       <Header />
       <main>{children}</main>
-      {/*<Footer />*/}
     </section>
   );
 };

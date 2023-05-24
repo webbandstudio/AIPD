@@ -27,4 +27,4 @@ export const SHOPS = [
     category: 'площадка',
     image: ''
   },
-]
+];
