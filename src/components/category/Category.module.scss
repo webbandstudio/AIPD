@@ -1,16 +1,6 @@
-@import 'src/public/styles/variables.scss';
-
-@mixin containerForm {
-  width: fit-content;
-  padding: 16px 30px;
-  border-radius: 60px;
-  border: 1px solid;
-  cursor: pointer;
-}
-
 .container {
   @include containerForm;
-  background-color: #090713;
+  background-color: $deepDark;
   border-color: #C3C3C3;
   transition: background-color $animationPeriod;
 
@@ -27,6 +17,6 @@
 
 .name {
   color: $white;
-  font-weight: 500;
+  font-weight: $medium;
   line-height: 16px;
 }

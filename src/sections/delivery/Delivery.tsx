@@ -1,18 +1,18 @@
 import Image from 'next/image';
 
-import { useQuery } from '@/hooks/use-query';
+import { useQuery } from '../../hooks/use-query';
 import styles from './Delivery.module.scss';
-import routeImg from '../../public/assets/images/route.png';
-import couponImg from '../../public/assets/images/routeCoupon.png';
-import starIcon from '../../public/assets/images/starIcon.png';
-import headPhonesImg from '../../public/assets/images/headPhonesBackground.png';
-import sneakerImg from '../../public/assets/images/sneakerBackground.png';
-import TelegramOrder from '@/components/telegramOrder/TelegramOrder';
-import littleHeadPhones from '../../public/assets/images/littleHeadPhones.png';
-import mobileSneakerImg1 from '../../public/assets/images/mobileSneaker1.png';
-import parfumeImg from '../../public/assets/images/parfume.png';
-import mobileSneakerImg2 from '../../public/assets/images/mobileSneaker2.png';
-import playStationImg from '../../public/assets/images/playStation.png';
+import routeImg from '@assets/images/png/route.png';
+import couponImg from '@assets/images/png/routeCoupon.png';
+import starIcon from '@assets/images/png/starIcon.png';
+import headPhonesImg from '@assets/images/png/headPhonesBackground.png';
+import sneakerImg from '@assets/images/png/sneakerBackground.png';
+import TelegramOrder from '@components/telegramOrder/TelegramOrder';
+import littleHeadPhones from '@assets/images/png/littleHeadPhones.png';
+import mobileSneakerImg1 from '@assets/images/png/mobileSneaker1.png';
+import parfumeImg from '@assets/images/png/parfume.png';
+import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
+import playStationImg from '@assets/images/png/playStation.png';
 import Tag from './tag/Tag';
 
 const tagsText = [
@@ -47,41 +47,69 @@ const tagsText = [
   },
 ];
 
+const mobileImages = [
+  {
+    style: styles.mobileImgWrapper1,
+    image: littleHeadPhones,
+    alt: 'headphones',
+  },
+  {
+    style: styles.mobileImgWrapper2,
+    image: mobileSneakerImg1,
+    alt: 'headphones',
+  },
+  {
+    style: styles.mobileImgWrapper3,
+    image: littleHeadPhones,
+    alt: 'headphones',
+  },
+  {
+    style: styles.mobileImgWrapper4,
+    image: littleHeadPhones,
+    alt: 'headphones',
+  },
+  {
+    style: styles.mobileImgWrapper5,
+    image: littleHeadPhones,
+    alt: 'headphones',
+  },
+];
+
 const Delivery = () => {
   const { isLgTablet, isTablet } = useQuery();
 
   const drawStarIcon = (id: number) => {
     if (isLgTablet && id === 4) return null;
-    return (<Image className={styles.starIcon} src={starIcon} alt='divider' />);
+    return (<Image className={styles.starIcon} src={starIcon} alt="divider" />);
   };
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.desktopImages}>
-        <Image className={styles.headPhonesImg} src={headPhonesImg} alt='background headphones' />
-        <Image className={styles.sneakerImg} src={sneakerImg} alt='background sneaker' />
+        <Image className={styles.headPhonesImg} src={headPhonesImg} alt="background headphones" />
+        <Image className={styles.sneakerImg} src={sneakerImg} alt="background sneaker" />
       </div>
       <div className={styles.mobileImages}>
         <div className={styles.mobileImgWrapper1}>
-          <Image src={littleHeadPhones} alt='headphones' />
+          <Image src={littleHeadPhones} alt="headphones" />
         </div>
         <div className={styles.mobileImgWrapper2}>
-          <Image src={mobileSneakerImg1} alt='sneaker' />
+          <Image src={mobileSneakerImg1} alt="sneaker" />
         </div>
         <div className={styles.mobileImgWrapper3}>
-          <Image src={parfumeImg} alt='parfume' />
+          <Image src={parfumeImg} alt="parfume" />
         </div>
         <div className={styles.mobileImgWrapper4}>
-          <Image src={mobileSneakerImg2} alt='sneaker' />
+          <Image src={mobileSneakerImg2} alt="sneaker" />
         </div>
         <div className={styles.mobileImgWrapper5}>
-          <Image src={playStationImg} alt='playstation 5' />
+          <Image src={playStationImg} alt="playstation 5" />
         </div>
       </div>
       <div className={styles.container}>
         <div className={styles.routeImg}>
-          <Image src={routeImg} alt='route' />
-          <Image className={styles.couponImg} src={couponImg} alt='coupon' />
+          <Image src={routeImg} alt="route" />
+          <Image className={styles.couponImg} src={couponImg} alt="coupon" />
         </div>
         <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
         <TelegramOrder text={isTablet ? 'Оформить заказ' : 'Оформить заказ в Телеграм'} />

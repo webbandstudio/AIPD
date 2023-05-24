@@ -1,13 +1,14 @@
-import Delivery from "@/sections/delivery/Delivery";
-import DeliveryInstruction from "@/sections/deliveryInstruction/DeliveryInstruction";
-import Goods from "@/sections/goods/Goods";
+import Delivery from '@sections/delivery/Delivery';
+import Shops from '@sections/shops/Shops';
+import DeliveryInstruction from '@sections/deliveryInstruction/DeliveryInstruction';
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Delivery />
+      <Shops />
       <DeliveryInstruction />
-    </main>
+    </>
   );
 };
 

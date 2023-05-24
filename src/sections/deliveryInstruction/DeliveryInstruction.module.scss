@@ -2,10 +2,10 @@
 
 .header {
   color: $white;
-  max-width: 1141px;
+  max-width: 1140px;
   text-align: center;
   position: relative;
-  z-index: 10;
+  z-index: 999;
   text-transform: uppercase;
 }
 
@@ -15,8 +15,8 @@
 
 .instructionImages {
   position: relative;
-  z-index: 10;
-  padding: 0 40px;
+  z-index: 999;
+  padding: 0 4%;
 }
 
 .hyperStickerWrapper {
@@ -40,15 +40,14 @@
 .headlineShadow {
   position: absolute;
   width: 100%;
-  height: 749px;
+  height: 750px;
   background: linear-gradient(180deg, $black 45.83%, rgba(9, 7, 19, 0) 96.35%);
-  z-index: 5;
+  z-index: 777;
 }
 
 .phoneWrapper {
   position: relative;
-  z-index: 3;
-  // bottom: 227px;
+  z-index: 555;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -57,12 +56,12 @@
 
 .purpleEllipse {
   position: absolute;
-  width: 1231px;
+  width: 1230px;
   height: 405px;
-  z-index: -2;
+  z-index: -1;
   bottom: -70px;
   background: linear-gradient(0deg, #9134C3, #9134C3), #9134C3;
-  filter: blur(147px);
+  filter: blur(145px);
 }
 
 .fiveYearSticker {
@@ -97,12 +96,12 @@
 
 .instructions {
   position: relative;
-  z-index: 10;
+  z-index: 999;
   bottom: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 35px;
-  padding: 0 40px;
+  padding: 0 4%;
   margin-top: -30px;
 }
 
@@ -117,7 +116,7 @@
 
   .iphone {
     width: 350px;
-    height: 709px;
+    height: 710px;
   }
 
   .header {
@@ -130,8 +129,8 @@
   }
 
   .hyperSticker {
-    height: 56px;
-    width: 228px;
+    height: 55px;
+    width: 230px;
   }
 
   .fiveYearSticker {
@@ -161,7 +160,7 @@
   }
 
   .iphone {
-    width: 306px;
+    width: 305px;
     height: 620px;
   }
 
@@ -180,6 +179,7 @@
   .instructionImages {
     padding: 0;
   }
+
   .instructionWrapper {
     flex-direction: row;
     padding-left: 20px;
@@ -188,8 +188,8 @@
 
   .instructions {
     grid-template-columns: 1fr;
-    grid-template-rows: 164px 148px 164px;
-    padding: 0 40px 0 20px;
+    grid-template-rows: 165px 150px 165px;
+    padding: 0 9% 0 4%;
     margin: 0;
   }
 }
@@ -205,8 +205,8 @@
   }
 
   .hyperSticker {
-    height: 36px;
-    width: 128px;
+    height: 35px;
+    width: 125px;
   }
 
  .instructionContainer {
@@ -216,8 +216,8 @@
 
 @media screen and (max-width: $mobile) {
   .iphone {
-    width: 262px;
-    height: 532px;
+    width: 260px;
+    height: 530px;
   }
 
   .telegramWrapper {

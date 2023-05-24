@@ -26,8 +26,15 @@ $darkGreen: #244133;
 $grey: #EBECED;
 
 //Fonts
-$montserrat: 'Montserrat', sans-serif;
-$inter: 'Inter', sans-serif;
+$font-face-primary: 'Montserrat', sans-serif;
+$font-face-secondary: 'Inter', sans-serif;
+
+//Font weights
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
 
 //Resolutions
 $mobile: 440px;

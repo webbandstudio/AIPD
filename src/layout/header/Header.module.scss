@@ -1,5 +1,3 @@
-@import "src/public/styles/variables";
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,7 +7,7 @@
 
 .title {
   font-family: 'Inter', sans-serif;
-  font-weight: 700;
+  font-weight: $bold;
   font-size: 19px;
   line-height: 23px;
   text-transform: uppercase;
@@ -25,9 +23,9 @@
 }
 
 .link {
-  font-family: 'Inter', sans-serif;
+  font-family: $font-face-secondary;
   font-style: normal;
-  font-weight: 400;
+  font-weight: $regular;
   font-size: 15px;
   line-height: 18px;
   text-decoration: none;

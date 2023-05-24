@@ -2,14 +2,14 @@ import React from "react";
 import Image from "next/image";
 
 import styles from './Shop.module.scss';
-import mockedImage from '../../public/assets/images/allegro.png';
+import mockedImage from '@assets/images/png/allegro.png';
 
-interface Shop {
+interface IShop {
   label: string;
   image: string;
 }
 
-const Shop:React.FC<Shop> = ({ label, image }) => {
+const Shop:React.FC<IShop> = ({ label, image }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.labelWrapper}>

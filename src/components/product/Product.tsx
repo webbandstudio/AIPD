@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React from "react";
 
 import styles from './Product.module.scss';
 
@@ -9,17 +10,19 @@ interface IProduct {
 }
 
 const Product: React.FC<IProduct> = ({ image, title, economy }) => {
+  console.log(image);
+  
   return (
     <div className={styles.container}>
       <div className={styles.description}>
         <p className={styles.title}>{title}</p>
         <p className={styles.title}>Экономия ${economy}</p>
       </div>
-      <Image
+      {/* {image && <Image
         className={styles.productImage}
         src={image}
         alt='product'
-      />
+      />} */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import fiveYearSticker from '../../public/assets/images/fiveYearSticker.png';
 import horizontalLine from '../../public/assets/images/horisontalLine.png';
 import verticalLine from '../../public/assets/images/verticalLine.png';
 import InstructionText from './instructionText/InstructionText';
-import TelegramOrder from '@/components/telegramOrder/TelegramOrder';
+import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 
 const instructions = [
   {
@@ -31,7 +31,7 @@ const instructions = [
     title: 'Получаешь',
     description: 'Текст описание в несколько предложений.',
   },
-]
+];
 
 const DeliveryInstruction = () => {
   return (
@@ -42,21 +42,21 @@ const DeliveryInstruction = () => {
         заказывай в пару нажатий.<br />
         это
         <span className={styles.hyperStickerWrapper}>
-          <Image className={styles.hyperSticker} src={stickerHyper} alt='hyper' />
+          <Image className={styles.hyperSticker} src={stickerHyper} alt="hyper" />
         </span>
         удобно
       </h2>
       <div className={styles.instructionContainer}>
         <div className={styles.phoneWrapper}>
-          <Image className={styles.iphone} src={iphone} alt='iphone' />
+          <Image className={styles.iphone} src={iphone} alt="iphone" />
           <div className={styles.purpleEllipse} />
-          <Image className={styles.fiveYearSticker} src={fiveYearSticker} alt='5 лет доставляем товары' />
-          <Image className={styles.commissionSticker} src={commissionSticker} alt='комиссия 9%' />
+          <Image className={styles.fiveYearSticker} src={fiveYearSticker} alt="5 лет доставляем товары" />
+          <Image className={styles.commissionSticker} src={commissionSticker} alt="комиссия 9%" />
         </div>
         <div className={styles.instructionWrapper}>
           <div className={styles.instructionImages}>
-            <Image className={styles.horizontalLine} src={horizontalLine} alt='instruction route' />
-            <Image className={styles.verticalLine} src={verticalLine} alt='instruction route' />
+            <Image className={styles.horizontalLine} src={horizontalLine} alt="instruction route" />
+            <Image className={styles.verticalLine} src={verticalLine} alt="instruction route" />
           </div>
           <div className={styles.instructions}>
             {instructions.map(elem =>
@@ -70,7 +70,7 @@ const DeliveryInstruction = () => {
         </div>
       </div>
       <div className={styles.telegramWrapper}>
-        <TelegramOrder text='Оформить свой заказ' />
+        <TelegramOrder text="Оформить свой заказ" />
       </div>
     </section>
   );
