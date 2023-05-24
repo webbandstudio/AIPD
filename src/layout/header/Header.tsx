@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from './Header.module.scss';
-import { HEADER_LINKS } from "@/constants/links";
-import gradient from '../../public/assets/images/png/gradient.png';
+import { HEADER_LINKS } from "@constants/links";
+import gradient from '@assets/images/png/gradient.png';
 
 const Header = () => {
   return (
