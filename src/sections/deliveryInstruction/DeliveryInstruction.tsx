@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 import styles from './DeliveryInstruction.module.scss';
-import stickerHyper from '../../public/assets/images/stickerHyper.png';
-import iphone from '../../public/assets/images/iphone.png';
-import commissionSticker from '../../public/assets/images/commission.png';
-import fiveYearSticker from '../../public/assets/images/fiveYearSticker.png';
-import horizontalLine from '../../public/assets/images/horisontalLine.png';
-import verticalLine from '../../public/assets/images/verticalLine.png';
+import stickerHyper from '@assets/images/stickerHyper.png';
+import iphone from '@assets/images/iphone.png';
+import commissionSticker from '@assets/images/commission.png';
+import fiveYearSticker from '@assets/images/fiveYearSticker.png';
+import horizontalLine from '@assets/images/horisontalLine.png';
+import verticalLine from '@assets/images/verticalLine.png';
 import InstructionText from './instructionText/InstructionText';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 
@@ -46,12 +46,12 @@ const DeliveryInstruction = () => {
         </span>
         удобно
       </h2>
+      <Image className={styles.fiveYearSticker} src={fiveYearSticker} alt="5 лет доставляем товары" />
+      <Image className={styles.commissionSticker} src={commissionSticker} alt="комиссия 9%" />
       <div className={styles.instructionContainer}>
         <div className={styles.phoneWrapper}>
           <Image className={styles.iphone} src={iphone} alt="iphone" />
           <div className={styles.purpleEllipse} />
-          <Image className={styles.fiveYearSticker} src={fiveYearSticker} alt="5 лет доставляем товары" />
-          <Image className={styles.commissionSticker} src={commissionSticker} alt="комиссия 9%" />
         </div>
         <div className={styles.instructionWrapper}>
           <div className={styles.instructionImages}>
@@ -69,8 +69,11 @@ const DeliveryInstruction = () => {
           </div>
         </div>
       </div>
-      <div className={styles.telegramWrapper}>
+      <div className={styles.telegramWrapperDesktop}>
         <TelegramOrder text="Оформить свой заказ" />
+      </div>
+      <div className={styles.telegramWrapperMobile}>
+        <TelegramOrder text="Оформить заказ" />
       </div>
     </section>
   );

@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 170px;
 }
 
 .headlineShadow {
@@ -66,14 +67,16 @@
 
 .fiveYearSticker {
   position: absolute;
-  bottom: 70px;
+  bottom: 560px;
   left: calc(50% - 480px);
+  z-index: 999;
 }
 
 .commissionSticker {
   position: absolute;
-  bottom: 300px;
+  bottom: 795px;
   left: calc(50% + 160px);
+  z-index: 999;
 }
 
 .instructionWrapper {
@@ -105,8 +108,12 @@
   margin-top: -30px;
 }
 
-.telegramWrapper {
+.telegramWrapperDesktop {
   margin-top: 100px;
+}
+
+.telegramWrapperMobile {
+  display: none;
 }
 
 @media screen and (max-width: $largeTablet) {
@@ -120,7 +127,7 @@
   }
 
   .header {
-    font-size: 50px;
+    font-size: $bigTitle;
     line-height: 56px;
   }
 
@@ -140,11 +147,19 @@
   .commissionSticker {
     display: none;
   }
+
+  .container {
+    margin-top: 140px;
+  }
+
+  .instructionContainer {
+    margin-top: -110px;
+  }
 }
 
 @media screen and (max-width: $tablet) {
   .header {
-    font-size: 40px;
+    font-size: $mediumTitle;
     line-height: 45px;
     margin-left: 20px;
     margin-right: 20px;
@@ -180,6 +195,10 @@
     padding: 0;
   }
 
+  .instructionContainer {
+    margin-top: -100px;
+  }
+
   .instructionWrapper {
     flex-direction: row;
     padding-left: 20px;
@@ -192,11 +211,15 @@
     padding: 0 9% 0 4%;
     margin: 0;
   }
+
+  .container {
+    margin-top: 120px;
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
   .header {
-    font-size: 30px;
+    font-size: $smallTitle;
     line-height: 36px;
   }
 
@@ -209,18 +232,33 @@
     width: 125px;
   }
 
- .instructionContainer {
-  margin-top: -100px;
- }
+  .instructionContainer {
+    margin-top: -140px;
+  }
+
+  .container {
+    margin-top: 70px;
+  }
+
+  .headlineShadow {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .telegramWrapperDesktop {
+    display: none;
+  }
+
+  .telegramWrapperMobile {
+    margin-top: 60px;
+    display: block;
+  }
 }
 
 @media screen and (max-width: $mobile) {
   .iphone {
     width: 260px;
     height: 530px;
-  }
-
-  .telegramWrapper {
-    display: none;
   }
 }
