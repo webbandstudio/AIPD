@@ -1,0 +1,26 @@
+@mixin shopCard {
+  width: 260px;
+  height: 150px;
+  border: 1px solid #312E4A;
+  border-radius: 20px;
+  background-color: $black;
+  cursor: pointer;
+
+  @media screen and (max-width: $smallTablet) {
+    width: 155px;
+  }
+}
+
+@mixin containerForm {
+  width: fit-content;
+  padding: 16px 30px;
+  border-radius: 60px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+
+@mixin tagText {
+  color: $white;
+  opacity: 0.9;
+}
