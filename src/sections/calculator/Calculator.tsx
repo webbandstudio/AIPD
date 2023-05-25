@@ -1,9 +1,9 @@
-import Image from "next/image";
-import React, { useState } from "react";
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 
 import styles from './Calculator.module.scss';
-import sticker from '../../public/assets/images/png/stickers/calculatorSticker.png';
-import infoIcon from '../../public/assets/images/png/infoIcon.png';
+import sticker from '@assets/images/png/stickers/calculatorSticker.png';
+import infoIcon from '@assets/images/png/infoIcon.png';
 
 const vatPercentage = ['5%', '8%', '23%'];
 
@@ -31,10 +31,25 @@ const VatElement:React.FC<IVat> = ({ text, handleActiveVat, activeVat }) => {
 const Calculator = () => {
   const [activeVat, setActiveVat] = useState(vatPercentage[0]);
   const [isHovering, setIsHovered] = useState(false);
+  const [price, setPrice] = useState(0);
+  const [returnedVat, setReturnedVat] = useState(0);
+  const [totalResult, setTotalResult] = useState(0);
 
   const handleActiveVat = (vat: string) => setActiveVat(vat);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
+
+  const handlePrice = (value: React.ChangeEvent<HTMLInputElement>) => setPrice(Number(value.target.value));
+
+  useEffect(() => {
+    const vat = Number(activeVat.slice(0, activeVat.length - 1));
+    const priceWithCommission = price + 90;
+    const returnVat = Math.ceil((priceWithCommission / (100 + vat)) * vat);
+    const result = priceWithCommission - returnVat;
+
+    setReturnedVat(returnVat);
+    setTotalResult(result);
+  }, [activeVat, price]);
 
   return (
     <section className={styles.calculatorWrapper}>
@@ -43,7 +58,7 @@ const Calculator = () => {
           прикинь выгоду сам
           <Image className={styles.barcodeImage} src={sticker} alt="barcode sticker" />
         </h2>
-        <div className={styles.courses}>
+        <div className={styles.coursesDesktop}>
           <p>Актуальные курсы валют</p>
           <p>1 USD = 4.21pln</p>
           <p>1 EUR = 4.35pln</p>
@@ -52,7 +67,7 @@ const Calculator = () => {
       <section className={styles.calculations}>
         <div className={styles.textGroup}>
           <p className="p1">стоимость, pln</p>
-          <input type="number"/>
+          <input type="number" onChange={handlePrice} />
         </div>
         <div className={styles.textGroup}>
           <p className={`p1 ${styles.descriptionText}`}>комиссия сервиса, 9%</p>
@@ -60,39 +75,47 @@ const Calculator = () => {
         </div>
         <div className={styles.textGroup}>
           <p className={`p1 ${styles.descriptionText}`}>к оплате в Польше, pln</p>
-          <p className={`p1 ${styles.descriptionResult}`}>1,090</p>
+          <p className={`p1 ${styles.descriptionResult}`}>{price + 90}</p>
         </div>
         <div className={styles.textGroup}>
           <div className={styles.tooltipWrapper}>
-            <p className={`p1 ${styles.descriptionText}`}>VAT 5% к возврату, pln</p>
+            <p className={`p1 ${styles.descriptionText}`}>{`VAT ${activeVat} к возврату, pln`}</p>
             <div>
               {isHovering && <div className={styles.tooltipWindow}>
-                <label>VAT 5% применяется на авто товары, колеса и стекла</label>
+                <label>{`VAT ${activeVat} применяется на авто товары, колеса и стекла`}</label>
               </div>}
               <Image
                 src={infoIcon}
                 alt="info icon"
                 className={styles.tooltip}
-                onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                onMouseEnter={onMouseEnter}
               />
             </div>
           </div>
-          <p className={`p1 ${styles.descriptionResult}`}>203</p>
+          <p className={`p1 ${styles.descriptionResult}`}>{returnedVat}</p>
         </div>
         <div className={styles.divider} />
         <div className={styles.textGroup}>
           <p className={`p1 ${styles.descriptionTextTotal}`}>конечная стоимость покупки, pln</p>
-          <p className={`p1 ${styles.descriptionTotal}`}>890</p>
+          <p className={`p1 ${styles.descriptionTotal}`}>{totalResult}</p>
         </div>
       </section>
       <section className={styles.vatWrapper}>
         <p>VAT:</p>
         {vatPercentage.map((vat) => <VatElement
+          key={vat}
           text={vat}
           activeVat={activeVat}
           handleActiveVat={handleActiveVat}
         />)}
+      </section>
+      <section className={styles.coursesMobile}>
+        <p>Актуальные курсы валют</p>
+        <div>
+          <p>1 USD = 4.21pln</p>
+          <p>1 EUR = 4.35pln</p>
+        </div>
       </section>
     </section>
   );
