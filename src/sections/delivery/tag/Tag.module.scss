@@ -1,9 +1,3 @@
-.container {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
 .upText {
   @include tagText;
   font-weight: $bold;

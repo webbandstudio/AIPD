@@ -9,7 +9,7 @@ interface ITag {
 
 const Tag: React.FC<ITag> = ({ upText, downText }) => {
   return (
-    <div className={styles.textContainer}>
+    <div>
       <p className={styles.upText}>{upText}</p>
       <p className={styles.downText}>{downText}</p>
     </div>

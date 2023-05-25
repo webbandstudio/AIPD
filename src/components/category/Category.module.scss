@@ -1,6 +1,6 @@
 .container {
   @include containerForm;
-  background-color: #090713;
+  background-color: $deepDark;
   border-color: #C3C3C3;
   transition: background-color $animationPeriod;
 
