@@ -32,21 +32,23 @@ const Calculator = () => {
   const [activeVat, setActiveVat] = useState(vatPercentage[0]);
   const [isHovering, setIsHovered] = useState(false);
   const [price, setPrice] = useState(0);
+  const [commission, setCommission] = useState(0);
   const [returnedVat, setReturnedVat] = useState(0);
   const [totalResult, setTotalResult] = useState(0);
 
   const handleActiveVat = (vat: string) => setActiveVat(vat);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
-
   const handlePrice = (value: React.ChangeEvent<HTMLInputElement>) => setPrice(Number(value.target.value));
 
   useEffect(() => {
     const vat = Number(activeVat.slice(0, activeVat.length - 1));
-    const priceWithCommission = price + 90;
-    const returnVat = Math.ceil((priceWithCommission / (100 + vat)) * vat);
-    const result = priceWithCommission - returnVat;
+    const commission = Number((price * 0.09).toFixed(2));
+    const priceWithCommission = price + commission;
+    const returnVat = Number(((priceWithCommission / (100 + vat)) * vat).toFixed(2));
+    const result = Number((priceWithCommission - returnVat).toFixed(2));
 
+    setCommission(commission);
     setReturnedVat(returnVat);
     setTotalResult(result);
   }, [activeVat, price]);
@@ -71,11 +73,11 @@ const Calculator = () => {
         </div>
         <div className={styles.textGroup}>
           <p className={`p1 ${styles.descriptionText}`}>комиссия сервиса, 9%</p>
-          <p className={`p1 ${styles.descriptionResult}`}>90</p>
+          <p className={`p1 ${styles.descriptionResult}`}>{commission}</p>
         </div>
         <div className={styles.textGroup}>
           <p className={`p1 ${styles.descriptionText}`}>к оплате в Польше, pln</p>
-          <p className={`p1 ${styles.descriptionResult}`}>{price + 90}</p>
+          <p className={`p1 ${styles.descriptionResult}`}>{price + commission}</p>
         </div>
         <div className={styles.textGroup}>
           <div className={styles.tooltipWrapper}>

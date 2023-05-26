@@ -5,6 +5,22 @@
   background-color: $lightGrey;
   padding: 45px 0 30px 46px;
   display: flex;
+  height: 307px;
+
+  &:before {
+    content: url("../../public/assets/images/png/tree.png");
+    position: relative;
+    left: -59px;
+    top: -46px;
+  }
+
+  &:after {
+    content: url("../../public/assets/images/png/tree.png");
+    position: relative;
+    transform: rotate(180deg);
+    right: -13px;
+    bottom: -30px;
+  }
 }
 
 .titleCourse {
@@ -15,7 +31,7 @@
 .title {
   color: $black;
   text-transform: uppercase;
-  max-width: 440px;
+  max-width: 430px;
   margin: 0 0 25px;
 }
 
@@ -202,6 +218,15 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 90%;
+    height: unset;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
   }
 
   .title {

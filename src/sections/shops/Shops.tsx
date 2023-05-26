@@ -11,7 +11,7 @@ const Shops = () => {
       <h2 className={styles.title}>Доставляем ото всюду</h2>
       <div className={styles.shopsWrapper}>
         {SHOPS.map((shop) =>
-          <Shop key={shop.image} label={shop.category} image={shop.image} />
+          <Shop key={shop.id} label={shop.category} image={shop.image} />
         )}
         <div>
           <div className={styles.allShops}>
