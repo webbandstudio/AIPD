@@ -1,6 +1,7 @@
 import Delivery from '@sections/delivery/Delivery';
 import Shops from '@sections/shops/Shops';
 import DeliveryInstruction from '@sections/deliveryInstruction/DeliveryInstruction';
+import Feedbacks from '@sections/feedbacks/Feedbacks';
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Delivery />
       <Shops />
       <DeliveryInstruction />
+      <Feedbacks />
     </>
   );
 };

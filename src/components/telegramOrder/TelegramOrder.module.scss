@@ -8,6 +8,7 @@
   padding: 0 50px;
   cursor: pointer;
   transition: background-color $animationPeriod;
+  width: fit-content;
 
   &:hover {
     background-color: $middlePurple;

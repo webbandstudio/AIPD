@@ -1,0 +1,112 @@
+.feedbackWrapper {
+  display: flex;
+  max-width: 1220px;
+  margin: 120px auto;
+  column-gap: 140px;
+  padding: 0 20px;
+}
+
+.feedbacksText {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  margin: 170px auto auto auto;
+}
+
+.title {
+  color: $white;
+  text-transform: uppercase;
+}
+
+.description {
+  color: $white;
+  opacity: 0.5;
+  margin: 20px 0 40px;
+}
+
+.feedbacksVideos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.emptyDiv {
+  display: block;
+}
+
+.moreFeedbacks {
+  display: flex;
+  column-gap: 20px;
+  margin: auto;
+  cursor: pointer;
+  transition: $animationPeriod;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.moreFeedbacksText {
+  color: $blue;
+}
+
+@media screen and (max-width: $desktop) {
+  .feedbackWrapper {
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: $smallDesktop + 16px) {
+  .feedbackWrapper {
+    flex-direction: column;
+  }
+
+  .feedbacksVideos {
+    justify-items: center;
+    margin-top: 60px;
+  }
+
+  .emptyDiv {
+    display: none;
+  }
+
+  .moreFeedbacks {
+    grid-column: span 2;
+  }
+
+  .feedbacksText {
+    max-width: unset;
+    text-align: center;
+    margin: auto;
+
+    button {
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $largeTablet){
+  .title {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+
+@media screen and (max-width: $smallTablet + 50px) {
+  .feedbackWrapper {
+    margin: 100px auto;
+  }
+
+  .feedbacksVideos {
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+  }
+
+  .feedbacksText {
+    max-width: 380px;
+    margin: auto;
+    text-align: unset;
+  }
+}
