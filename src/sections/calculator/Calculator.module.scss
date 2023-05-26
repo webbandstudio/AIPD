@@ -8,14 +8,14 @@
   height: 307px;
 
   &:before {
-    content: url("../../public/assets/images/png/tree.png");
+    content: url('../../public/assets/images/png/tree.png');
     position: relative;
     left: -59px;
     top: -46px;
   }
 
   &:after {
-    content: url("../../public/assets/images/png/tree.png");
+    content: url('../../public/assets/images/png/tree.png');
     position: relative;
     transform: rotate(180deg);
     right: -13px;

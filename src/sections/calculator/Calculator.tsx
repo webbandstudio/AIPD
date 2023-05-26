@@ -105,7 +105,7 @@ const Calculator = () => {
       </section>
       <section className={styles.vatWrapper}>
         <p>VAT:</p>
-        {vatPercentage.map((vat) => <VatElement
+        {vatPercentage.map(vat => <VatElement
           key={vat}
           text={vat}
           activeVat={activeVat}
