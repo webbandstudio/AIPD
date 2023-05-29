@@ -50,13 +50,13 @@
   }
 
   .title {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
   }
 
   .economy {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
     font-weight: $regular;
   }
 }

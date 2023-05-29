@@ -32,7 +32,7 @@
 
 .text {
   margin: 30px 60px 40px 30px;
-  line-height: 28px;
+  line-height: $largeParagraphLineHeight + 1px;
   color: $white;
   opacity: 0.8;
   animation: fadeIn $animationPeriod;

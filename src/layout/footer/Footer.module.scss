@@ -7,8 +7,8 @@
   a {
     text-decoration: none;
     font-family: $font-face-secondary;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
     color: $white;
     font-weight: 400;
     opacity: 0.5;
