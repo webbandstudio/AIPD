@@ -32,7 +32,7 @@ const Faq = () => {
             <Image className={styles.managerImage} src={managerImage} alt="manager" />
             <p className={styles.managerName}>Менеджер Вика</p>
           </div>
-          <Link href={''} className={styles.telegramWrapper}>
+          <Link href="" className={styles.telegramWrapper}>
             <Image className={styles.telegramIcon} src={telegramIcon} alt="telegram icon" />
           </Link>
         </div>

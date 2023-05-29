@@ -20,6 +20,7 @@
   list-style: none;
   max-width: 950px;
   width: 100%;
+  color: $white;
 }
 
 .title {
@@ -29,13 +30,11 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    height: 0;
-    margin: 0 60px 0 30px;
+    @include FaqElementzeroHeightText;
   }
 
   50% {
-    height: 100%;
-    margin: 30px 60px 40px 30px;
+    @include FaqElementfullHeightText;
   }
 
   100% {
@@ -46,47 +45,37 @@
 @keyframes fadeOut {
   0% {
     opacity: 0.8;
-    display: block; 
-    height: 100%;
-    margin: 30px 60px 40px 30px;
-    font-size: 18px;
-    line-height: 28px;
+    display: block;
+    @include FaqElementfullHeightText;
+    @include FaqElementfullFontSizeText;
   }
 
   30% {
     opacity: 0;
-    height: 100%;
-    margin: 30px 60px 40px 30px;
-    font-size: 18px;
-    line-height: 28px;
+    @include FaqElementfullHeightText;
+    @include FaqElementfullFontSizeText;
   }
 
-  60% { 
-    font-size: 0;
-    line-height: 0;
+  60% {
+    @include FaqElementzeroFontSizeText;
   }
 
-  100% {  
-    margin: 0 60px 0 30px;
-    height: 0;
+  100% {
+    @include FaqElementzeroHeightText;
   }
 }
 
 .textOpen {
-  margin: 30px 60px 40px 30px;
+  @include FaqElementfullHeightText;
   line-height: 28px;
-  color: $white;
-  opacity: 0.8; 
+  opacity: 0.8;
   animation: fadeIn $animationPeriod;
 }
 
 .textClose {
-  margin: 0 60px 0 30px;
-  font-size: 0;
-  line-height: 0px;
-  color: $white;
-  opacity: 0; 
-  height: 0;
+  @include FaqElementzeroHeightText;
+  @include FaqElementzeroFontSizeText;
+  opacity: 0;
   animation: fadeOut $animationPeriod;
 }
 
