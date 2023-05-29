@@ -10,14 +10,14 @@ export interface IFeedbackVideo {
   id?: number;
 }
 
-const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title}) => {
+const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
   const videoControl = useRef<HTMLVideoElement>(null);
-  const [isPlay, setIsPlay] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const playVideo = () => {
     if (videoControl.current) {
-      isPlay ? videoControl.current.pause() : videoControl.current.play();
-      setIsPlay(prevState => !prevState);
+      isPlaying ? videoControl.current.pause() : videoControl.current.play();
+      setIsPlaying(prevState => !prevState);
     }
   };
 
@@ -31,7 +31,7 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title}) => {
           onClick={playVideo}
           src={playIcon}
           alt="play icon"
-          className={isPlay ? styles.playIconNone : styles.playIcon}
+          className={isPlaying ? styles.playIconNone : styles.playIcon}
         />
       </div>
       <p className={`p2 ${styles.title}`}>

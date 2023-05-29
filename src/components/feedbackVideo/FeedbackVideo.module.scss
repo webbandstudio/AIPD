@@ -25,10 +25,8 @@
     cursor: pointer;
   }
 
-  .playIconNone {
-    .playIcon {
-      display: none;
-    }
+  .playIconNone .playIcon {
+    display: none;
   }
 }
 

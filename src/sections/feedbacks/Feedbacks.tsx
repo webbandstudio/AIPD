@@ -23,16 +23,16 @@ const feedbackElement = (item: IFeedbackVideo, index: number) => {
 const Feedbacks = () => {
   return (
     <section className={styles.feedbackWrapper}>
-      <section className={styles.feedbacksText}>
+      <div className={styles.feedbacksText}>
         <h2 className={styles.title}> реальные отзывы клиентов</h2>
         <p className={`p2 ${styles.description}`}>
           За 5 лет работы, нам уже доверилось более 1,000 клиентов.
         </p>
         <TelegramOrder text="Присоединиться" />
-      </section>
-      <section className={styles.feedbacksVideos}>
+      </div>
+      <div className={styles.feedbacksVideos}>
         {FEEDBACKS_DATA.map((item, index) => feedbackElement(item, index))}
-      </section>
+      </div>
     </section>
   );
 };
