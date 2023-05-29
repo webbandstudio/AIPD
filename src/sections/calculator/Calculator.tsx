@@ -55,7 +55,7 @@ const Calculator = () => {
 
   return (
     <section className={styles.calculatorWrapper}>
-      <section className={styles.titleCourse}>
+      <div className={styles.titleCourse}>
         <h2 className={styles.title}>
           прикинь выгоду сам
           <Image className={styles.barcodeImage} src={sticker} alt="barcode sticker" />
@@ -65,8 +65,8 @@ const Calculator = () => {
           <p>1 USD = 4.21pln</p>
           <p>1 EUR = 4.35pln</p>
         </div>
-      </section>
-      <section className={styles.calculations}>
+      </div>
+      <div className={styles.calculations}>
         <div className={styles.textGroup}>
           <p className="p1">стоимость, pln</p>
           <input type="number" onChange={handlePrice} />
@@ -102,8 +102,8 @@ const Calculator = () => {
           <p className={`p1 ${styles.descriptionTextTotal}`}>конечная стоимость покупки, pln</p>
           <p className={`p1 ${styles.descriptionTotal}`}>{totalResult}</p>
         </div>
-      </section>
-      <section className={styles.vatWrapper}>
+      </div>
+      <div className={styles.vatWrapper}>
         <p>VAT:</p>
         {vatPercentage.map(vat => <VatElement
           key={vat}
@@ -111,14 +111,14 @@ const Calculator = () => {
           activeVat={activeVat}
           handleActiveVat={handleActiveVat}
         />)}
-      </section>
-      <section className={styles.coursesMobile}>
+      </div>
+      <div className={styles.coursesMobile}>
         <p>Актуальные курсы валют</p>
         <div>
           <p>1 USD = 4.21pln</p>
           <p>1 EUR = 4.35pln</p>
         </div>
-      </section>
+      </div>
     </section>
   );
 };
