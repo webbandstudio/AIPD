@@ -1,1 +1,1 @@
-# AIPD.github.io
+# AIPD
