@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 import styles from './DeliveryInstruction.module.scss';
-import stickerHyper from '@assets/images/stickerHyper.png';
-import iphone from '@assets/images/iphone.png';
-import commissionSticker from '@assets/images/commission.png';
-import fiveYearSticker from '@assets/images/fiveYearSticker.png';
-import horizontalLine from '@assets/images/horisontalLine.png';
-import verticalLine from '@assets/images/verticalLine.png';
+import stickerHyper from '@assets/images/png/stickers/stickerHyper.png';
+import iphone from '@assets/images/png/iphone.png';
+import commissionSticker from '@assets/images/png/stickers/commission.png';
+import fiveYearSticker from '@assets/images/png/stickers/fiveYearSticker.png';
+import horizontalLine from '@assets/images/png/horisontalLine.png';
+import verticalLine from '@assets/images/png/verticalLine.png';
 import InstructionText from './instructionText/InstructionText';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 

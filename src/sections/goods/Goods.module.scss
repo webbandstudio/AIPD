@@ -1,0 +1,139 @@
+$goodsBackgroundColors: (
+  $red,
+  $mediumPurple,
+  $grey,
+  $blue,
+  $orange,
+  $lightRed,
+  $lightYellow,
+  $darkPurple,
+  $blue,
+  $darkGreen,
+  $darkBlue,
+  $darkRed,
+  $red,
+  $mediumPurple,
+  $green,
+  $blue
+);
+
+.container {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  color: $white;
+  text-transform: uppercase;
+  max-width: 883px;
+  text-align: center;
+
+  span {
+    color: $mediumPurple;
+  }
+}
+
+.goods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  margin-top: 100px;
+
+  @for $i from 1 to 17 {
+    li:nth-child(#{$i}) {
+      background-color: nth($goodsBackgroundColors, $i);
+    }
+  }
+}
+
+.telegramOrderDesktop {
+  position: relative;
+  margin-top: -130px;
+  z-index: 5;
+  width: 100%;
+
+  button {
+    margin: auto auto 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 1440px;
+    height: 350px;
+    background: linear-gradient(179.71deg, #000000 35.87%, rgba(5, 4, 10, 0.48) 68.18%, rgba(9, 7, 19, 0) 96.12%);
+    transform: rotate(-180deg);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.95;
+  }
+}
+
+.telegramOrderMobile {
+  display: none;
+}
+
+@media screen and (max-width: $largeTablet) {
+  .container {
+    margin-top: 100px;
+  }
+
+  .goods {
+    margin: 40px 24px 0;
+    gap: 10px;
+  }
+
+  .header {
+    font-size: $bigTitle;
+    line-height: 56px;
+    margin: 0 15px;
+  }
+
+  .telegramOrderDesktop {
+    display: none;
+  }
+
+  .telegramOrderMobile {
+    display: block;
+    z-index: 5;
+    width: 100%;
+    position: relative;
+
+    button {
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: flex;
+      width: 100%;
+      height: 235px;
+      background: linear-gradient(179.71deg, #000000 35.87%, rgba(5, 4, 10, 0.48) 68.18%, rgba(9, 7, 19, 0) 96.12%);
+      transform: rotate(-180deg);
+      bottom: 75px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header {
+    font-size: $mediumTitle;
+    line-height: 45px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .header {
+    font-size: $smallTitle;
+    line-height: 36px;
+  }
+}

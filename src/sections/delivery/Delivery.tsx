@@ -97,10 +97,6 @@ const desktopImages = [
 const Delivery = () => {
   const tagsTextMobile = tagsText.filter(elem => elem.id !== 4);
 
-  const drawStarIcon = () => {
-    return (<Image className={styles.starIcon} src={starIcon} alt="divider" />);
-  };
-
   return (
     <section className={styles.wrapper}>
       <div className={styles.desktopImages}>
@@ -127,14 +123,19 @@ const Delivery = () => {
         </div>
         <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
         <div className={styles.telegramWrapperDesktop}>
-          <TelegramOrder text='Оформить заказ в Телеграм' />
+          <TelegramOrder text="Оформить заказ в Телеграм" />
         </div>
         <div className={styles.telegramWrapperMobile}>
-          <TelegramOrder text='Оформить заказ' />
+          <TelegramOrder text="Оформить заказ" />
         </div>
         <div className={styles.tags}>
           {tagsText.map(elem => elem.id % 2 === 0
-            ? drawStarIcon()
+            ? <Image
+              key={elem.id}
+              className={styles.starIcon}
+              src={starIcon}
+              alt="divider"
+            />
             : <Tag
               upText={elem.upText || ''}
               downText={elem.downText || ''}
@@ -144,7 +145,12 @@ const Delivery = () => {
         </div>
         <div className={styles.tagsMobile}>
           {tagsTextMobile.map(elem => elem.id % 2 === 0
-            ? drawStarIcon()
+            ? <Image
+              key={elem.id}
+              className={styles.starIcon}
+              src={starIcon}
+              alt="divider"
+            />
             : <Tag
               upText={elem.upText || ''}
               downText={elem.downText || ''}

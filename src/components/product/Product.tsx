@@ -1,29 +1,29 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
 import styles from './Product.module.scss';
 
 interface IProduct {
-  image: string,
+  image: StaticImageData,
   title: string,
   economy: number,
 }
 
 const Product: React.FC<IProduct> = ({ image, title, economy }) => {
-  console.log(image);
-  
   return (
-    <div className={styles.container}>
+    <li className={styles.container}>
       <div className={styles.description}>
-        <p className={styles.title}>{title}</p>
-        <p className={styles.title}>Экономия ${economy}</p>
+        <p className={`${styles.title} p2`}>{title}</p>
+        <p className={`${styles.economy} p1`}>Экономия ${economy}</p>
       </div>
-      {/* {image && <Image
-        className={styles.productImage}
-        src={image}
-        alt='product'
-      />} */}
-    </div>
+      <div className={styles.imageWrapper}>
+        <Image
+          className={styles.productImage}
+          src={image}
+          alt="product"
+        />
+      </div>
+    </li>
   );
 };
 
