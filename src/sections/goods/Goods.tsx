@@ -20,26 +20,26 @@ import sneakerAirJordan from '@assets/images/png/goodsImages/sneakerAirJordan.pn
 import earPhones from '@assets/images/png/goodsImages/earPhones.png';
 import wheel from '@assets/images/png/goodsImages/wheel.png';
 
-const Goods = () => {
-  const productImages = [
-    headPhones,
-    table,
-    jacket,
-    laptop,
-    sneakerYeezy,
-    sneakerZigKinetica,
-    sneakerNewBalance,
-    sneakerAirJordanMid,
-    playStation,
-    sneakerAdidasForum,
-    parfume,
-    washingMachine,
-    television,
-    sneakerAirJordan,
-    earPhones,
-    wheel,
-  ];
+const productImages = [
+  headPhones,
+  table,
+  jacket,
+  laptop,
+  sneakerYeezy,
+  sneakerZigKinetica,
+  sneakerNewBalance,
+  sneakerAirJordanMid,
+  playStation,
+  sneakerAdidasForum,
+  parfume,
+  washingMachine,
+  television,
+  sneakerAirJordan,
+  earPhones,
+  wheel,
+];
 
+const Goods = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.header}>
