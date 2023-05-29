@@ -1,4 +1,5 @@
 .calculatorWrapper {
+  position: relative;
   max-width: 1100px;
   width: 100%;
   margin: 80px auto 0;
@@ -6,21 +7,20 @@
   padding: 45px 0 30px 46px;
   display: flex;
   height: 307px;
+}
 
-  &:before {
-    content: url('../../public/assets/images/png/tree.png');
-    position: relative;
-    left: -59px;
-    top: -46px;
-  }
+.leftBorderImage {
+  position: absolute;
+  margin-top: -46px;
+  margin-left: -59px;
+}
 
-  &:after {
-    content: url('../../public/assets/images/png/tree.png');
-    position: relative;
-    transform: rotate(180deg);
-    right: -13px;
-    bottom: -30px;
-  }
+.rightBorderImage {
+  position: absolute;
+  margin-top: -46px;
+  margin-right: -13px;
+  transform: rotate(180deg);
+  right: 0;
 }
 
 .titleCourse {
@@ -219,14 +219,15 @@
     grid-template-columns: 1fr 2fr;
     width: 90%;
     height: unset;
+  }
 
-    &:after {
-      display: none;
-    }
+  .leftBorderImage {
+    margin-top: -1px;
+    margin-left: -13px;
+  }
 
-    &:before {
-      display: none;
-    }
+  .rightBorderImage {
+    margin-top: -1px;
   }
 
   .title {
@@ -247,10 +248,28 @@
   }
 }
 
+@media screen and (max-width: $desktop - 19px) {
+  .leftBorderImage {
+    height: 420px;
+  }
+
+  .rightBorderImage {
+    height: 420px;
+  }
+}
+
 @media screen and (max-width: $largeTablet) {
   .calculatorWrapper {
     grid-template-columns: 1fr;
     padding: 40px 20px 50px 30px;
+  }
+
+  .leftBorderImage {
+    display: none;
+  }
+
+  .rightBorderImage {
+   display: none;
   }
 
   .calculations {
@@ -280,6 +299,24 @@
       font-size: 15px;
       line-height: 18px;
     }
+  }
+
+  .leftBorderImage {
+    transform: rotate(90deg);
+    margin: -188px auto 0;
+    right: 0;
+    left: 0;
+    height: 363px;
+  }
+
+  .rightBorderImage {
+    transform: rotate(270deg);
+    margin: auto auto -188px;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 363px;
   }
 
   .calculations {

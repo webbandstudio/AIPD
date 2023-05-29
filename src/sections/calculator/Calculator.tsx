@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Calculator.module.scss';
 import sticker from '@assets/images/png/stickers/calculatorSticker.png';
 import infoIcon from '@assets/images/png/infoIcon.png';
+import borderImage from '@assets/images/png/tree.png';
 
 const vatPercentage = ['5%', '8%', '23%'];
 
@@ -55,6 +56,7 @@ const Calculator = () => {
 
   return (
     <section className={styles.calculatorWrapper}>
+      <Image src={borderImage} alt="border image" className={styles.leftBorderImage} />
       <div className={styles.titleCourse}>
         <h2 className={styles.title}>
           прикинь выгоду сам
@@ -119,6 +121,7 @@ const Calculator = () => {
           <p>1 EUR = 4.35pln</p>
         </div>
       </div>
+      <Image src={borderImage} alt="border image" className={styles.rightBorderImage} />
     </section>
   );
 };
