@@ -1,0 +1,13 @@
+.headerWrapper {
+  width: 100%;
+  max-width: 1190px;
+  margin: 110px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  text-transform: uppercase;
+  line-height: 88px;
+  color: $white;
+}

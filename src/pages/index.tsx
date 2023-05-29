@@ -1,6 +1,6 @@
-import Delivery from '@sections/delivery/Delivery';
-import Shops from '@sections/shops/Shops';
-import DeliveryInstruction from '@sections/deliveryInstruction/DeliveryInstruction';
+import Delivery from '@sections/mainPage/delivery/Delivery';
+import Shops from '@sections/mainPage/shops/Shops';
+import DeliveryInstruction from '@sections/mainPage/deliveryInstruction/DeliveryInstruction';
 
 const Home = () => {
   return (

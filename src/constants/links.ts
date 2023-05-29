@@ -1,7 +1,7 @@
 export const HEADER_LINKS = [
   {
     title: 'магазины',
-    link: ''
+    link: '/shops'
   },
   {
     title: 'как мы работаем',
@@ -13,7 +13,7 @@ export const HEADER_LINKS = [
   },
   {
     title: 'отзывы',
-    link: '/shops'
+    link: ''
   },
 ];
 
