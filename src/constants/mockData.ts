@@ -2,37 +2,37 @@ export const SHOPS = [
   {
     id: '1',
     category: 'одежда',
-    image: ''
+    image: '',
   },
   {
     id: '3',
     category: 'техника',
-    image: ''
+    image: '',
   },
   {
     id: '6',
     category: 'парфюмерия',
-    image: ''
+    image: '',
   },
   {
     id: '10',
     category: 'одежда',
-    image: ''
+    image: '',
   },
   {
     id: '11',
     category: 'одежда',
-    image: ''
+    image: '',
   },
   {
     id: '15',
     category: 'обувь',
-    image: ''
+    image: '',
   },
   {
     id: '17',
     category: 'площадка',
-    image: ''
+    image: '',
   },
 ];
 
@@ -123,31 +123,31 @@ export const FEEDBACKS_DATA = [
   {
     id: 1,
     video: '',
-    title: 'Дима, Минск'
+    title: 'Дима, Минск',
   },
   {
     id: 3,
     video: '',
-    title: ''
+    title: '',
   },
   {
     id: 5,
     video: '',
-    title: 'Гриша, Орша'
+    title: 'Гриша, Орша',
   },
   {
     id: 9,
     video: '',
-    title: 'Вика, Москва'
+    title: 'Вика, Москва',
   },
   {
     id: 12,
     video: '',
-    title: 'Мага, Махачкала'
+    title: 'Мага, Махачкала',
   },
   {
     id: 17,
     video: '',
-    title: ''
+    title: '',
   },
 ];

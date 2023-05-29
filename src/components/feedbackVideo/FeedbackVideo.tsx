@@ -2,12 +2,12 @@ import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 
 import styles from './FeedbackVideo.module.scss';
-import playIcon from '@assets//images/png/playIcon.png';
+import playIcon from '@assets/images/png/playIcon.png';
 
 export interface IFeedbackVideo {
   video: string;
   title: string;
-  id?: number;
+  id: number;
 }
 
 const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
@@ -25,7 +25,7 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
     <section className={styles.wrapper}>
       <div className={styles.videoContainer}>
         <video loop ref={videoControl} onClick={playVideo}>
-          <source src={video || '/testVideo.mp4'} type="video/mp4" />
+          <source src={video || '/defaultVideo.mp4'} type="video/mp4" />
         </video>
         <Image
           onClick={playVideo}

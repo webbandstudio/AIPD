@@ -16,7 +16,7 @@ const feedbackElement = (item: IFeedbackVideo, index: number) => {
         <p className={`p2 ${styles.moreFeedbacksText}`}>еще отзывы</p>
       </div>
     default:
-      return <FeedbackVideo video={item.video} title={item.title} key={item.id} />
+      return <FeedbackVideo video={item.video} title={item.title} key={item.id} id={item.id} />
   }
 }
 
