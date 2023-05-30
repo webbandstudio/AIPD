@@ -2,20 +2,31 @@
   position: relative;
   max-width: 1100px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   background-color: $lightGrey;
   padding: 45px 0 30px 45px;
   display: flex;
-  height: 305px;
+  height: 320px;
 }
 
 .border {
   max-width: 1145px;
   display: flex;
   margin: 80px auto 0;
-  border-right: 20px solid $blue;
-  border-left: 20px solid;
-  border-image: url('../../public/assets/images/svg/polygon.svg') 30% round;
+  justify-content: center;
+}
+
+.borderLeft {
+  background-image: url('../../public/assets/images/svg/borderLeft.svg');
+  width: 11px;
+  margin-right: -2px;
+  background-position-y: 13px;
+}
+
+.borderRight {
+  background-image: url('../../public/assets/images/svg/borderRight.svg');
+  width: 11px;
+  background-position-y: 10px;
 }
 
 .titleCourse {
@@ -217,6 +228,10 @@
     height: unset;
   }
 
+  .borderLeft {
+    margin-right: -3px;
+  }
+
   .title {
     font-size: 48px;
     line-height: 55px;
@@ -243,8 +258,40 @@
   .calculatorWrapper {
     grid-template-columns: 1fr;
     padding: 40px 20px 50px 30px;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      height: 10px;
+      background-image: url('../../public/assets/images/svg/borderTop.svg');
+      width: 100%;
+      position: absolute;
+      top: -8px;
+      background-position-x: 11px;
+    }
+
+    &::after {
+      content: '';
+      height: 8px;
+      background-image: url('../../public/assets/images/svg/borderBottom.svg');
+      width: 100%;
+      position: absolute;
+      bottom: -8px;
+      background-position-x: 11px;
+    }
   }
 
+  .border {
+    flex-direction: column;
+  }
+
+  .borderLeft {
+    display: none;
+  }
+
+  .borderRight {
+    display: none;
+  }
 
   .calculations {
     max-width: 100%;

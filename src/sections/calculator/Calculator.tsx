@@ -60,6 +60,7 @@ const Calculator = () => {
 
   return (
     <section id="calculator" className={styles.border}>
+      <div className={styles.borderLeft} />
       <div className={styles.calculatorWrapper}>
         <div className={styles.titleCourse}>
           <h2 className={styles.title}>
@@ -126,6 +127,7 @@ const Calculator = () => {
           </div>
         </div>
       </div>
+      <div className={styles.borderRight} />
     </section>
   );
 };
