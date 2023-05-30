@@ -1,19 +1,19 @@
 export const HEADER_LINKS = [
   {
     title: 'магазины',
-    link: ''
+    link: '/shops'
   },
   {
     title: 'как мы работаем',
-    link: ''
+    link: '#instruction'
   },
   {
     title: 'калькулятор',
-    link: ''
+    link: '#calculator'
   },
   {
     title: 'отзывы',
-    link: '/shops'
+    link: '#feedbacks'
   },
 ];
 

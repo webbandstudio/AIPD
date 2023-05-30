@@ -26,6 +26,7 @@
   transition: $animationPeriod;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 
   &:hover {
     background-color: #1B1929;
@@ -109,6 +110,12 @@
 }
 
 @media screen and (max-width: $smallTablet) {
+  .shopsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
   .arrow {
     display: none;
   }

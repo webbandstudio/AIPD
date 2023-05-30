@@ -35,7 +35,7 @@ const instructions = [
 
 const DeliveryInstruction = () => {
   return (
-    <section className={styles.container}>
+    <section id="instruction" className={styles.container}>
       <div className={styles.headlineShadow} />
       <h2 className={styles.header}>
         запрыгивай в телегу и <br />

@@ -41,8 +41,15 @@
   position: absolute;
   width: calc(100% + 290px);
   height: 405px;
-  left: -109px;
+  left: -110px;
   top: -30px;
+}
+
+@media screen and (min-width: 1650px) {
+  .gradient {
+    width: 200%;
+    left: calc(-110px - 50%);
+  }
 }
 
 @media screen and (max-width: $desktop) {

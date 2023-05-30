@@ -2,25 +2,20 @@
   position: relative;
   max-width: 1100px;
   width: 100%;
-  margin: 80px auto 0;
+  margin: 0 auto;
   background-color: $lightGrey;
   padding: 45px 0 30px 45px;
   display: flex;
   height: 305px;
 }
 
-.leftBorderImage {
-  position: absolute;
-  margin-top: -46px;
-  margin-left: -59px;
-}
-
-.rightBorderImage {
-  position: absolute;
-  margin-top: -46px;
-  margin-right: -13px;
-  transform: rotate(180deg);
-  right: 0;
+.border {
+  max-width: 1145px;
+  display: flex;
+  margin: 80px auto 0;
+  border-right: 20px solid $blue;
+  border-left: 20px solid;
+  border-image: url('../../public/assets/images/svg/polygon.svg') 30% round;
 }
 
 .titleCourse {
@@ -145,6 +140,7 @@
   font-family: $font-face-primary;
   font-weight: $extra-bold;
   margin-right: 18px;
+  max-width: 310px;
 }
 
 .divider {
@@ -221,15 +217,6 @@
     height: unset;
   }
 
-  .leftBorderImage {
-    margin-top: -1px;
-    margin-left: -13px;
-  }
-
-  .rightBorderImage {
-    margin-top: -1px;
-  }
-
   .title {
     font-size: 48px;
     line-height: 55px;
@@ -246,15 +233,9 @@
     justify-content: space-between;
     margin-top: 20px;
   }
-}
 
-@media screen and (max-width: $desktop - 19px) {
-  .leftBorderImage {
-    height: 420px;
-  }
-
-  .rightBorderImage {
-    height: 420px;
+  .descriptionTotal {
+    overflow-wrap: break-word;
   }
 }
 
@@ -264,13 +245,6 @@
     padding: 40px 20px 50px 30px;
   }
 
-  .leftBorderImage {
-    display: none;
-  }
-
-  .rightBorderImage {
-   display: none;
-  }
 
   .calculations {
     max-width: 100%;
@@ -299,24 +273,6 @@
       font-size: 15px;
       line-height: 18px;
     }
-  }
-
-  .leftBorderImage {
-    transform: rotate(90deg);
-    margin: -188px auto 0;
-    right: 0;
-    left: 0;
-    height: 363px;
-  }
-
-  .rightBorderImage {
-    transform: rotate(270deg);
-    margin: auto auto -188px;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    height: 363px;
   }
 
   .calculations {
