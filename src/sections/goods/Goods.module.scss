@@ -17,6 +17,44 @@ $goodsBackgroundColors: (
   $blue
 );
 
+$productImageScaleX: (
+  0.7,
+  0.7,
+  1,
+  0.9,
+  0.9,
+  0.9,
+  0.8,
+  0.9,
+  0.8,
+  1,
+  0.3,
+  0.7,
+  0.8,
+  0.9,
+  0.8,
+  0.8
+);
+
+$productImageScaleY: (
+  0.7,
+  0.6,
+  1.3,
+  0.8,
+  0.7,
+  0.5,
+  0.5,
+  0.6,
+  0.9,
+  0.6,
+  0.7,
+  1,
+  0.6,
+  1,
+  0.9,
+  0.8
+);
+
 .container {
   margin-top: 140px;
   display: flex;
@@ -46,6 +84,18 @@ $goodsBackgroundColors: (
   @for $i from 1 to 17 {
     li:nth-child(#{$i}) {
       background-color: nth($goodsBackgroundColors, $i);
+
+      @if $i ==3 {
+        color: $black;
+      }
+
+      @else if $i ==7 {
+        color: $black;
+      }
+
+      @else {
+        color: $white;
+      }
     }
   }
 }
@@ -80,13 +130,17 @@ $goodsBackgroundColors: (
 }
 
 @media screen and (max-width: $largeTablet) {
-  .container {
-    margin-top: 100px;
-  }
-
   .goods {
-    margin: 40px 24px 0;
+    margin: 40px 0 0;
     gap: 10px;
+
+    @for $i from 1 to 17 {
+      li:nth-child(#{$i}) {
+        img {
+          transform: scale(nth($productImageScaleX, $i), nth($productImageScaleY, $i));
+        }
+      }
+    }
   }
 
   .header {
@@ -128,6 +182,17 @@ $goodsBackgroundColors: (
   .header {
     font-size: $mediumTitle;
     line-height: 45px;
+  }
+
+  .telegramOrderMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      margin: 0;
+      justify-content: center;
+    }
   }
 }
 
