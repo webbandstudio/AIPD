@@ -1,6 +1,8 @@
 import Delivery from '@sections/mainPage/delivery/Delivery';
 import Shops from '@sections/mainPage/shops/Shops';
 import DeliveryInstruction from '@sections/mainPage/deliveryInstruction/DeliveryInstruction';
+import Goods from '@sections/mainPage/goods/Goods';
+import Calculator from '@sections/mainPage/calculator/Calculator';
 
 const Home = () => {
   return (
@@ -8,6 +10,8 @@ const Home = () => {
       <Delivery />
       <Shops />
       <DeliveryInstruction />
+      <Goods />
+      <Calculator />
     </>
   );
 };
