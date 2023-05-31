@@ -118,3 +118,50 @@ export const GOODS = [
     economy: 250,
   },
 ];
+
+export const CATEGORIES = [
+  {
+    id: 1,
+    category: 'все магазины',
+  },
+  {
+    id: 2,
+    category: 'детские товары',
+  },
+  {
+    id: 3,
+    category: 'компьютеры и ноутбуки',
+  },
+  {
+    id: 4,
+    category: 'обувь',
+  },
+  {
+    id: 5,
+    category: 'парфюмерия',
+  },
+  {
+    id: 6,
+    category: 'одежда',
+  },
+  {
+    id: 7,
+    category: 'строительство',
+  },
+  {
+    id: 8,
+    category: 'обувь',
+  },
+  {
+    id: 9,
+    category: 'парфюмерия',
+  },
+  {
+    id: 10,
+    category: 'одежда',
+  },
+  {
+    id: 11,
+    category: 'строительство',
+  },
+]

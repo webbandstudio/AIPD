@@ -19,7 +19,6 @@
   cursor: pointer;
 }
 
-
 @mixin tagText {
   color: $white;
   opacity: 0.9;
@@ -39,4 +38,11 @@
 @mixin vatElementText {
   margin: auto;
   color: $black;
+}
+
+@mixin telegramOrderWrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 20px;
 }
