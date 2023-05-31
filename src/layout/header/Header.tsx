@@ -9,8 +9,8 @@ const Header = () => {
       <div className={styles.header}>
         <Link className={styles.title} href="/">All in poland delivery</Link>
         <nav className={styles.navWrapper}>
-          {HEADER_LINKS.map((item) =>
-            <Link key={item.title} href={item.link} className={styles.link}>{item.title}</Link>
+          {HEADER_LINKS.map(({ title, link}) =>
+            <Link key={title} href={link} className={styles.link}>{title}</Link>
           )}
         </nav>
       </div>

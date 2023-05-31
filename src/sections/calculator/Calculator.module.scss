@@ -12,7 +12,7 @@
 .border {
   max-width: 1145px;
   display: flex;
-  margin: 40px auto 0;
+  margin: 0 auto;
   justify-content: center;
 }
 
@@ -206,18 +206,17 @@
 }
 
 .tooltipWindow {
-  height: 65px;
-  width: 230px;
-  position: absolute;
-  margin: -70px 0 0 -100px;
-  background: $black;
-  border-radius: 8px;
-  display: flex;
+  @include tooltip;
+}
 
-  label {
-    padding: 16px;
-    color: $white;
-  }
+.tooltipWindowButtons {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
+}
+
+.tooltipWindowButtons3 {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -258,7 +257,7 @@
   .calculatorWrapper {
     grid-template-columns: 1fr;
     padding: 40px 20px 50px 30px;
-    margin: 60px auto 0;
+    margin: 100px auto 0;
 
     &::before {
       content: '';
@@ -306,13 +305,21 @@
     grid-row: 2;
     margin: 30px 25px;
   }
+
+  .descriptionTotal {
+    font-size: $mediumTitle;
+    line-height: 45px;
+  }
+
+  .tooltipWindowButtons3 {
+    margin: -75px 0 0 -145px;
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
   .calculatorWrapper {
     width: 85%;
     padding: 40px 20px 50px 20px;
-    margin: 60px auto 0;
 
     input {
       width: 100px;

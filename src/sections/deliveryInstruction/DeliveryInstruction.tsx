@@ -7,31 +7,9 @@ import commissionSticker from '@assets/images/png/stickers/commission.png';
 import fiveYearSticker from '@assets/images/png/stickers/fiveYearSticker.png';
 import horizontalLine from '@assets/images/png/horisontalLine.png';
 import verticalLine from '@assets/images/png/verticalLine.png';
-import InstructionText from './instructionText/InstructionText';
+import InstructionText from '@sections/deliveryInstruction/instructionText/InstructionText';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
-
-const instructions = [
-  {
-    id: 1,
-    title: 'Закидываешь ссылку в телеграм бот',
-    description: 'Супер просто и удобно. А наши менеджеры на всё ответят и помогут.',
-  },
-  {
-    id: 2,
-    title: 'Оплачиваешь через ссылку',
-    description: 'Безопасная оплата через секьюрную индивидуальную ссылку.',
-  },
-  {
-    id: 3,
-    title: 'Выбираешь доставку',
-    description: 'На твое усмотрение выбирай перевозчика и мы передадим контакты для дальнейшей коммуникации.',
-  },
-  {
-    id: 4,
-    title: 'Получаешь',
-    description: 'Текст описание в несколько предложений.',
-  },
-];
+import { INSTRUCTIONS } from '@constants/constants';
 
 const DeliveryInstruction = () => {
   return (
@@ -49,24 +27,24 @@ const DeliveryInstruction = () => {
       <Image className={styles.fiveYearSticker} src={fiveYearSticker} alt="5 лет доставляем товары" />
       <Image className={styles.commissionSticker} src={commissionSticker} alt="комиссия 9%" />
       <div className={styles.instructionContainer}>
-        <div className={styles.phoneWrapper}>
+        <figure className={styles.phoneWrapper}>
           <Image className={styles.iphone} src={iphone} alt="iphone" />
           <div className={styles.purpleEllipse} />
-        </div>
+        </figure>
         <div className={styles.instructionWrapper}>
-          <div className={styles.instructionImages}>
+          <figure className={styles.instructionImages}>
             <Image className={styles.horizontalLine} src={horizontalLine} alt="instruction route" />
             <Image className={styles.verticalLine} src={verticalLine} alt="instruction route" />
-          </div>
-          <div className={styles.instructions}>
-            {instructions.map(elem =>
+          </figure>
+          <ul className={styles.instructions}>
+            {INSTRUCTIONS.map(({ title, description, id }) =>
               <InstructionText
-                title={elem.title}
-                description={elem.description}
-                key={elem.id}
+                title={title}
+                description={description}
+                key={id}
               />
             )}
-          </div>
+          </ul>
         </div>
       </div>
       <div className={styles.telegramWrapperDesktop}>

@@ -16,77 +16,79 @@ const Footer = () => {
     <footer className={styles.footerWrapper}>
       <Image src={price} alt="price sticker" className={styles.priceSticker} />
       <Image src={date} alt="date sticker" className={styles.dateSticker} />
-      <div className={styles.infoWrapper}>
-        <div className={styles.shopInfo}>
-          <div className={styles.group}>
+      <section className={styles.infoWrapper}>
+        <ul className={styles.shopInfo}>
+          <li className={styles.group}>
             <p className={styles.title}>
               Контакты
             </p>
             <div className={styles.firstGroup}>
-              <div className={styles.groupContent}>
+              <figure className={styles.groupContent}>
                 <Image className={styles.houseImage} src={house} alt="house" />
-                <div className={styles.contentText}>
+                <figcaption className={styles.contentText}>
                   <p>Склад в польше:</p>
                   <Link href={plTelephoneNumber}>+48 571 352 966</Link>
-                </div>
-              </div>
-              <div className={styles.specialGroupContent}>
+                </figcaption>
+              </figure>
+              <figure className={styles.specialGroupContent}>
                 <Image className={styles.accountImage} src={account} alt="account" />
-                <div className={styles.contentText}>
+                <figcaption className={styles.contentText}>
                   <p>Менеджер в Беларуси:</p>
                   <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
-                </div>
-              </div>
+                </figcaption>
+              </figure>
             </div>
-          </div>
-          <div className={styles.specialGroup}>
-            <div className={styles.groupContent}>
+          </li>
+          <li className={styles.specialGroup}>
+            <figure className={styles.groupContent}>
               <Image className={styles.accountImage} src={account} alt="account" />
-              <div className={styles.contentText}>
+              <figcaption className={styles.contentText}>
                 <p>Менеджер в Беларуси:</p>
                 <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
-              </div>
-            </div>
-          </div>
-          <div className={styles.group}>
+              </figcaption>
+            </figure>
+          </li>
+          <li className={styles.group}>
             <p className={styles.title}>
               Адрес
             </p>
-            <div className={styles.groupContent}>
+            <figure className={styles.groupContent}>
               <Image className={styles.addressImage} src={address} alt="address" />
-              <Link
-                href={googleMapsLink}
-                target="_blank"
-                className={styles.contentText}
-              >
-                <p>Sokólska 22/1, 16-123,</p>
-                <p>Kuźnica, Polska</p>
-              </Link>
-            </div>
-          </div>
-          <div className={styles.group}>
+              <figcaption>
+                <Link
+                  href={googleMapsLink}
+                  target="_blank"
+                  className={styles.contentText}
+                >
+                  <p>Sokólska 22/1, 16-123,</p>
+                  <p>Kuźnica, Polska</p>
+                </Link>
+              </figcaption>
+            </figure>
+          </li>
+          <li className={styles.group}>
             <p className={styles.title}>
               Социалки
             </p>
-            <div className={styles.groupContent}>
+            <figure className={styles.groupContent}>
               <Image className={styles.instagramImage} src={instagram} alt="instagram" />
-              <div className={styles.contentText}>
+              <figcaption className={styles.contentText}>
                 <Link href={instagramLink} target="_blank">
                   Instagram
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.otherInfo}>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+        <aside className={styles.otherInfo}>
           <p>
             AIPD © 2023 Условия использования
           </p>
           <Link href="https://zametniy.com/" target="_blank">
             Дизайн – Zametniy.com
           </Link>
-        </div>
-      </div>
+        </aside>
+      </section>
       <Image src={barcode} alt="barcode sticker" className={styles.barcodeSticker} />
     </footer>
   );
