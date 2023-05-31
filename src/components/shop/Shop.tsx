@@ -10,16 +10,18 @@ interface IShop {
   link: string;
 }
 
-const Shop:React.FC<IShop> = ({ label, image, link }) => {
+const Shop: React.FC<IShop> = ({ label, image, link }) => {
   return (
-    <Link href={link} className={styles.wrapper} target="_blank">
-      <div className={styles.labelWrapper}>
-        <label className={styles.label}>{label}</label>
-      </div>
-      <div className={styles.imageWrapper}>
-        <Image className={styles.innerImage} src={image} alt="shop" />
-      </div>
-    </Link>
+    <li>
+      <Link href={link} className={styles.wrapper} target="_blank">
+        <div className={styles.labelWrapper}>
+          <label className={styles.label}>{label}</label>
+        </div>
+        <figure className={styles.imageWrapper}>
+          <Image className={styles.innerImage} src={image} alt="shop" />
+        </figure>
+      </Link>
+    </li>
   );
 };
 

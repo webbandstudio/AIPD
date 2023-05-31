@@ -190,13 +190,17 @@ $productImageScaleY: (
     align-items: stretch;
 
     button {
-      margin: 0;
+      margin: 0 10px;
       justify-content: center;
     }
   }
 }
 
 @media screen and (max-width: $smallTablet) {
+  .container {
+    margin-top: 100px;
+  }
+
   .header {
     font-size: $smallTitle;
     line-height: 36px;

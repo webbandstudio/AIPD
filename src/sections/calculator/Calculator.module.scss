@@ -12,7 +12,7 @@
 .border {
   max-width: 1145px;
   display: flex;
-  margin: 80px auto 0;
+  margin: 40px auto 0;
   justify-content: center;
 }
 
@@ -20,13 +20,13 @@
   background-image: url('../../public/assets/images/svg/borderLeft.svg');
   width: 11px;
   margin-right: -2px;
-  background-position-y: 13px;
+  background-position-y: 12px;
 }
 
 .borderRight {
   background-image: url('../../public/assets/images/svg/borderRight.svg');
   width: 11px;
-  background-position-y: 10px;
+  background-position-y: 12px;
 }
 
 .titleCourse {
@@ -258,7 +258,7 @@
   .calculatorWrapper {
     grid-template-columns: 1fr;
     padding: 40px 20px 50px 30px;
-    margin: 0 auto;
+    margin: 60px auto 0;
 
     &::before {
       content: '';
@@ -310,9 +310,9 @@
 
 @media screen and (max-width: $smallTablet) {
   .calculatorWrapper {
-    width: 86%;
+    width: 85%;
     padding: 40px 20px 50px 20px;
-    margin: 110px auto 0;
+    margin: 60px auto 0;
 
     input {
       width: 100px;

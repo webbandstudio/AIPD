@@ -24,14 +24,14 @@ const Footer = () => {
             </p>
             <div className={styles.firstGroup}>
               <div className={styles.groupContent}>
-                <Image src={house} alt="house" />
+                <Image className={styles.houseImage} src={house} alt="house" />
                 <div className={styles.contentText}>
                   <p>Склад в польше:</p>
                   <Link href={plTelephoneNumber}>+48 571 352 966</Link>
                 </div>
               </div>
               <div className={styles.specialGroupContent}>
-                <Image src={account} alt="account" />
+                <Image className={styles.accountImage} src={account} alt="account" />
                 <div className={styles.contentText}>
                   <p>Менеджер в Беларуси:</p>
                   <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
           <div className={styles.specialGroup}>
             <div className={styles.groupContent}>
-              <Image src={account} alt="account" />
+              <Image className={styles.accountImage} src={account} alt="account" />
               <div className={styles.contentText}>
                 <p>Менеджер в Беларуси:</p>
                 <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
               Адрес
             </p>
             <div className={styles.groupContent}>
-              <Image src={address} alt="address" />
+              <Image className={styles.addressImage} src={address} alt="address" />
               <Link
                 href={googleMapsLink}
                 target="_blank"
@@ -69,7 +69,7 @@ const Footer = () => {
               Социалки
             </p>
             <div className={styles.groupContent}>
-              <Image src={instagram} alt="instagram" />
+              <Image className={styles.instagramImage} src={instagram} alt="instagram" />
               <div className={styles.contentText}>
                 <Link href={instagramLink} target="_blank">
                   Instagram

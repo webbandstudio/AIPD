@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 import styles from './Calculator.module.scss';
 import sticker from '@assets/images/png/stickers/calculatorSticker.png';
-import infoIcon from '@assets/images/png/infoIcon.png';
+import infoIcon from '@assets/images/svg/icons/infoIcon.svg';
 
 const vatPercentage = ['5%', '8%', '23%'];
 
@@ -14,17 +14,28 @@ interface IVat {
 }
 
 const VatElement:React.FC<IVat> = ({ text, handleActiveVat, activeVat }) => {
+  const [isHovering, setIsHovered] = useState(false);
+  const onMouseEnter = () => setIsHovered(true);
+  const onMouseLeave = () => setIsHovered(false);
+
   const isActive = activeVat === text;
 
   return (
-    <div
-      className={isActive ? styles.vatElementWrapperActive : styles.vatElementWrapperNonActive}
-      onClick={() => handleActiveVat(text)}
-    >
-      <p className={`p1 ${isActive ? styles.vatElementTextActive : styles.vatElementTextNonActive}`}>
-        {text}
-      </p>
-    </div>
+    <>
+      <div
+        className={isActive ? styles.vatElementWrapperActive : styles.vatElementWrapperNonActive}
+        onClick={() => handleActiveVat(text)}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        {isHovering && <div className={styles.tooltipWindow}>
+          <label>{`VAT ${text} применяется на авто товары, колеса и стекла`}</label>
+        </div>}
+        <p className={`p1 ${isActive ? styles.vatElementTextActive : styles.vatElementTextNonActive}`}>
+          {text}
+        </p>
+      </div>
+    </>
   );
 }
 

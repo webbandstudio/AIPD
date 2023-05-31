@@ -55,6 +55,22 @@
   column-gap: 120px;
 }
 
+.houseImage {
+  margin: 0;
+}
+
+.accountImage {
+  margin: 0;
+}
+
+.addressImage {
+  margin: 0;
+}
+
+.instagramImage {
+  margin: 0;
+}
+
 .otherInfo {
   display: flex;
   justify-content: space-between;
@@ -108,8 +124,6 @@
   p {
     opacity: 0.5;
   }
-
-
 }
 
 @media screen and (max-width: $desktop) {
@@ -125,6 +139,22 @@
     display: grid;
     grid-template-columns: 1.5fr 0.5fr;
     row-gap: 20px;
+  }
+
+  .houseImage {
+    margin-top: 5px;
+  }
+
+  .accountImage {
+    margin: 5px 2px 0 0;
+  }
+
+  .addressImage {
+    margin: 5px 5px 0 7px;
+  }
+
+  .instagramImage {
+    margin-right: -3px;
   }
 
   .specialGroupContent {

@@ -10,11 +10,11 @@ const Shops = () => {
   return (
     <section className={styles.shopsSection}>
       <h2 className={styles.title}>Доставляем ото всюду</h2>
-      <div className={styles.shopsWrapper}>
+      <ul className={styles.shopsWrapper}>
         {SHOPS.map(({id, category, image, link }) =>
           <Shop key={id} label={category} image={image} link={link} />
         )}
-        <div>
+        <li>
           <Link href="/shops" className={styles.allShops}>
             <div className={styles.otherShops}>
               <label className={styles.label}>20+ магазинов</label>
@@ -26,8 +26,8 @@ const Shops = () => {
           </Link>
           <div className={styles.allShops1} />
           <div className={styles.allShops2} />
-        </div>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 };
