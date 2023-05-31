@@ -1,9 +1,9 @@
-import ShopsHeader from "@sections/shopsPage/shopsHeader/ShopsHeader";
+import MainSection from "@sections/shopsPage/mainSection/MainSection";
 
 const ShopsPage = () => {
   return (
     <>
-      <ShopsHeader />
+      <MainSection />
     </>
   );
 };

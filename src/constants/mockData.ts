@@ -2,37 +2,44 @@ export const SHOPS = [
   {
     id: '1',
     category: 'одежда',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '3',
     category: 'техника',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '6',
     category: 'парфюмерия',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '10',
     category: 'одежда',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '11',
     category: 'одежда',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '15',
     category: 'обувь',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '17',
     category: 'площадка',
-    image: ''
+    image: '',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
 ];
 

@@ -51,6 +51,15 @@
   gap: 12px;
 }
 
+.shopsWrapper {
+  max-width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 10% 0 140px;
+  gap: 30px 20px;
+}
+
 @media screen and (max-width: $desktop) {
   .headerWrapper {
     width: 100%;
@@ -79,5 +88,20 @@
 
   .title {
     margin: 0;
+  }
+
+  .shopsWrapper {
+    margin: 50px 10% 0 100px
+  }
+}
+
+@media screen and (max-width: $largeTablet) {
+  .title {
+    font-size: $bigTitle;
+    line-height: 56px;
+  }
+
+  .headerWrapper {
+    width: auto;
   }
 }

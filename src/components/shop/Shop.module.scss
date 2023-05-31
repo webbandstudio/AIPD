@@ -38,9 +38,20 @@
   margin: auto;
 }
 
+.description {
+  max-width: 269px;
+  margin-top: 16px;
+  color: $white;
+  opacity: 0.5;
+}
+
 @media screen and (max-width: $smallTablet) {
   .wrapper {
     width: 167px;
+  }
+
+  .description {
+    max-width: 167px;
   }
 
   .labelWrapper {
