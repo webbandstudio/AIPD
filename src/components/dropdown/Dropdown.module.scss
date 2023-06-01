@@ -1,0 +1,102 @@
+.dropdownWrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-family: $font-face-secondary;
+    color: $white;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: $medium;
+  }
+}
+
+.dropdownButton {
+  display: flex;
+  background: $purple;
+  border-radius: 110px;
+  width: 100%;
+  cursor: pointer;
+  transition: $animationPeriod;
+
+  &:hover {
+    background: $middlePurple;
+  }
+}
+
+.buttonText {
+  margin: 15px auto;
+}
+
+.dropdownImage {
+  @include dropdownArrow;
+}
+
+.dropdownImageActive {
+  @include dropdownArrow;
+  transform: scaleY(-1);
+}
+
+.itemsWrapper {
+  @include dropdownItems;
+  animation: growDown $animationPeriod + 0.2s;
+}
+
+.itemsWrapperClose {
+  @include dropdownItems;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  animation: growUp $animationPeriod + 0.2s;
+}
+
+.dropdownItem {
+  margin: 30px auto;
+  cursor: pointer;
+  transition: $animationPeriod;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+
+@keyframes growDown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  30% {
+    height: fit-content;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes growUp {
+  0% {
+    display: block;
+    opacity: 1;
+    height: fit-content;
+    visibility: visible;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  99% {
+    height: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    display: none;
+  }
+}

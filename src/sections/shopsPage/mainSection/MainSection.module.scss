@@ -38,6 +38,10 @@
   }
 }
 
+.backWrapper {
+  display: none;
+}
+
 .arrowImage {
   border: none;
   margin-left: 13px;
@@ -53,17 +57,32 @@
 
 .shopsWrapper {
   max-width: 1140px;
+  width: 95%;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px 10% 0 140px;
+  margin: 50px auto 0;
   gap: 30px 20px;
+}
+
+.dropdownWrapper {
+  display: none;
 }
 
 @media screen and (max-width: $desktop) {
   .headerWrapper {
-    width: 100%;
+    width: 95%;
     margin: 100px auto 0;
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .categoriesWrapper {
+    width: 95%;
+    margin: 10px auto 0;
+    padding: 0 20px;
+    justify-content: center;
   }
 
   .title {
@@ -81,17 +100,12 @@
 }
 
 @media screen and (max-width: $smallDesktop) {
-  .headerWrapper {
-    width: 100%;
-    margin: 100px auto 0 100px;
-  }
-
   .title {
     margin: 0;
   }
 
-  .shopsWrapper {
-    margin: 50px 10% 0 100px
+  .orderWrapperMobile {
+    margin: 60px 0 0 40px;
   }
 }
 
@@ -99,9 +113,63 @@
   .title {
     font-size: $bigTitle;
     line-height: 56px;
+    margin: 0 auto;
   }
 
   .headerWrapper {
     width: auto;
+    margin: 30px auto 0;
+    flex-direction: column;
+  }
+
+  .backWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 15px;
+    color: $white;
+    margin-bottom: 20px;
+    transition: $animationPeriod;
+    cursor: pointer;
+    text-decoration: none;
+
+    p {
+      line-height: 39px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .title {
+    font-size: $mediumTitle;
+    line-height: 39px;
+  }
+
+  .categoriesWrapper {
+    display: none;
+  }
+
+  .dropdownWrapper {
+    display: flex;
+    margin: 20px auto 40px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .shopsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin: 40px 0 0;
+    padding: 0 10px;
+    gap: 30px 15px;
+  }
+
+  .orderWrapperMobile {
+    margin: 60px 0 0 20px
   }
 }

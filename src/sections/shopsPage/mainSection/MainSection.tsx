@@ -8,6 +8,8 @@ import telegramArrow from '@assets/images/svg/telegramArrow.svg';
 import { CATEGORIES, SHOPS } from '@constants/mockData';
 import Category from '@components/category/Category';
 import Shop from '@components/shop/Shop';
+import backImage from '@assets/images/svg/arrowBack.svg';
+import Dropdown from "@components/dropdown/Dropdown";
 
 const MainSection = () => {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].id);
@@ -16,6 +18,10 @@ const MainSection = () => {
   return (
     <section>
       <div className={styles.headerWrapper}>
+        <Link href="/" className={styles.backWrapper}>
+          <Image src={backImage} alt="back image" />
+          <p>На главную</p>
+        </Link>
         <h2 className={styles.title}>магазины в польше</h2>
         <figure className={styles.orderWrapper}>
           <Image src={telegramIcon} alt="telegram icon" />
@@ -39,6 +45,13 @@ const MainSection = () => {
           />
         )}
       </ul>
+      {<div className={styles.dropdownWrapper}>
+        <Dropdown
+          items={CATEGORIES}
+          activeItem={activeCategory}
+          handleItem={handleCategory}
+        />
+      </div>}
       <ul className={styles.shopsWrapper}>
         {SHOPS.map(({ id, category, image, description }) =>
           <Shop
