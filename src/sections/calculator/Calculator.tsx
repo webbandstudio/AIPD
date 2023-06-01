@@ -47,12 +47,12 @@ const Calculator = () => {
   const handleActiveVat = (vat: string) => setActiveVat(vat);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
-  const handlePrice = (value: React.ChangeEvent<HTMLInputElement>) => {
-    const num = value.target.value;
-    const slicedNum = Number(value.target.value.slice(0, 8));
-    const finalValue = String(num.length > 8 ? slicedNum : Number(value.target.value))
+  const handlePrice = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const num = e.target.value;
+    const slicedNum = Number(e.target.value.slice(0, 8));
+    const finalValue = String(num.length > 8 ? slicedNum : Number(e.target.value))
 
-    value.target.value = finalValue;
+    e.target.value = finalValue;
     setPrice(Number(finalValue));
   }
 
