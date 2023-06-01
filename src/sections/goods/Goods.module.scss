@@ -85,11 +85,11 @@ $productImageScaleY: (
     li:nth-child(#{$i}) {
       background-color: nth($goodsBackgroundColors, $i);
 
-      @if $i ==3 {
+      @if $i == 3 {
         color: $black;
       }
 
-      @else if $i ==7 {
+      @else if $i == 7 {
         color: $black;
       }
 

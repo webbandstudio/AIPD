@@ -49,9 +49,11 @@ const Calculator = () => {
   const onMouseLeave = () => setIsHovered(false);
   const handlePrice = (value: React.ChangeEvent<HTMLInputElement>) => {
     const num = value.target.value;
+    const slicedNum = Number(value.target.value.slice(0, 8));
+    const finalValue = String(num.length > 8 ? slicedNum : Number(value.target.value))
 
-    value.target.value = String(num.length > 8 ? 99999999 : Number(value.target.value));
-    setPrice(num.length > 8 ? 99999999 : Number(value.target.value));
+    value.target.value = finalValue;
+    setPrice(Number(finalValue));
   }
 
   useEffect(() => {
