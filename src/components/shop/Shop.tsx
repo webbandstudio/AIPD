@@ -14,9 +14,7 @@ const Shop: React.FC<IShop> = ({ label, image, link }) => {
   return (
     <li>
       <Link href={link} className={styles.wrapper} target="_blank">
-        <div className={styles.labelWrapper}>
-          <label className={styles.label}>{label}</label>
-        </div>
+        <label className={styles.labelWrapper}>{label}</label>
         <figure className={styles.imageWrapper}>
           <Image className={styles.innerImage} src={image} alt="shop" />
         </figure>

@@ -14,6 +14,7 @@ import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
 import playStationImg from '@assets/images/png/playStation.png';
 import { TAGS_TEXT } from '@constants/constants';
 import Tag from '@sections/delivery/tag/Tag';
+import plFlagImage from '@assets/images/png/flagPl.png';
 
 const mobileImages = [
   {
@@ -64,12 +65,10 @@ const desktopImages = [
 ];
 
 const Delivery = () => {
-  const tagsTextMobile = TAGS_TEXT.filter(elem => elem.id !== 4);
-
   return (
     <section className={styles.wrapper}>
       <figure className={styles.desktopImages}>
-        {desktopImages.map(({ id, style, image, alt}) =>
+        {desktopImages.map(({ id, style, image, alt }) =>
           <Image
             key={id}
             className={style}
@@ -79,7 +78,7 @@ const Delivery = () => {
         )}
       </figure>
       <div className={styles.mobileImages}>
-        {mobileImages.map(({ id, style, image, alt}) =>
+        {mobileImages.map(({ id, style, image, alt }) =>
           <figure key={id} className={style}>
             <Image src={image} alt={alt} />
           </figure>
@@ -90,7 +89,12 @@ const Delivery = () => {
           <Image src={routeImg} alt="route" />
           <Image className={styles.couponImg} src={couponImg} alt="coupon" />
         </figure>
-        <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
+        <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>
+          <Image
+            src={plFlagImage}
+            className={styles.polandFlag}
+            alt="poland flag"
+          /></span> польши</h1>
         <div className={styles.telegramWrapperDesktop}>
           <TelegramOrder text="Оформить заказ в Телеграм" />
         </div>
@@ -98,13 +102,21 @@ const Delivery = () => {
           <TelegramOrder text="Оформить заказ" />
         </div>
         <ul className={styles.tags}>
-          {TAGS_TEXT.map(({ id, upText, downText }) => id % 2 === 0
-            ? <Image
-              key={id}
-              className={styles.starIcon}
-              src={starIcon}
-              alt="divider"
-            />
+          {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1
+            ?
+            <>
+              <Image
+                key={id}
+                className={styles.starIcon}
+                src={starIcon}
+                alt="divider"
+              />
+              <Tag
+                upText={upText || ''}
+                downText={downText || ''}
+                key={id}
+              />
+            </>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
@@ -113,13 +125,21 @@ const Delivery = () => {
           )}
         </ul>
         <ul className={styles.tagsMobile}>
-          {tagsTextMobile.map(({ id, upText, downText }) => id % 2 === 0
-            ? <Image
-              key={id}
-              className={styles.starIcon}
-              src={starIcon}
-              alt="divider"
-            />
+          {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1 && id !== 3
+            ?
+            <>
+              <Image
+                key={id}
+                className={styles.starIcon}
+                src={starIcon}
+                alt="divider"
+              />
+              <Tag
+                upText={upText || ''}
+                downText={downText || ''}
+                key={id}
+              />
+            </>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}

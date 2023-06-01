@@ -23,38 +23,38 @@ const Footer = () => {
               Контакты
             </p>
             <div className={styles.firstGroup}>
-              <figure className={styles.groupContent}>
+              <div className={styles.groupContent}>
                 <Image className={styles.houseImage} src={house} alt="house" />
-                <figcaption className={styles.contentText}>
+                <div className={styles.contentText}>
                   <p>Склад в польше:</p>
                   <Link href={plTelephoneNumber}>+48 571 352 966</Link>
-                </figcaption>
-              </figure>
-              <figure className={styles.specialGroupContent}>
+                </div>
+              </div>
+              <div className={styles.specialGroupContent}>
                 <Image className={styles.accountImage} src={account} alt="account" />
-                <figcaption className={styles.contentText}>
+                <div className={styles.contentText}>
                   <p>Менеджер в Беларуси:</p>
                   <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
           </li>
           <li className={styles.specialGroup}>
-            <figure className={styles.groupContent}>
+            <div className={styles.groupContent}>
               <Image className={styles.accountImage} src={account} alt="account" />
-              <figcaption className={styles.contentText}>
+              <div className={styles.contentText}>
                 <p>Менеджер в Беларуси:</p>
                 <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
-              </figcaption>
-            </figure>
+              </div>
+            </div>
           </li>
           <li className={styles.group}>
             <p className={styles.title}>
               Адрес
             </p>
-            <figure className={styles.groupContent}>
+            <div className={styles.groupContent}>
               <Image className={styles.addressImage} src={address} alt="address" />
-              <figcaption>
+              <div>
                 <Link
                   href={googleMapsLink}
                   target="_blank"
@@ -63,21 +63,21 @@ const Footer = () => {
                   <p>Sokólska 22/1, 16-123,</p>
                   <p>Kuźnica, Polska</p>
                 </Link>
-              </figcaption>
-            </figure>
+              </div>
+            </div>
           </li>
           <li className={styles.group}>
             <p className={styles.title}>
               Социалки
             </p>
-            <figure className={styles.groupContent}>
+            <div className={styles.groupContent}>
               <Image className={styles.instagramImage} src={instagram} alt="instagram" />
-              <figcaption className={styles.contentText}>
+              <div className={styles.contentText}>
                 <Link href={instagramLink} target="_blank">
                   Instagram
                 </Link>
-              </figcaption>
-            </figure>
+              </div>
+            </div>
           </li>
         </ul>
         <aside className={styles.otherInfo}>

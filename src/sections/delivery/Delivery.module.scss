@@ -37,6 +37,11 @@ $mobileImageWrapperWidth: (
   text-transform: uppercase;
   color: $white;
   margin: 20px 0 45px;
+
+  span {
+    position: relative;
+    margin-right: 120px;
+  }
 }
 
 .tags {
@@ -73,6 +78,15 @@ $mobileImageWrapperWidth: (
 
 .telegramWrapperMobile {
   display: none;
+}
+
+.polandFlag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -119,11 +133,19 @@ $mobileImageWrapperWidth: (
   .container {
     margin: 45px 20px 0;
   }
+
+  .polandFlag {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: $tablet) {
   .mainText {
     font-size: 70px;
+
+    span {
+      margin-right: 100px;
+    }
   }
 
   .telegramWrapperMobile {
@@ -132,6 +154,11 @@ $mobileImageWrapperWidth: (
 
   .telegramWrapperDesktop {
     display: none;
+  }
+
+  .polandFlag {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -149,6 +176,10 @@ $mobileImageWrapperWidth: (
   .mainText {
     font-size: 50px;
     margin-top: 0;
+
+    span {
+      margin-right: 60px;
+    }
   }
 
   .routeImg {
@@ -171,10 +202,20 @@ $mobileImageWrapperWidth: (
       width: nth($mobileImageWrapperWidth , $i);
     }
   }
+
+  .polandFlag {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: $mobile) {
   .mainText {
     font-size: 40px;
+  }
+
+  .polandFlag {
+    margin-bottom: 0;
   }
 }
