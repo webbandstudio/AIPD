@@ -37,14 +37,6 @@
   }
 }
 
-.gradient {
-  position: absolute;
-  width: calc(100% + 290px);
-  height: 405px;
-  left: -109px;
-  top: -30px;
-}
-
 @media screen and (max-width: $desktop) {
   .header {
     margin: 30px 40px 0;

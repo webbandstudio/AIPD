@@ -46,12 +46,12 @@ const Goods = () => {
         мы уже привезли<br /><span>более 5,000</span> товаров, выгоду смотри сам
       </h2>
       <ul className={styles.goods}>
-        {GOODS.map((elem, index) =>
+        {GOODS.map(({ title, economy, id }, index) =>
           <Product
             image={productImages[index]}
-            title={elem.title}
-            economy={elem.economy}
-            key={elem.id}
+            title={title}
+            economy={economy}
+            key={id}
           />
         )}
       </ul>

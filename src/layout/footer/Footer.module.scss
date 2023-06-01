@@ -14,6 +14,10 @@
     opacity: 0.5;
     transition: $animationPeriod;
 
+    p {
+      opacity: 1;
+    }
+
     &:hover {
       opacity: 1;
     }
@@ -51,11 +55,14 @@
   column-gap: 120px;
 }
 
+.houseImage .accountImage .addressImage .instagramImage {
+  margin: 0;
+}
+
 .otherInfo {
   display: flex;
   justify-content: space-between;
   color: $white;
-  opacity: 0.5;
   margin-top: 50px;
 
   p {
@@ -99,7 +106,6 @@
   flex-direction: column;
   margin-left: 20px;
   color: $white;
-  opacity: 0.5;
   row-gap: 8px;
   white-space: nowrap;
 
@@ -123,13 +129,29 @@
     row-gap: 20px;
   }
 
+  .houseImage {
+    margin-top: 5px;
+  }
+
+  .accountImage {
+    margin: 5px 2px 0 0;
+  }
+
+  .addressImage {
+    margin: 5px 5px 0 7px;
+  }
+
+  .instagramImage {
+    margin-right: -3px;
+  }
+
   .specialGroupContent {
     display: none;
   }
 
   .specialGroup {
     display: flex;
-    margin-top: 20px;
+    margin-top: 18px;
   }
 }
 

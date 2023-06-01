@@ -230,10 +230,6 @@
     width: 125px;
   }
 
-  .instructionContainer {
-    margin-top: -140px;
-  }
-
   .container {
     margin-top: 70px;
   }
@@ -246,6 +242,10 @@
 @media screen and (max-width: $largeMobile) {
   .telegramWrapperDesktop {
     display: none;
+  }
+
+  .instructionContainer {
+    margin-top: -140px;
   }
 
   .telegramWrapperMobile {
