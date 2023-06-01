@@ -1,38 +1,53 @@
+import zaraImage from '@assets/images/png/shopsImages/zara.png';
+import mediaMarketImage from '@assets/images/png/shopsImages/mediaMarkt.png';
+import notinoImage from '@assets/images/png/shopsImages/notino.png';
+import answerImage from '@assets/images/png/shopsImages/answer.png';
+import zalandoImage from '@assets/images/png/shopsImages/zalando.png';
+import newBalanceImage from '@assets/images/png/shopsImages/newBalance.png';
+import allegroImage from '@assets/images/png/shopsImages/allegro.png';
+
 export const SHOPS = [
   {
     id: '1',
     category: 'одежда',
-    image: '',
+    image: zaraImage,
+    link: 'https://www.zara.com/pl/',
   },
   {
     id: '3',
     category: 'техника',
-    image: '',
+    image: mediaMarketImage,
+    link: 'https://mediamarkt.pl/',
   },
   {
     id: '6',
     category: 'парфюмерия',
-    image: '',
+    image: notinoImage,
+    link: 'https://www.notino.pl/',
   },
   {
     id: '10',
     category: 'одежда',
-    image: '',
+    image: answerImage,
+    link: 'https://answear.com/',
   },
   {
     id: '11',
     category: 'одежда',
-    image: '',
+    image: zalandoImage,
+    link: 'https://www.zalando.pl/',
   },
   {
     id: '15',
     category: 'обувь',
-    image: '',
+    image: newBalanceImage,
+    link: 'https://nbsklep.pl/',
   },
   {
     id: '17',
     category: 'площадка',
-    image: '',
+    image: allegroImage,
+    link: 'https://allegro.pl/',
   },
 ];
 
