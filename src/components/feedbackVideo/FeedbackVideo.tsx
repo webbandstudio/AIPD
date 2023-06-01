@@ -22,8 +22,8 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
   };
 
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.videoContainer}>
+    <li className={styles.wrapper}>
+      <figure className={styles.videoContainer}>
         <video loop ref={videoControl} onClick={playVideo}>
           <source src={video || '/defaultVideo.mp4'} type="video/mp4" />
         </video>
@@ -33,11 +33,11 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
           alt="play icon"
           className={isPlaying ? styles.playIconNone : styles.playIcon}
         />
-      </div>
+      </figure>
       <p className={`p2 ${styles.title}`}>
         {title}
       </p>
-    </section>
+    </li>
   );
 };
 

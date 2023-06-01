@@ -141,28 +141,18 @@ export const FEEDBACKS_DATA = [
     title: 'Дима, Минск',
   },
   {
-    id: 3,
-    video: '',
-    title: '',
-  },
-  {
     id: 5,
     video: '',
-    title: 'Гриша, Орша',
+    title: 'Вика, Москва',
   },
   {
     id: 9,
     video: '',
-    title: 'Вика, Москва',
+    title: 'Гриша, Орша',
   },
   {
     id: 12,
     video: '',
     title: 'Мага, Махачкала',
-  },
-  {
-    id: 17,
-    video: '',
-    title: '',
   },
 ];
