@@ -26,8 +26,8 @@
   font-family: $font-face-secondary;
   font-style: normal;
   font-weight: $regular;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: $smallParagraphFontSize;
+  line-height: $smallParagraphLineHeight;
   text-decoration: none;
   color: $white;
   transition: opacity $animationPeriod;
@@ -56,7 +56,7 @@
 
 @media screen and (max-width: $largeMobile) {
   .title {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
   }
 }

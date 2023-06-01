@@ -24,16 +24,16 @@ h1 {
 h2 {
   font-family: $font-face-primary;
   font-weight: $extra-bold;
-  font-size: 60px;
-  line-height: 68px;
+  font-size: $mediumHeadingFontSize;
+  line-height: $mediumHeadingLineHeight;
   margin: 0;
 }
 
 h4 {
   font-family: $font-face-secondary;
   font-weight: $bold;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: $mediumParagraphFontSize;
+  line-height: $mediumParagraphLineHeight;
 }
 
 button {
@@ -50,29 +50,29 @@ button {
 .p1 {
   font-family: $font-face-secondary;
   font-weight: $regular;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: $largeParagraphFontSize;
+  line-height: $largeParagraphLineHeight;
 }
 
 .p2 {
   font-family: $font-face-secondary;
   font-weight: $regular;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: $mediumParagraphFontSize;
+  line-height: $mediumParagraphLineHeight;
 }
 
 p {
   font-family: $font-face-secondary;
   font-weight: $regular;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: $smallParagraphFontSize;
+  line-height: $smallParagraphLineHeight;
 }
 
 label {
   font-family: $font-face-secondary;
   font-weight: $medium;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: $labelFontSize;
+  line-height: $labelLineHeight;
 }
 
 ul {

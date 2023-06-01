@@ -164,7 +164,7 @@ $mobileImageWrapperWidth: (
 
 @media screen and (max-width: $smallTablet) {
   .mainText {
-    font-size: 60px;
+    font-size: $mediumHeadingFontSize;
   }
 }
 

@@ -100,8 +100,8 @@
     border-radius: 4px;
     font-family: $font-face-secondary;
     font-weight: $regular;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: $largeParagraphFontSize;
+    line-height: $largeParagraphLineHeight;
     text-align: right;
     color: $black;
     -moz-appearance: textfield;
@@ -145,7 +145,7 @@
 }
 
 .descriptionTotal {
-  font-size: 60px;
+  font-size: $mediumHeadingFontSize;
   line-height: 58px;
   color: $black;
   font-family: $font-face-primary;
@@ -324,15 +324,15 @@
     input {
       width: 100px;
       height: 35px;
-      font-size: 15px;
-      line-height: 18px;
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
     }
   }
 
   .calculations {
     p {
-      font-size: 15px;
-      line-height: 18px;
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
     }
   }
 

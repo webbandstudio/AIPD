@@ -8,6 +8,7 @@
   padding: 0 50px;
   cursor: pointer;
   transition: background-color $animationPeriod;
+  width: fit-content;
 
   &:hover {
     background-color: $middlePurple;
@@ -17,7 +18,7 @@
 .text {
   font-weight: $semi-bold;
   text-align: center;
-  color: #FFFFFF;
+  color: $white;
 }
 
 @media screen and (max-width: $mobile) {

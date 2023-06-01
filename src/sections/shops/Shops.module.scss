@@ -77,8 +77,8 @@
 .text {
   width: 130px;
   height: 45px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: $mediumParagraphFontSize;
+  line-height: $mediumParagraphLineHeight;
   font-weight: $medium;
   margin: auto 0 20px 20px;
   color: $white;

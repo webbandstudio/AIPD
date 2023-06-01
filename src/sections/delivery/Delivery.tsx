@@ -114,13 +114,13 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={id}
+                key={upText + id}
               />
             </>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={id}
+              key={upText + downText}
             />
           )}
         </ul>
@@ -129,7 +129,7 @@ const Delivery = () => {
             ?
             <>
               <Image
-                key={id}
+                key={upText}
                 className={styles.starIcon}
                 src={starIcon}
                 alt="divider"
@@ -137,13 +137,13 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={id}
+                key={downText + id}
               />
             </>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={id}
+              key={downText}
             />
           )}
         </ul>

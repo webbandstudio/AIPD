@@ -133,3 +133,26 @@ export const GOODS = [
     economy: 250,
   },
 ];
+
+export const FEEDBACKS_DATA = [
+  {
+    id: 1,
+    video: '',
+    title: 'Дима, Минск',
+  },
+  {
+    id: 5,
+    video: '',
+    title: 'Вика, Москва',
+  },
+  {
+    id: 9,
+    video: '',
+    title: 'Гриша, Орша',
+  },
+  {
+    id: 12,
+    video: '',
+    title: 'Мага, Махачкала',
+  },
+];
