@@ -4,11 +4,12 @@
   gap: 20px;
   background-color: $purple;
   border-radius: 90px;
-  height: 79px;
+  height: 80px;
   padding: 0 50px;
   cursor: pointer;
   transition: background-color $animationPeriod;
   width: fit-content;
+  text-decoration: none;
 
   &:hover {
     background-color: $middlePurple;
@@ -16,9 +17,12 @@
 }
 
 .text {
-  font-weight: $semi-bold;
   text-align: center;
   color: $white;
+  font-family: $font-face-primary;
+  font-weight: $semi-bold;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 @media screen and (max-width: $mobile) {

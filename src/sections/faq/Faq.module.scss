@@ -26,7 +26,7 @@
 }
 
 .description {
-  line-height: 22px;
+  line-height: $mediumParagraphLineHeight;
   opacity: 0.5;
 }
 
@@ -87,10 +87,6 @@
     gap: 40px
   }
 
-  .subHeaderWrapper {
-    align-self: flex-start;
-  }
-
   .description {
     display: none;
   }
@@ -115,5 +111,11 @@
   .header {
     font-size: $smallTitle;
     line-height: 36px;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .subHeaderWrapper {
+    align-self: flex-start;
   }
 }

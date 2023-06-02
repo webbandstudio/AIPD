@@ -19,9 +19,9 @@ const FaqElement: React.FC<IFaqElement> = ({ title, text }) => {
         <p className={`p2 ${styles.title}`}>{title}</p>
         <Image className={`${styles.arrow} ${isOpenDropdown && styles.arrowOpen}`} src={arrow} alt="arrow" />
       </div>
-      <p className={`p2 ${isOpenDropdown ? styles.textOpen : styles.textClose}`}>
+      <aside className={`p2 ${isOpenDropdown ? styles.textOpen : styles.textClose}`}>
         {text}
-      </p>
+      </aside>
     </li>
   );
 };

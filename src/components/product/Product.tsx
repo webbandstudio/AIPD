@@ -16,13 +16,13 @@ const Product: React.FC<IProduct> = ({ image, title, economy }) => {
         <p className={`${styles.title} p2`}>{title}</p>
         <p className={`${styles.economy} p1`}>Экономия ${economy}</p>
       </div>
-      <div className={styles.imageWrapper}>
+      <figure className={styles.imageWrapper}>
         <Image
           className={styles.productImage}
           src={image}
           alt="product"
         />
-      </div>
+      </figure>
     </li>
   );
 };

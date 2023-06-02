@@ -1,6 +1,6 @@
 .feedbackWrapper {
   display: flex;
-  max-width: 1220px;
+  max-width: 1130px;
   margin: 120px auto;
   column-gap: 140px;
   padding: 0 20px;
@@ -63,7 +63,7 @@
   }
 
   .feedbacksVideos {
-    justify-items: center;
+    align-self: center;
     margin-top: 60px;
   }
 
@@ -80,7 +80,7 @@
     text-align: center;
     margin: auto;
 
-    button {
+    a {
       margin: auto;
     }
   }
@@ -88,7 +88,7 @@
 
 @media screen and (max-width: $largeTablet) {
   .title {
-    font-size: 48px;
+    font-size: $mediumTitle + 8;
     line-height: 55px;
   }
 }
@@ -112,9 +112,9 @@
 }
 
 @media screen and (max-width: $mobile) {
-  .feedbacksText button {
-    width: 100%;
+  .feedbacksText a {
     justify-content: center;
+    width: 75%;
 
     img {
       display: none;

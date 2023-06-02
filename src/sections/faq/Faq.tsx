@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { FAQ } from '@constants/faqData';
+import { FAQ } from '@constants/constants';
 import styles from './Faq.module.scss';
 import FaqElement from '@components/faqElement/FaqElement';
 import managerImage from '@assets/images/png/manager.png';
@@ -12,11 +12,11 @@ const Faq = () => {
     <section className={styles.container}>
       <h2 className={styles.header}>Частые вопросы</h2>
       <ul className={styles.questions}>
-        {FAQ.map(elem =>
+        {FAQ.map(({ id, title, text }) =>
           <FaqElement
-            key={elem.id}
-            title={elem.title}
-            text={elem.text}
+            key={id}
+            title={title}
+            text={text}
           />
         )}
       </ul>
@@ -32,7 +32,7 @@ const Faq = () => {
             <Image className={styles.managerImage} src={managerImage} alt="manager" />
             <p className={styles.managerName}>Менеджер Вика</p>
           </div>
-          <Link href="" className={styles.telegramWrapper}>
+          <Link href="https://telegram.org/" target="_blank" className={styles.telegramWrapper}>
             <Image className={styles.telegramIcon} src={telegramIcon} alt="telegram icon" />
           </Link>
         </div>
