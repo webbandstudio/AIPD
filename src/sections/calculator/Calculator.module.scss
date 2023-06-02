@@ -1,0 +1,378 @@
+.calculatorWrapper {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0;
+  background-color: $lightGrey;
+  padding: 45px 0 30px 45px;
+  display: flex;
+  height: 320px;
+}
+
+.border {
+  max-width: 1145px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.borderLeft {
+  background-image: url('../../public/assets/images/svg/borderLeft.svg');
+  width: 11px;
+  margin-right: -2px;
+  background-position-y: 12px;
+}
+
+.borderRight {
+  background-image: url('../../public/assets/images/svg/borderRight.svg');
+  width: 11px;
+  background-position-y: 12px;
+}
+
+.titleCourse {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $black;
+  text-transform: uppercase;
+  max-width: 430px;
+  margin: 0 0 25px;
+}
+
+.coursesDesktop {
+  color: $middleGrey;
+
+  p {
+    margin: 4px 0;
+  }
+
+  p:nth-child(1) {
+    color: $black;
+    opacity: 0.5;
+    margin-bottom: 12px;
+  }
+}
+
+.coursesMobile {
+  color: $middleGrey;
+  display: none;
+
+  div {
+    display: flex;
+    column-gap: 30px;
+
+    p:nth-child(1) {
+      color: $black;
+      opacity: 0.5;
+    }
+  }
+
+  p {
+    margin: 4px 0;
+  }
+
+  p:nth-child(1) {
+    color: $black;
+    margin-bottom: 12px;
+  }
+}
+
+.barcodeImage {
+  position: absolute;
+  margin: -5px 0 0 -10px;
+}
+
+.calculations {
+  display: flex;
+  flex-direction: column;
+  max-width: 485px;
+  margin-top: 15px;
+  width: 100%;
+  row-gap: 16px;
+
+  input {
+    width: 180px;
+    height: 50px;
+    background: $white;
+    border: 1px solid #C8CFDB;
+    border-radius: 4px;
+    font-family: $font-face-secondary;
+    font-weight: $regular;
+    font-size: $largeParagraphFontSize;
+    line-height: $largeParagraphLineHeight;
+    text-align: right;
+    color: $black;
+    -moz-appearance: textfield;
+    padding-right: 16px;
+
+    &:focus {
+      outline: none;
+      background: #F5F5F5;
+      border: 1px solid #9E9E9E;
+      color: #AFAFAF;
+      caret-color: #1673FF;
+    }
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.textGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:nth-child(1) {
+    margin-bottom: -12px;
+  }
+}
+
+.descriptionText {
+  color: $middleGrey;
+}
+
+.descriptionResult {
+  margin-right: 18px;
+}
+
+.descriptionTextTotal {
+  max-width: 241px;
+}
+
+.descriptionTotal {
+  font-size: $mediumHeadingFontSize;
+  line-height: 58px;
+  color: $black;
+  font-family: $font-face-primary;
+  font-weight: $extra-bold;
+  margin-right: 18px;
+  max-width: 310px;
+}
+
+.divider {
+  height: 0;
+  width: 100%;
+  border: 1px solid $black;
+  opacity: 0.2;
+  margin: 5px 0;
+}
+
+.vatWrapper {
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.vatElementWrapperNonActive {
+  @include vatElementWrapper;
+  transition: $animationPeriod;
+
+  &:hover {
+    background-color: $mediumGrey;
+  }
+}
+
+.vatElementWrapperActive {
+  @include vatElementWrapper;
+  background-color: $black;
+}
+
+.vatElementTextNonActive {
+  @include vatElementText;
+}
+
+.vatElementTextActive {
+  @include vatElementText;
+  color: $lightGrey;
+}
+
+.tooltipWrapper {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.tooltip {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.tooltipWindow {
+  @include tooltip;
+}
+
+.tooltipWindowButtons {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
+}
+
+.tooltipWindowButtons3 {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
+}
+
+@media screen and (max-width: $desktop) {
+  .calculatorWrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 90%;
+    height: unset;
+  }
+
+  .borderLeft {
+    margin-right: -3px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 55px;
+  }
+
+  .calculations {
+    margin: 15px auto;
+    grid-row: span 2;
+  }
+
+  .vatWrapper {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .descriptionTotal {
+    overflow-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: $largeTablet) {
+  .calculatorWrapper {
+    grid-template-columns: 1fr;
+    padding: 40px 20px 50px 30px;
+    margin: 100px auto 0;
+
+    &::before {
+      content: '';
+      height: 10px;
+      background-image: url('../../public/assets/images/svg/borderTop.svg');
+      width: 100%;
+      position: absolute;
+      top: -8px;
+      background-position-x: 11px;
+    }
+
+    &::after {
+      content: '';
+      height: 8px;
+      background-image: url('../../public/assets/images/svg/borderBottom.svg');
+      width: 100%;
+      position: absolute;
+      bottom: -8px;
+      background-position-x: 11px;
+    }
+  }
+
+  .border {
+    flex-direction: column;
+  }
+
+  .borderLeft {
+    display: none;
+  }
+
+  .borderRight {
+    display: none;
+  }
+
+  .calculations {
+    max-width: 100%;
+  }
+
+  .title {
+    max-width: 80%;
+  }
+
+  .vatWrapper {
+    width: unset;
+    grid-row: 2;
+    margin: 30px 25px;
+  }
+
+  .descriptionTotal {
+    font-size: $mediumTitle;
+    line-height: 45px;
+  }
+
+  .tooltipWindowButtons3 {
+    margin: -75px 0 0 -145px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .calculatorWrapper {
+    width: 85%;
+    padding: 40px 20px 50px 20px;
+
+    input {
+      width: 100px;
+      height: 35px;
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
+    }
+  }
+
+  .calculations {
+    p {
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
+    }
+  }
+
+  .title {
+    max-width: 330px;
+  }
+
+  .divider {
+    margin: 5px 0 0;
+  }
+
+  .calculations {
+    margin: 15px 0;
+    grid-row: span 2;
+  }
+
+  .descriptionTextTotal {
+    max-width: 170px;
+  }
+
+  .descriptionResult {
+    margin-right: 10px;
+  }
+
+  .descriptionTotal {
+    font-size: 30px !important;
+    line-height: 58px !important;
+    margin-right: 10px;
+  }
+
+  .coursesDesktop {
+    display: none;
+  }
+
+  .coursesMobile {
+    margin-top: 30px;
+    display: block;
+  }
+
+  .vatWrapper {
+    margin: 30px 15px;
+  }
+}

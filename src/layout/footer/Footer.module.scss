@@ -2,17 +2,21 @@
   display: flex;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-y: clip;
 
   a {
     text-decoration: none;
     font-family: $font-face-secondary;
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
     color: $white;
     font-weight: 400;
     opacity: 0.5;
     transition: $animationPeriod;
+
+    p {
+      opacity: 1;
+    }
 
     &:hover {
       opacity: 1;
@@ -42,7 +46,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1085px;
   margin: 100px 150px 26px;
 }
 
@@ -52,11 +55,14 @@
   column-gap: 120px;
 }
 
+.houseImage .accountImage .addressImage .instagramImage {
+  margin: 0;
+}
+
 .otherInfo {
   display: flex;
   justify-content: space-between;
   color: $white;
-  opacity: 0.5;
   margin-top: 50px;
 
   p {
@@ -100,7 +106,6 @@
   flex-direction: column;
   margin-left: 20px;
   color: $white;
-  opacity: 0.5;
   row-gap: 8px;
   white-space: nowrap;
 
@@ -124,13 +129,29 @@
     row-gap: 20px;
   }
 
+  .houseImage {
+    margin-top: 5px;
+  }
+
+  .accountImage {
+    margin: 5px 2px 0 0;
+  }
+
+  .addressImage {
+    margin: 5px 5px 0 7px;
+  }
+
+  .instagramImage {
+    margin-right: -3px;
+  }
+
   .specialGroupContent {
     display: none;
   }
 
   .specialGroup {
     display: flex;
-    margin-top: 20px;
+    margin-top: 18px;
   }
 }
 

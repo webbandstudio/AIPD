@@ -26,8 +26,8 @@
   font-family: $font-face-secondary;
   font-style: normal;
   font-weight: $regular;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: $smallParagraphFontSize;
+  line-height: $smallParagraphLineHeight;
   text-decoration: none;
   color: $white;
   transition: opacity $animationPeriod;
@@ -35,14 +35,6 @@
   &:hover {
     opacity: 0.5;
   }
-}
-
-.gradient {
-  position: absolute;
-  width: calc(100% + 290px);
-  height: 405px;
-  left: -109px;
-  top: -30px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -64,7 +56,7 @@
 
 @media screen and (max-width: $largeMobile) {
   .title {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
   }
 }

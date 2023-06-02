@@ -12,39 +12,9 @@ import mobileSneakerImg1 from '@assets/images/png/mobileSneaker1.png';
 import parfumeImg from '@assets/images/png/parfume.png';
 import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
 import playStationImg from '@assets/images/png/playStation.png';
-import Tag from './tag/Tag';
-
-const tagsText = [
-  {
-    id: 1,
-    upText: '5 лет',
-    downText: 'привозим товары',
-  },
-  {
-    id: 2,
-  },
-  {
-    id: 3,
-    upText: 'всего 9%',
-    downText: 'коммисия сервиса',
-  },
-  {
-    id: 4,
-  },
-  {
-    id: 5,
-    upText: 'телеграм бот',
-    downText: 'для удобных и быстрых заказов',
-  },
-  {
-    id: 6,
-  },
-  {
-    id: 7,
-    upText: 'опт и розница',
-    downText: 'работаем со всеми',
-  },
-];
+import { TAGS_TEXT } from '@constants/constants';
+import Tag from '@sections/delivery/tag/Tag';
+import plFlagImage from '@assets/images/png/flagPl.png';
 
 const mobileImages = [
   {
@@ -95,63 +65,88 @@ const desktopImages = [
 ];
 
 const Delivery = () => {
-  const tagsTextMobile = tagsText.filter(elem => elem.id !== 4);
-
-  const drawStarIcon = (id: number) => {
-    return (<Image className={styles.starIcon} src={starIcon} alt="divider" />);
-  };
-
   return (
     <section className={styles.wrapper}>
-      <div className={styles.desktopImages}>
-        {desktopImages.map(elem =>
+      <figure className={styles.desktopImages}>
+        {desktopImages.map(({ id, style, image, alt }) =>
           <Image
-            key={elem.id}
-            className={elem.style}
-            src={elem.image}
-            alt={elem.alt}
+            key={id}
+            className={style}
+            src={image}
+            alt={alt}
           />
         )}
-      </div>
+      </figure>
       <div className={styles.mobileImages}>
-        {mobileImages.map(elem =>
-          <div key={elem.id} className={elem.style}>
-            <Image src={elem.image} alt={elem.alt} />
-          </div>
+        {mobileImages.map(({ id, style, image, alt }) =>
+          <figure key={id} className={style}>
+            <Image src={image} alt={alt} />
+          </figure>
         )}
       </div>
       <div className={styles.container}>
-        <div className={styles.routeImg}>
+        <figure className={styles.routeImg}>
           <Image src={routeImg} alt="route" />
           <Image className={styles.couponImg} src={couponImg} alt="coupon" />
-        </div>
-        <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>🇵🇱</span> польши</h1>
+        </figure>
+        <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>
+          <Image
+            src={plFlagImage}
+            className={styles.polandFlag}
+            alt="poland flag"
+          /></span> польши</h1>
         <div className={styles.telegramWrapperDesktop}>
-          <TelegramOrder text='Оформить заказ в Телеграм' />
+          <TelegramOrder text="Оформить заказ в Телеграм" />
         </div>
         <div className={styles.telegramWrapperMobile}>
-          <TelegramOrder text='Оформить заказ' />
+          <TelegramOrder text="Оформить заказ" />
         </div>
-        <div className={styles.tags}>
-          {tagsText.map(elem => elem.id % 2 === 0
-            ? drawStarIcon(elem.id)
+        <ul className={styles.tags}>
+          {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1
+            ?
+            <>
+              <Image
+                key={id}
+                className={styles.starIcon}
+                src={starIcon}
+                alt="divider"
+              />
+              <Tag
+                upText={upText || ''}
+                downText={downText || ''}
+                key={upText + id}
+              />
+            </>
             : <Tag
-              upText={elem.upText || ''}
-              downText={elem.downText || ''}
-              key={elem.id}
+              upText={upText || ''}
+              downText={downText || ''}
+              key={upText + downText}
             />
           )}
-        </div>
-        <div className={styles.tagsMobile}>
-          {tagsTextMobile.map(elem => elem.id % 2 === 0
-            ? drawStarIcon(elem.id)
+        </ul>
+        <ul className={styles.tagsMobile}>
+          {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1 && id !== 3
+            ?
+            <>
+              <Image
+                key={upText}
+                className={styles.starIcon}
+                src={starIcon}
+                alt="divider"
+              />
+              <Tag
+                upText={upText || ''}
+                downText={downText || ''}
+                key={downText + id}
+              />
+            </>
             : <Tag
-              upText={elem.upText || ''}
-              downText={elem.downText || ''}
-              key={elem.id}
+              upText={upText || ''}
+              downText={downText || ''}
+              key={downText}
             />
           )}
-        </div>
+        </ul>
       </div>
     </section>
   );

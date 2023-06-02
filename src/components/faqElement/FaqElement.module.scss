@@ -67,7 +67,7 @@
 
 .textOpen {
   @include FaqElementfullHeightText;
-  line-height: 28px;
+  line-height: $largeParagraphLineHeight + 1px;
   opacity: 0.8;
   animation: fadeIn $animationPeriod;
 }

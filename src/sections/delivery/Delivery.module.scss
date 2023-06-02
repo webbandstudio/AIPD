@@ -37,6 +37,11 @@ $mobileImageWrapperWidth: (
   text-transform: uppercase;
   color: $white;
   margin: 20px 0 45px;
+
+  span {
+    position: relative;
+    margin-right: 120px;
+  }
 }
 
 .tags {
@@ -75,6 +80,15 @@ $mobileImageWrapperWidth: (
   display: none;
 }
 
+.polandFlag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: $desktop) {
   .desktopImages {
     transition: opacity $animationPeriod;
@@ -95,7 +109,11 @@ $mobileImageWrapperWidth: (
     row-gap: 40px;
     align-items: flex-start;
     max-width: 350px;
-    margin-top: 55px;
+    margin: 30px 0 0;
+
+    li {
+      width: 145px;
+    }
   }
 
   .tags {
@@ -115,11 +133,19 @@ $mobileImageWrapperWidth: (
   .container {
     margin: 45px 20px 0;
   }
+
+  .polandFlag {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: $tablet) {
   .mainText {
     font-size: 70px;
+
+    span {
+      margin-right: 100px;
+    }
   }
 
   .telegramWrapperMobile {
@@ -129,11 +155,16 @@ $mobileImageWrapperWidth: (
   .telegramWrapperDesktop {
     display: none;
   }
+
+  .polandFlag {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
   .mainText {
-    font-size: 60px;
+    font-size: $mediumHeadingFontSize;
   }
 }
 
@@ -145,6 +176,10 @@ $mobileImageWrapperWidth: (
   .mainText {
     font-size: 50px;
     margin-top: 0;
+
+    span {
+      margin-right: 60px;
+    }
   }
 
   .routeImg {
@@ -159,7 +194,7 @@ $mobileImageWrapperWidth: (
   }
 
   .container {
-    margin: 0 20px 0;
+    margin: 0 15px 0;
   }
 
   @for $i from 1 to 6 {
@@ -167,10 +202,20 @@ $mobileImageWrapperWidth: (
       width: nth($mobileImageWrapperWidth , $i);
     }
   }
+
+  .polandFlag {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: $mobile) {
   .mainText {
     font-size: 40px;
+  }
+
+  .polandFlag {
+    margin-bottom: 0;
   }
 }
