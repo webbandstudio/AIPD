@@ -1,44 +1,59 @@
+import zaraImage from '@assets/images/png/shopsImages/zara.png';
+import mediaMarketImage from '@assets/images/png/shopsImages/mediaMarkt.png';
+import notinoImage from '@assets/images/png/shopsImages/notino.png';
+import answerImage from '@assets/images/png/shopsImages/answer.png';
+import zalandoImage from '@assets/images/png/shopsImages/zalando.png';
+import newBalanceImage from '@assets/images/png/shopsImages/newBalance.png';
+import allegroImage from '@assets/images/png/shopsImages/allegro.png';
+
 export const SHOPS = [
   {
     id: '1',
     category: 'одежда',
-    image: '',
+    image: zaraImage,
+    link: 'https://www.zara.com/pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '3',
     category: 'техника',
-    image: '',
+    image: mediaMarketImage,
+    link: 'https://mediamarkt.pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '6',
     category: 'парфюмерия',
-    image: '',
+    image: notinoImage,
+    link: 'https://www.notino.pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '10',
     category: 'одежда',
-    image: '',
+    image: answerImage,
+    link: 'https://answear.com/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '11',
     category: 'одежда',
-    image: '',
+    image: zalandoImage,
+    link: 'https://www.zalando.pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '15',
     category: 'обувь',
-    image: '',
+    image: newBalanceImage,
+    link: 'https://nbsklep.pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
   {
     id: '17',
     category: 'площадка',
-    image: '',
+    image: allegroImage,
+    link: 'https://allegro.pl/',
     description: 'Площадка с магазинами где можно найти всё.',
   },
 ];
@@ -126,6 +141,29 @@ export const GOODS = [
   },
 ];
 
+export const FEEDBACKS_DATA = [
+  {
+    id: 1,
+    video: '',
+    title: 'Дима, Минск',
+  },
+  {
+    id: 5,
+    video: '',
+    title: 'Вика, Москва',
+  },
+  {
+    id: 9,
+    video: '',
+    title: 'Гриша, Орша',
+  },
+  {
+    id: 12,
+    video: '',
+    title: 'Мага, Махачкала',
+  },
+];
+
 export const CATEGORIES = [
   {
     id: 1,
@@ -171,4 +209,4 @@ export const CATEGORIES = [
     id: 11,
     category: 'строительство',
   },
-]
+];

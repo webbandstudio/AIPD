@@ -1,5 +1,5 @@
 .container {
-  width: 340px;
+  width: calc(25% - 15px);
   height: 450px;
   transition: scale $animationPeriod;
   display: flex;
@@ -15,12 +15,7 @@
   margin: 30px 30px 0
 }
 
-.title {
-  color: $white;
-}
-
 .economy {
-  color: $white;
   font-weight: $bold;
 }
 
@@ -28,15 +23,28 @@
   display: flex;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .productImage {
   margin: auto;
 }
 
+@media screen and (max-width: $desktop) {
+  .container {
+    width: calc(100% / 3 - 15px);
+  }
+}
+
+@media screen and (max-width: $smallDesktop) {
+  .container {
+    width: calc(50% - 15px);
+  }
+}
+
 @media screen and (max-width: $largeTablet) {
   .container {
-    width: 160px;
+    width: calc(25% - 10px);
     height: 230px;
   }
 
@@ -44,25 +52,37 @@
     margin: 16px 16px 0;
   }
 
+  .imageWrapper {
+    max-width: 220px;
+    margin: auto;
+  }
+
   .productImage {
-    width: 70%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 
   .title {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
   }
 
   .economy {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
     font-weight: $regular;
   }
 }
 
 @media screen and (max-width: $tablet) {
   .container {
-    width: 155px;
+    width: calc(100% / 3 - 10px);
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .container {
+    width: calc(50% - 10px);
   }
 }

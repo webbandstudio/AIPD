@@ -2,25 +2,31 @@
   position: relative;
   max-width: 1100px;
   width: 100%;
-  margin: 80px auto 0;
+  margin: 0;
   background-color: $lightGrey;
   padding: 45px 0 30px 45px;
   display: flex;
-  height: 305px;
+  height: 320px;
 }
 
-.leftBorderImage {
-  position: absolute;
-  margin-top: -46px;
-  margin-left: -59px;
+.border {
+  max-width: 1145px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-.rightBorderImage {
-  position: absolute;
-  margin-top: -46px;
-  margin-right: -13px;
-  transform: rotate(180deg);
-  right: 0;
+.borderLeft {
+  background-image: url('../../../public/assets/images/svg/borderLeft.svg');
+  width: 11px;
+  margin-right: -2px;
+  background-position-y: 12px;
+}
+
+.borderRight {
+  background-image: url('../../../public/assets/images/svg/borderRight.svg');
+  width: 11px;
+  background-position-y: 12px;
 }
 
 .titleCourse {
@@ -94,8 +100,8 @@
     border-radius: 4px;
     font-family: $font-face-secondary;
     font-weight: $regular;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: $largeParagraphFontSize;
+    line-height: $largeParagraphLineHeight;
     text-align: right;
     color: $black;
     -moz-appearance: textfield;
@@ -139,12 +145,13 @@
 }
 
 .descriptionTotal {
-  font-size: 60px;
+  font-size: $mediumHeadingFontSize;
   line-height: 58px;
   color: $black;
   font-family: $font-face-primary;
   font-weight: $extra-bold;
   margin-right: 18px;
+  max-width: 310px;
 }
 
 .divider {
@@ -199,18 +206,17 @@
 }
 
 .tooltipWindow {
-  height: 65px;
-  width: 230px;
-  position: absolute;
-  margin: -70px 0 0 -100px;
-  background: $black;
-  border-radius: 8px;
-  display: flex;
+  @include tooltip;
+}
 
-  label {
-    padding: 16px;
-    color: $white;
-  }
+.tooltipWindowButtons {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
+}
+
+.tooltipWindowButtons3 {
+  @include tooltip;
+  margin: -75px 0 0 -85px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -221,13 +227,8 @@
     height: unset;
   }
 
-  .leftBorderImage {
-    margin-top: -1px;
-    margin-left: -13px;
-  }
-
-  .rightBorderImage {
-    margin-top: -1px;
+  .borderLeft {
+    margin-right: -3px;
   }
 
   .title {
@@ -246,15 +247,9 @@
     justify-content: space-between;
     margin-top: 20px;
   }
-}
 
-@media screen and (max-width: $desktop - 19px) {
-  .leftBorderImage {
-    height: 420px;
-  }
-
-  .rightBorderImage {
-    height: 420px;
+  .descriptionTotal {
+    overflow-wrap: break-word;
   }
 }
 
@@ -262,14 +257,39 @@
   .calculatorWrapper {
     grid-template-columns: 1fr;
     padding: 40px 20px 50px 30px;
+    margin: 100px auto 0;
+
+    &::before {
+      content: '';
+      height: 10px;
+      background-image: url('../../../public/assets/images/svg/borderTop.svg');
+      width: 100%;
+      position: absolute;
+      top: -8px;
+      background-position-x: 11px;
+    }
+
+    &::after {
+      content: '';
+      height: 8px;
+      background-image: url('../../../public/assets/images/svg/borderBottom.svg');
+      width: 100%;
+      position: absolute;
+      bottom: -8px;
+      background-position-x: 11px;
+    }
   }
 
-  .leftBorderImage {
+  .border {
+    flex-direction: column;
+  }
+
+  .borderLeft {
     display: none;
   }
 
-  .rightBorderImage {
-   display: none;
+  .borderRight {
+    display: none;
   }
 
   .calculations {
@@ -285,44 +305,34 @@
     grid-row: 2;
     margin: 30px 25px;
   }
+
+  .descriptionTotal {
+    font-size: $mediumTitle;
+    line-height: 45px;
+  }
+
+  .tooltipWindowButtons3 {
+    margin: -75px 0 0 -145px;
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
   .calculatorWrapper {
-    width: 86%;
+    width: 85%;
     padding: 40px 20px 50px 20px;
-    margin: 110px auto 0;
 
     input {
       width: 100px;
       height: 35px;
-      font-size: 15px;
-      line-height: 18px;
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
     }
-  }
-
-  .leftBorderImage {
-    transform: rotate(90deg);
-    margin: -188px auto 0;
-    right: 0;
-    left: 0;
-    height: 363px;
-  }
-
-  .rightBorderImage {
-    transform: rotate(270deg);
-    margin: auto auto -188px;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    height: 363px;
   }
 
   .calculations {
     p {
-      font-size: 15px;
-      line-height: 18px;
+      font-size: $smallParagraphFontSize;
+      line-height: $smallParagraphLineHeight;
     }
   }
 

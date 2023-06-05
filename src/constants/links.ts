@@ -5,15 +5,15 @@ export const HEADER_LINKS = [
   },
   {
     title: 'как мы работаем',
-    link: ''
+    link: '#instruction'
   },
   {
     title: 'калькулятор',
-    link: ''
+    link: '#calculator'
   },
   {
     title: 'отзывы',
-    link: ''
+    link: '#feedbacks'
   },
 ];
 

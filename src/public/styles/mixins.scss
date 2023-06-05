@@ -65,3 +65,18 @@
   border-radius: 30px;
   text-align: center;
 }
+
+@mixin tooltip {
+  height: 65px;
+  width: 230px;
+  position: absolute;
+  margin: -70px 0 0 -100px;
+  background: $black;
+  border-radius: 8px;
+  display: flex;
+
+  label {
+    padding: 16px;
+    color: $white;
+  }
+}

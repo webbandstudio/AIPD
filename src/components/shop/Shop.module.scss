@@ -4,9 +4,11 @@
   width: 269px;
   height: 150px;
   background: $white;
+  color: $black;
   border-radius: 20px;
   cursor: pointer;
   transition: 0.5s;
+  text-decoration: none;
 
   &:hover {
     scale: 0.95;
@@ -19,18 +21,13 @@
   justify-content: center;
   margin: -17px auto 0 auto;
   width: fit-content;
-  height: 26px;
-  padding: 0 12px;
+  height: 24px;
+  padding: 0 12px 2px;
   background: $white;
   border: 3px solid $black;
   border-radius: 20px;
   font-weight: $medium;
   cursor: pointer;
-}
-
-.label {
-  cursor: pointer;
-  margin-bottom: 2px;
 }
 
 .imageWrapper {
@@ -48,6 +45,22 @@
 @media screen and (max-width: $smallTablet) {
   .wrapper {
     width: 167px;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .innerImage {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transform: scale(0.8);
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   .description {

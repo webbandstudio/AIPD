@@ -1,26 +1,25 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 import styles from './Shop.module.scss';
-import mockedImage from '@assets/images/png/allegro.png';
 
 interface IShop {
   label: string;
-  image: string;
+  image: StaticImageData;
+  link: string;
   description?: string;
 }
 
-const Shop: React.FC<IShop> = ({ label, image, description }) => {
+const Shop: React.FC<IShop> = ({ label, image, link, description }) => {
   return (
     <li>
-      <div className={styles.wrapper}>
-        {!description && <div className={styles.labelWrapper}>
-          <label className={styles.label}>{label}</label>
-        </div>}
-        <div className={styles.imageWrapper}>
-          <Image src={image || mockedImage} alt="shop" height={50} width={147} />
-        </div>
-      </div>
+      <Link href={link} className={styles.wrapper} target="_blank">
+        {!description && <label className={styles.labelWrapper}>{label}</label>}
+        <figure className={styles.imageWrapper}>
+          <Image className={styles.innerImage} src={image} alt="shop" />
+        </figure>
+      </Link>
       {description && <p className={styles.description}>{description}</p>}
     </li>
   );

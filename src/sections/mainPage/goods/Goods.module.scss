@@ -17,6 +17,44 @@ $goodsBackgroundColors: (
   $blue
 );
 
+$productImageScaleX: (
+  0.7,
+  0.7,
+  1,
+  0.9,
+  0.9,
+  0.9,
+  0.8,
+  0.9,
+  0.8,
+  1,
+  0.3,
+  0.7,
+  0.8,
+  0.9,
+  0.8,
+  0.8
+);
+
+$productImageScaleY: (
+  0.7,
+  0.6,
+  1.3,
+  0.8,
+  0.7,
+  0.5,
+  0.5,
+  0.6,
+  0.9,
+  0.6,
+  0.7,
+  1,
+  0.6,
+  1,
+  0.9,
+  0.8
+);
+
 .container {
   margin-top: 140px;
   display: flex;
@@ -41,23 +79,35 @@ $goodsBackgroundColors: (
   gap: 20px;
   justify-content: center;
   padding: 0;
-  margin-top: 100px;
+  margin: 100px 0 0;
 
   @for $i from 1 to 17 {
     li:nth-child(#{$i}) {
       background-color: nth($goodsBackgroundColors, $i);
+
+      @if $i == 3 {
+        color: $black;
+      }
+
+      @else if $i == 7 {
+        color: $black;
+      }
+
+      @else {
+        color: $white;
+      }
     }
   }
 }
 
 .telegramOrderDesktop {
   position: relative;
-  margin-top: -130px;
+  margin-top: -120px;
   z-index: 5;
   width: 100%;
 
   button {
-    margin: auto auto 40px;
+    margin: auto auto 80px;
   }
 
   &::before {
@@ -68,7 +118,7 @@ $goodsBackgroundColors: (
     height: 350px;
     background: linear-gradient(179.71deg, #000000 35.87%, rgba(5, 4, 10, 0.48) 68.18%, rgba(9, 7, 19, 0) 96.12%);
     transform: rotate(-180deg);
-    bottom: 0;
+    bottom: 35px;
     left: 0;
     z-index: -1;
     opacity: 0.95;
@@ -80,13 +130,17 @@ $goodsBackgroundColors: (
 }
 
 @media screen and (max-width: $largeTablet) {
-  .container {
-    margin-top: 100px;
-  }
-
   .goods {
-    margin: 40px 24px 0;
+    margin: 40px 0 0;
     gap: 10px;
+
+    @for $i from 1 to 17 {
+      li:nth-child(#{$i}) {
+        img {
+          transform: scale(nth($productImageScaleX, $i), nth($productImageScaleY, $i));
+        }
+      }
+    }
   }
 
   .header {
@@ -104,6 +158,7 @@ $goodsBackgroundColors: (
     z-index: 5;
     width: 100%;
     position: relative;
+    margin-top: 30px;
 
     button {
       margin: 0 auto;
@@ -129,9 +184,24 @@ $goodsBackgroundColors: (
     font-size: $mediumTitle;
     line-height: 45px;
   }
+
+  .telegramOrderMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    button {
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
+  .container {
+    margin-top: 100px;
+  }
+
   .header {
     font-size: $smallTitle;
     line-height: 36px;
