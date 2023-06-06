@@ -19,7 +19,6 @@
   cursor: pointer;
 }
 
-
 @mixin tagText {
   color: $white;
   opacity: 0.9;
@@ -54,4 +53,24 @@
     padding: 16px;
     color: $white;
   }
+}
+
+@mixin FaqElementfullHeightText {
+  height: 100%;
+  margin: 30px 60px 40px 30px;
+}
+
+@mixin FaqElementzeroHeightText {
+  margin: 0 60px 0 30px;
+  height: 0;
+}
+
+@mixin FaqElementzeroFontSizeText {
+  font-size: 0;
+  line-height: 0;
+}
+
+@mixin FaqElementfullFontSizeText {
+  font-size: $mediumParagraphFontSize;
+  line-height: $largeParagraphLineHeight + 1;
 }

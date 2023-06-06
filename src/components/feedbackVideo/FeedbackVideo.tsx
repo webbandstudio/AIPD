@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 import styles from './FeedbackVideo.module.scss';
@@ -8,9 +8,11 @@ export interface IFeedbackVideo {
   video: string;
   title: string;
   id: number;
+  activeVideo?: number;
+  handleActiveVideo?: (id: number) => void;
 }
 
-const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
+const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title, id, activeVideo, handleActiveVideo }) => {
   const videoControl = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -18,8 +20,20 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title }) => {
     if (videoControl.current) {
       isPlaying ? videoControl.current.pause() : videoControl.current.play();
       setIsPlaying(prevState => !prevState);
+      if (handleActiveVideo && !isPlaying) {
+        handleActiveVideo(id);
+      }
     }
   };
+
+  useEffect(() => {
+    if (activeVideo !== id) {
+      if (videoControl.current) {
+        videoControl.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  },[activeVideo]);
 
   return (
     <li className={styles.wrapper}>

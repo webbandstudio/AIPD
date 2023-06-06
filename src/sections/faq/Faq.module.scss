@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+  margin: 120px 0 0;
+  color: $white;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin: 120px 40px 100px;
+  padding: 0;
+}
+
+.managerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 950px;
+  width: 100%;
+}
+
+.description {
+  line-height: $mediumParagraphLineHeight;
+  opacity: 0.5;
+}
+
+.managerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-right: -45px;
+  position: relative;
+}
+
+.subHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 405px;
+}
+
+.managerContacts {
+  display: flex;
+}
+
+.managerImage {
+  border-radius: 50%;
+}
+
+.managerName {
+    line-height: 22px;
+    opacity: 0.5;
+}
+
+.telegramWrapper {
+  display: flex;
+  border-radius: 50%;
+  background-color: $blue;
+  width: 200px;
+  height: 200px;
+  transition: background-color $animationPeriod;
+
+  &:hover {
+    background-color: #68D1F5;
+  }
+}
+
+.telegramIcon {
+  margin: auto;
+}
+
+@media screen and (max-width: $largeTablet) {
+  .header {
+    font-size: $bigTitle;
+    line-height: 56px;
+  }
+
+  .managerInfo {
+    flex-direction: column;
+    gap: 40px
+  }
+
+  .description {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .header {
+    font-size: $mediumTitle;
+    line-height: 45px;
+  }
+
+  .questions {
+    margin: 40px 40px 100px;
+  }
+}
+
+@media screen and (max-width: $smallTablet) {
+  .header {
+    font-size: $smallTitle;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: $largeMobile) {
+  .subHeaderWrapper {
+    align-self: flex-start;
+  }
+}

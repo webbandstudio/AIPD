@@ -4,6 +4,7 @@ import DeliveryInstruction from '@sections/deliveryInstruction/DeliveryInstructi
 import Goods from '@sections/goods/Goods';
 import Calculator from '@sections/calculator/Calculator';
 import Feedbacks from '@sections/feedbacks/Feedbacks';
+import Faq from '@sections/faq/Faq';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Goods />
       <Calculator />
       <Feedbacks />
+      <Faq />
     </>
   );
 };

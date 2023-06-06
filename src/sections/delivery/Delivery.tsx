@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React from 'react';
 
 import styles from './Delivery.module.scss';
 import routeImg from '@assets/images/png/route.png';
@@ -104,9 +105,8 @@ const Delivery = () => {
         <ul className={styles.tags}>
           {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1
             ?
-            <>
+            <React.Fragment key={id}>
               <Image
-                key={id}
                 className={styles.starIcon}
                 src={starIcon}
                 alt="divider"
@@ -114,22 +114,20 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={upText + id}
               />
-            </>
+            </React.Fragment>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={upText + downText}
+              key={id}
             />
           )}
         </ul>
         <ul className={styles.tagsMobile}>
           {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1 && id !== 3
             ?
-            <>
+            <React.Fragment key={id}>
               <Image
-                key={upText}
                 className={styles.starIcon}
                 src={starIcon}
                 alt="divider"
@@ -137,13 +135,12 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={downText + id}
               />
-            </>
+            </React.Fragment>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={downText}
+              key={id}
             />
           )}
         </ul>

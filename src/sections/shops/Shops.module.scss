@@ -10,7 +10,7 @@
 }
 
 .shopsWrapper {
-  max-width: 1140px;
+  max-width: 1150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -51,7 +51,7 @@
 
 .otherShops {
   width: 120px;
-  height: 26px;
+  height: 25px;
   background-color: $black;
   border: 1px solid #312E4A;
   border-radius: 78px;
@@ -102,7 +102,7 @@
 @media screen and (max-width: $tablet) {
   .shopsWrapper {
     gap: 20px 15px;
-    padding: 0 13px;
+    padding: 0 15px;
   }
 
   .title {
