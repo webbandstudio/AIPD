@@ -62,12 +62,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px auto 0;
+  margin: 50px auto 105px;
   gap: 30px 20px;
 }
 
 .dropdownWrapper {
   display: none;
+}
+
+.noShops {
+  color: $white;
+  font-weight: $semi-bold;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -85,6 +91,10 @@
     justify-content: center;
   }
 
+  .shopsWrapper {
+    margin-bottom: 0;
+  }
+
   .title {
     margin: 0 auto;
   }
@@ -95,7 +105,7 @@
 
   .orderWrapperMobile {
     display: flex;
-    margin: 60px 0 0 100px;
+    margin: 60px 0 45px 100px;
   }
 }
 
@@ -105,7 +115,7 @@
   }
 
   .orderWrapperMobile {
-    margin: 60px 0 0 40px;
+    margin: 60px 0 45px 40px;
   }
 }
 
@@ -157,6 +167,13 @@
     display: flex;
     margin: 20px auto 40px;
   }
+
+  .noShops {
+    grid-column: span 2;
+    text-align: center;
+    font-size: $mediumParagraphFontSize;
+    line-height: $mediumParagraphLineHeight;
+  }
 }
 
 @media screen and (max-width: $smallTablet) {
@@ -170,6 +187,6 @@
   }
 
   .orderWrapperMobile {
-    margin: 60px 0 0 20px
+    margin: 60px 0 45px 20px;
   }
 }

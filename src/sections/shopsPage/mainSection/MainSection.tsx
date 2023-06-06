@@ -10,6 +10,7 @@ import Category from '@components/category/Category';
 import Shop from '@components/shop/Shop';
 import backImage from '@assets/images/svg/arrowBack.svg';
 import Dropdown from '@components/dropdown/Dropdown';
+import { telegramLink } from '@constants/links';
 
 const MainSection = () => {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].id);
@@ -37,7 +38,7 @@ const MainSection = () => {
           <Image src={telegramIcon} alt="telegram icon" />
           <figcaption className={styles.textWrapper}>
             <p className={`p2`}>Заказывай через удобный</p>
-            <Link href="" className={`p2`}>
+            <Link href={telegramLink} target="_blank" className={`p2`}>
               телеграм бот
               <Image className={styles.arrowImage} src={telegramArrow} alt="arrow" />
             </Link>
@@ -72,12 +73,13 @@ const MainSection = () => {
             description={description}
           />
         )}
+        {filteredShops.length === 0 && <li className={`p1 ${styles.noShops}`}>В данной категории нет магазинов</li>}
       </ul>
       <figure className={styles.orderWrapperMobile}>
         <Image src={telegramIcon} alt="telegram icon" />
         <figcaption className={styles.textWrapper}>
           <p className={`p2`}>Заказывай через удобный</p>
-          <Link href="" className={`p2`}>
+          <Link href={telegramLink} target="_blank" className={`p2`}>
             телеграм бот
             <Image className={styles.arrowImage} src={telegramArrow} alt="arrow" />
           </Link>
