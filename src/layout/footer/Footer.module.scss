@@ -1,8 +1,9 @@
 .footerWrapper {
   display: flex;
-  position: relative;
+  position: absolute;
   width: 100%;
   overflow-y: clip;
+  bottom: 0;
 
   a {
     text-decoration: none;

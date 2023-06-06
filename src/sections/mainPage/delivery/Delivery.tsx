@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React from 'react';
 
 import styles from './Delivery.module.scss';
 import routeImg from '@assets/images/png/route.png';
@@ -13,7 +14,7 @@ import parfumeImg from '@assets/images/png/parfume.png';
 import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
 import playStationImg from '@assets/images/png/playStation.png';
 import { TAGS_TEXT } from '@constants/constants';
-import Tag from '@sections/delivery/tag/Tag';
+import Tag from '@sections/mainPage/delivery/tag/Tag';
 import plFlagImage from '@assets/images/png/flagPl.png';
 
 const mobileImages = [
@@ -104,9 +105,8 @@ const Delivery = () => {
         <ul className={styles.tags}>
           {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1
             ?
-            <>
+            <React.Fragment key={id}>
               <Image
-                key={id}
                 className={styles.starIcon}
                 src={starIcon}
                 alt="divider"
@@ -114,22 +114,20 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={upText + id}
               />
-            </>
+            </React.Fragment>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={upText + downText}
+              key={id}
             />
           )}
         </ul>
         <ul className={styles.tagsMobile}>
           {TAGS_TEXT.map(({ id, upText, downText }) => id !== 1 && id !== 3
             ?
-            <>
+            <React.Fragment key={id}>
               <Image
-                key={upText}
                 className={styles.starIcon}
                 src={starIcon}
                 alt="divider"
@@ -137,13 +135,12 @@ const Delivery = () => {
               <Tag
                 upText={upText || ''}
                 downText={downText || ''}
-                key={downText + id}
               />
-            </>
+            </React.Fragment>
             : <Tag
               upText={upText || ''}
               downText={downText || ''}
-              key={downText}
+              key={id}
             />
           )}
         </ul>

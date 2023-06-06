@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 
 import styles from './MainSection.module.scss';
 import telegramIcon from '@assets/images/svg/icons/telegramIcon.svg';
@@ -9,11 +9,21 @@ import { CATEGORIES, SHOPS } from '@constants/mockData';
 import Category from '@components/category/Category';
 import Shop from '@components/shop/Shop';
 import backImage from '@assets/images/svg/arrowBack.svg';
-import Dropdown from "@components/dropdown/Dropdown";
+import Dropdown from '@components/dropdown/Dropdown';
 
 const MainSection = () => {
   const [activeCategory, setActiveCategory] = useState(CATEGORIES[0].id);
   const handleCategory = (id: number) => setActiveCategory(id);
+
+  const filteredShops = useMemo(() => {
+    if (activeCategory !== 1) {
+      const currentCategory = CATEGORIES.find((item) => item.id === activeCategory);
+
+      return SHOPS.filter((elem) => elem.category === currentCategory?.category);
+    }
+
+    return SHOPS;
+  }, [activeCategory]);
 
   return (
     <section>
@@ -53,11 +63,12 @@ const MainSection = () => {
         />
       </div>}
       <ul className={styles.shopsWrapper}>
-        {SHOPS.map(({ id, category, image, description }) =>
+        {filteredShops.map(({ id, category, image, description, link }) =>
           <Shop
             key={id}
             label={category}
             image={image}
+            link={link}
             description={description}
           />
         )}

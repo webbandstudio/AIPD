@@ -1,0 +1,25 @@
+.errorPageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 300px auto;
+}
+
+.title {
+  color: $white;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: $white;
+  transition: $animationPeriod;
+  margin-top: 60px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

@@ -27,7 +27,7 @@ const Dropdown: React.FC<IDropdown> = ({ items, activeItem, handleItem }) => {
       </button>
       <ul className={isOpen ? styles.itemsWrapper : styles.itemsWrapperClose}>
         {items.map(({ id, category}) =>
-          <li className={styles.dropdownItem} onClick={() => handleSelectItem(id)}>
+          <li key={id} className={styles.dropdownItem} onClick={() => handleSelectItem(id)}>
             <p>{category}</p>
           </li>
         )}

@@ -3,7 +3,7 @@ import Shops from '@sections/mainPage/shops/Shops';
 import DeliveryInstruction from '@sections/mainPage/deliveryInstruction/DeliveryInstruction';
 import Goods from '@sections/mainPage/goods/Goods';
 import Calculator from '@sections/mainPage/calculator/Calculator';
-import Feedbacks from '@sections/feedbacks/Feedbacks';
+import Feedbacks from '@sections/mainPage/feedbacks/Feedbacks';
 
 const Home = () => {
   return (

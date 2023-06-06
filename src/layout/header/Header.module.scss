@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 100px 0;
+  padding: 30px 100px 0;
 }
 
 .title {
@@ -39,14 +39,14 @@
 
 @media screen and (max-width: $desktop) {
   .header {
-    margin: 30px 40px 0;
+    padding: 30px 40px 0;
   }
 }
 
 @media screen and (max-width: $largeTablet) {
   .header {
     justify-content: center;
-    margin: 30px 0 0;
+    padding: 30px 0 0;
   }
 
   .navWrapper {

@@ -7,7 +7,7 @@ import commissionSticker from '@assets/images/png/stickers/commission.png';
 import fiveYearSticker from '@assets/images/png/stickers/fiveYearSticker.png';
 import horizontalLine from '@assets/images/png/horisontalLine.png';
 import verticalLine from '@assets/images/png/verticalLine.png';
-import InstructionText from '@sections/deliveryInstruction/instructionText/InstructionText';
+import InstructionText from '@sections/mainPage/deliveryInstruction/instructionText/InstructionText';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 import { INSTRUCTIONS } from '@constants/constants';
 
