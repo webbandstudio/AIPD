@@ -11,20 +11,21 @@
 
 .border {
   max-width: 1145px;
+  width: 100%;
   display: flex;
   margin: 0 auto;
   justify-content: center;
 }
 
 .borderLeft {
-  background-image: url('../../public/assets/images/svg/borderLeft.svg');
+  background-image: url('../../../public/assets/images/svg/borderLeft.svg');
   width: 11px;
   margin-right: -2px;
   background-position-y: 12px;
 }
 
 .borderRight {
-  background-image: url('../../public/assets/images/svg/borderRight.svg');
+  background-image: url('../../../public/assets/images/svg/borderRight.svg');
   width: 11px;
   background-position-y: 12px;
 }
@@ -88,7 +89,7 @@
   display: flex;
   flex-direction: column;
   max-width: 485px;
-  margin-top: 15px;
+  margin: 15px 0 0 20px;
   width: 100%;
   row-gap: 16px;
 
@@ -166,7 +167,7 @@
   color: $black;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 65px 0;
   gap: 16px;
   align-items: center;
 }
@@ -245,7 +246,7 @@
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin: 20px auto 0;
   }
 
   .descriptionTotal {
@@ -262,7 +263,7 @@
     &::before {
       content: '';
       height: 10px;
-      background-image: url('../../public/assets/images/svg/borderTop.svg');
+      background-image: url('../../../public/assets/images/svg/borderTop.svg');
       width: 100%;
       position: absolute;
       top: -8px;
@@ -272,7 +273,7 @@
     &::after {
       content: '';
       height: 8px;
-      background-image: url('../../public/assets/images/svg/borderBottom.svg');
+      background-image: url('../../../public/assets/images/svg/borderBottom.svg');
       width: 100%;
       position: absolute;
       bottom: -8px;
@@ -326,10 +327,14 @@
       height: 35px;
       font-size: $smallParagraphFontSize;
       line-height: $smallParagraphLineHeight;
+      padding-right: 10px;
     }
   }
 
   .calculations {
+    margin: 15px 0;
+    grid-row: span 2;
+
     p {
       font-size: $smallParagraphFontSize;
       line-height: $smallParagraphLineHeight;
@@ -344,11 +349,6 @@
     margin: 5px 0 0;
   }
 
-  .calculations {
-    margin: 15px 0;
-    grid-row: span 2;
-  }
-
   .descriptionTextTotal {
     max-width: 170px;
   }
@@ -358,7 +358,7 @@
   }
 
   .descriptionTotal {
-    font-size: 30px !important;
+    font-size: $smallTitle !important;
     line-height: 58px !important;
     margin-right: 10px;
   }

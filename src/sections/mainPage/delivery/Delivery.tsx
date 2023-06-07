@@ -14,7 +14,7 @@ import parfumeImg from '@assets/images/png/parfume.png';
 import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
 import playStationImg from '@assets/images/png/playStation.png';
 import { TAGS_TEXT } from '@constants/constants';
-import Tag from '@sections/delivery/tag/Tag';
+import Tag from '@sections/mainPage/delivery/tag/Tag';
 import plFlagImage from '@assets/images/png/flagPl.png';
 
 const mobileImages = [

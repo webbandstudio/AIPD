@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import styles from './TelegramOrder.module.scss';
 import telegramIcon from '@assets/images/png/telegramIcon.png';
+import { telegramLink } from '@constants/links';
 
 interface ITelegramOrder {
   text: string,
@@ -11,7 +12,7 @@ interface ITelegramOrder {
 
 const TelegramOrder: React.FC<ITelegramOrder> = ({ text }) => {
   return (
-    <Link href="https://telegram.org/" target="_blank" className={styles.container}>
+    <Link href={telegramLink} target="_blank" className={styles.container}>
       <Image src={telegramIcon} alt='telegram icon' />
       <p className={styles.text}>{text}</p>
     </Link>

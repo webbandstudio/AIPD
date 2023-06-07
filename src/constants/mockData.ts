@@ -24,46 +24,116 @@ import wheel from '@assets/images/png/goodsImages/wheel.png';
 
 export const SHOPS = [
   {
-    id: '1',
+    id: 1,
     category: 'одежда',
     image: zaraImage,
     link: 'https://www.zara.com/pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '3',
+    id: 2,
     category: 'техника',
     image: mediaMarketImage,
     link: 'https://mediamarkt.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '6',
+    id: 3,
     category: 'парфюмерия',
     image: notinoImage,
     link: 'https://www.notino.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '10',
+    id: 4,
     category: 'одежда',
     image: answerImage,
     link: 'https://answear.com/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '11',
+    id: 5,
     category: 'одежда',
     image: zalandoImage,
     link: 'https://www.zalando.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '15',
+    id: 6,
     category: 'обувь',
     image: newBalanceImage,
     link: 'https://nbsklep.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
   {
-    id: '17',
+    id: 7,
     category: 'площадка',
     image: allegroImage,
     link: 'https://allegro.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 8,
+    category: 'одежда',
+    image: zaraImage,
+    link: 'https://www.zara.com/pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 9,
+    category: 'техника',
+    image: mediaMarketImage,
+    link: 'https://mediamarkt.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 10,
+    category: 'парфюмерия',
+    image: notinoImage,
+    link: 'https://www.notino.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 11,
+    category: 'одежда',
+    image: answerImage,
+    link: 'https://answear.com/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 12,
+    category: 'одежда',
+    image: zalandoImage,
+    link: 'https://www.zalando.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 13,
+    category: 'обувь',
+    image: newBalanceImage,
+    link: 'https://nbsklep.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 14,
+    category: 'площадка',
+    image: allegroImage,
+    link: 'https://allegro.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 15,
+    category: 'одежда',
+    image: zaraImage,
+    link: 'https://www.zara.com/pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
+  },
+  {
+    id: 16,
+    category: 'техника',
+    image: mediaMarketImage,
+    link: 'https://mediamarkt.pl/',
+    description: 'Площадка с магазинами где можно найти всё.',
   },
 ];
 
@@ -186,5 +256,52 @@ export const FEEDBACKS_DATA = [
     id: 12,
     video: '',
     title: 'Мага, Махачкала',
+  },
+];
+
+export const CATEGORIES = [
+  {
+    id: 1,
+    category: 'все магазины',
+  },
+  {
+    id: 2,
+    category: 'детские товары',
+  },
+  {
+    id: 3,
+    category: 'компьютеры и ноутбуки',
+  },
+  {
+    id: 4,
+    category: 'обувь',
+  },
+  {
+    id: 5,
+    category: 'парфюмерия',
+  },
+  {
+    id: 6,
+    category: 'одежда',
+  },
+  {
+    id: 7,
+    category: 'строительство',
+  },
+  {
+    id: 8,
+    category: 'обувь',
+  },
+  {
+    id: 9,
+    category: 'парфюмерия',
+  },
+  {
+    id: 10,
+    category: 'одежда',
+  },
+  {
+    id: 11,
+    category: 'строительство',
   },
 ];

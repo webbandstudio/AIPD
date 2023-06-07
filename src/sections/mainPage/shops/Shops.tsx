@@ -7,11 +7,13 @@ import Shop from '@components/shop/Shop';
 import arrow from '@assets/images/svg/shopsArrow.svg';
 
 const Shops = () => {
+  const shopsPart = SHOPS.slice(0, 7);
+
   return (
     <section className={styles.shopsSection}>
       <h2 className={styles.title}>Доставляем ото всюду</h2>
       <ul className={styles.shopsWrapper}>
-        {SHOPS.map(({id, category, image, link }) =>
+        {shopsPart.map(({ id, category, image, link }) =>
           <Shop key={id} label={category} image={image} link={link} />
         )}
         <li>

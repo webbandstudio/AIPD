@@ -1,7 +1,7 @@
 .feedbackWrapper {
   display: flex;
   max-width: 1130px;
-  margin: 120px auto;
+  margin: 120px auto 0;
   column-gap: 140px;
   padding: 0 20px;
 }
@@ -95,13 +95,13 @@
 
 @media screen and (max-width: $smallTablet + 50px) {
   .feedbackWrapper {
-    margin: 100px auto;
+    margin: 100px auto 0;
   }
 
   .feedbacksVideos {
     display: flex;
     flex-direction: column;
-    margin: 40px auto;
+    margin: 40px auto 0;
   }
 
   .feedbacksText {

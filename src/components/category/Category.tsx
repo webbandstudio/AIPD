@@ -1,25 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './Category.module.scss';
 
 interface ICategory {
-  name: string,
+  id: number;
+  category: string;
+  activeCategory: number;
+  handleCategory: (id: number) => void;
 }
 
-const Category: React.FC<ICategory> = ({ name }) => {
-  const [activeCategory, setActiveCategory] = useState(false);
-
-  const handleActiveCategory = () => {
-    setActiveCategory(prevState => !prevState);
-  };
+const Category: React.FC<ICategory> = ({ id, category, activeCategory, handleCategory }) => {
+  const isActive = activeCategory === id;
 
   return (
-    <div
-      className={activeCategory ? styles.activeContainer : styles.container}
-      onClick={handleActiveCategory}
+    <li
+      className={isActive ? styles.activeContainer : styles.container}
+      onClick={() => handleCategory(id)}
     >
-      <p className={styles.name}>{name}</p>
-    </div>
+      <p className={styles.name}>{category}</p>
+    </li>
   );
 };
 

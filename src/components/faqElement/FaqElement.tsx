@@ -7,10 +7,12 @@ import arrow from '@assets/images/png/arrow.png';
 interface IFaqElement {
   title: string;
   text: string;
+  id: number;
 }
 
-const FaqElement: React.FC<IFaqElement> = ({ title, text }) => {
-  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+const FaqElement: React.FC<IFaqElement> = ({ title, text, id }) => {
+  const isOpenByDefault = id === 100;
+  const [isOpenDropdown, setIsOpenDropdown] = useState(isOpenByDefault);
   const handleOpenDropdown = () => setIsOpenDropdown(prevState => !prevState);
 
   return (

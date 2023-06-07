@@ -11,7 +11,7 @@ const feedbackElement = (
   item: IFeedbackVideo,
   index: number,
   activeVideo: number,
-  handleActiveVideo: (id: number) => void
+  handleActiveVideo: (id: number) => void,
 ) => {
   switch (index) {
     case 1:
