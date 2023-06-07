@@ -69,14 +69,14 @@
   @include FaqElementfullHeightText;
   line-height: $largeParagraphLineHeight + 1px;
   opacity: 0.8;
-  animation: fadeIn $animationPeriod;
+  animation: fadeIn $animationPeriod + 0.2;
 }
 
 .textClose {
   @include FaqElementzeroHeightText;
   @include FaqElementzeroFontSizeText;
   opacity: 0;
-  animation: fadeOut $animationPeriod;
+  animation: fadeOut $animationPeriod + 0.2;
 }
 
 .arrow {

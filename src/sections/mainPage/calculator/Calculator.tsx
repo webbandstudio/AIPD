@@ -91,7 +91,7 @@ const Calculator = () => {
           </div>
           <div className={styles.textGroup}>
             <p className={`p1 ${styles.descriptionText}`}>комиссия сервиса, 9%</p>
-            <p className={`p1 ${styles.descriptionResult}`}>{commission}</p>
+            <p className={`p1 ${styles.descriptionResult}`}>{commission.toFixed(2)}</p>
           </div>
           <div className={styles.textGroup}>
             <p className={`p1 ${styles.descriptionText}`}>к оплате в Польше, pln</p>

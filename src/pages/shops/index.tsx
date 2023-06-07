@@ -1,11 +1,7 @@
-import MainSection from "@sections/shopsPage/mainSection/MainSection";
+import MainSection from '@sections/shopsPage/mainSection/MainSection';
 
 const ShopsPage = () => {
-  return (
-    <>
-      <MainSection />
-    </>
-  );
+  return <MainSection />;
 };
 
 export default ShopsPage;

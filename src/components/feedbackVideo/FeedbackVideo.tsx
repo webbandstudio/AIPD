@@ -33,7 +33,7 @@ const FeedbackVideo: React.FC<IFeedbackVideo> = ({ video, title, id, activeVideo
         setIsPlaying(false);
       }
     }
-  },[activeVideo]);
+  },[activeVideo, id]);
 
   return (
     <li className={styles.wrapper}>

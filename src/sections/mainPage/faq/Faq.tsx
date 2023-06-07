@@ -18,6 +18,7 @@ const Faq = () => {
             key={id}
             title={title}
             text={text}
+            id={id}
           />
         )}
       </ul>

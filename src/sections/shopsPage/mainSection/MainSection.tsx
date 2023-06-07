@@ -18,9 +18,9 @@ const MainSection = () => {
 
   const filteredShops = useMemo(() => {
     if (activeCategory !== 1) {
-      const currentCategory = CATEGORIES.find((item) => item.id === activeCategory);
+      const currentCategory = CATEGORIES.find(({ id }) => id === activeCategory);
 
-      return SHOPS.filter((elem) => elem.category === currentCategory?.category);
+      return SHOPS.filter(({ category }) => category === currentCategory?.category);
     }
 
     return SHOPS;
@@ -37,8 +37,8 @@ const MainSection = () => {
         <figure className={styles.orderWrapper}>
           <Image src={telegramIcon} alt="telegram icon" />
           <figcaption className={styles.textWrapper}>
-            <p className={`p2`}>Заказывай через удобный</p>
-            <Link href={telegramLink} target="_blank" className={`p2`}>
+            <p className="p2">Заказывай через удобный</p>
+            <Link href={telegramLink} target="_blank" className="p2">
               телеграм бот
               <Image className={styles.arrowImage} src={telegramArrow} alt="arrow" />
             </Link>
@@ -78,8 +78,8 @@ const MainSection = () => {
       <figure className={styles.orderWrapperMobile}>
         <Image src={telegramIcon} alt="telegram icon" />
         <figcaption className={styles.textWrapper}>
-          <p className={`p2`}>Заказывай через удобный</p>
-          <Link href={telegramLink} target="_blank" className={`p2`}>
+          <p className="p2">Заказывай через удобный</p>
+          <Link href={telegramLink} target="_blank" className="p2">
             телеграм бот
             <Image className={styles.arrowImage} src={telegramArrow} alt="arrow" />
           </Link>

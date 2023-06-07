@@ -4,8 +4,13 @@ import Image from 'next/image';
 import styles from './Dropdown.module.scss';
 import dropdownImage from '@assets/images/svg/dropdownArrow.svg';
 
+interface ICategory {
+  id: number;
+  category: string;
+}
+
 interface IDropdown {
-  items: { id: number; category: string; }[];
+  items: ICategory[];
   activeItem: number;
   handleItem: (id: number) => void;
 }
@@ -22,11 +27,11 @@ const Dropdown: React.FC<IDropdown> = ({ items, activeItem, handleItem }) => {
   return (
     <div className={styles.dropdownWrapper}>
       <button onClick={handleOpen} className={styles.dropdownButton}>
-        <p className={styles.buttonText}>{items.find(item => item.id === activeItem)?.category}</p>
-        <Image className={isOpen ? styles.dropdownImageActive : styles.dropdownImage} src={dropdownImage} alt="dropdown image" />
+        <p className={styles.buttonText}>{items.find(({ id }) => id === activeItem)?.category}</p>
+        <Image className={styles[isOpen ? 'dropdownImageActive' : 'dropdownImage']} src={dropdownImage} alt="dropdown" />
       </button>
-      <ul className={isOpen ? styles.itemsWrapper : styles.itemsWrapperClose}>
-        {items.map(({ id, category}) =>
+      <ul className={styles[isOpen ? 'itemsWrapper' : 'itemsWrapperClose']}>
+        {items.map(({ id, category }) =>
           <li key={id} className={styles.dropdownItem} onClick={() => handleSelectItem(id)}>
             <p>{category}</p>
           </li>
