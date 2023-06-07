@@ -83,3 +83,7 @@ export const FAQ = [
     text: 'Стандартная доставка товара 1-3 дня , но бывают случаю когда товар может доставляться дольше по разным причинам. Срок доставки товара от нас не зависит, он зависит от продавца у которого был куплен товар.',
   },
 ];
+
+export const META_SITE_NAME = 'All in Poland delivery';
+export const GA_ID = 'G-FFBR3YFJCW';
+export const GTM_ID = 'GTM-P63PM5B';
