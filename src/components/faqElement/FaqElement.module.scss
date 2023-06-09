@@ -21,62 +21,34 @@
   max-width: 950px;
   width: 100%;
   color: $white;
+
+  ol {
+    padding: 0;
+    margin-left: 20px;
+
+    li {
+      display: list-item;
+    }
+  }
 }
 
 .title {
   color: $white;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    @include FaqElementzeroHeightText;
-  }
-
-  50% {
-    @include FaqElementfullHeightText;
-  }
-
-  100% {
-    opacity: 0.8;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 0.8;
-    display: block;
-    @include FaqElementfullHeightText;
-    @include FaqElementfullFontSizeText;
-  }
-
-  30% {
-    opacity: 0;
-    @include FaqElementfullHeightText;
-    @include FaqElementfullFontSizeText;
-  }
-
-  60% {
-    @include FaqElementzeroFontSizeText;
-  }
-
-  100% {
-    @include FaqElementzeroHeightText;
-  }
-}
-
 .textOpen {
-  @include FaqElementfullHeightText;
+  height: fit-content;
+  padding: 30px 60px 40px 30px;
   line-height: $largeParagraphLineHeight + 1px;
   opacity: 0.8;
-  animation: fadeIn $animationPeriod + 0.2;
+  transition: all $animationPeriod;
 }
 
 .textClose {
-  @include FaqElementzeroHeightText;
-  @include FaqElementzeroFontSizeText;
+  height: 0;
   opacity: 0;
-  animation: fadeOut $animationPeriod + 0.2;
+  padding: 0 60px 0 30px;
+  transition: all $animationPeriod;
 }
 
 .arrow {
@@ -85,4 +57,21 @@
 
 .arrowOpen {
   transform: scaleY(-1);
+}
+
+@media screen and (max-width: $tablet) {
+  .textOpen {
+    font-size: $smallParagraphFontSize;
+    line-height: $mediumParagraphLineHeight;
+    padding: 20px;
+  }
+
+  .textClose {
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: $smallParagraphFontSize;
+    line-height: $smallParagraphLineHeight;
+  }
 }
