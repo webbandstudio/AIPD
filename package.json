@@ -17,9 +17,13 @@
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-gtm-module": "^2.0.11",
     "react-responsive": "^9.0.2",
     "sass": "^1.62.1",
     "sharp": "^0.32.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/react-gtm-module": "^2.0.1"
   }
 }

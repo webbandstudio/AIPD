@@ -1,13 +1,18 @@
 import type { AppProps } from 'next/app';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
+import TagManager from 'react-gtm-module';
 
 import '@styles/default.scss';
 import Layout from '@layouts/Layout';
 import GoogleAnalytics from '@analytics/googleAnalytics';
-import Gtm from '@analytics/gtm';
+import { GTM_ID } from '@constants/constants';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    TagManager.initialize({ gtmId: GTM_ID });
+  }, []);
+
   return (
     <>
       <Head>
@@ -16,7 +21,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1.0"
         />
       </Head>
-      <Gtm />
       <GoogleAnalytics />
       <Layout>
         <Component {...pageProps} />
