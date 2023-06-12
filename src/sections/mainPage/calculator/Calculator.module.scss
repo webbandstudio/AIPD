@@ -210,14 +210,29 @@
   @include tooltip;
 }
 
+.tooltipWindow8 {
+  @include tooltip;
+  margin-top: -130px;
+}
+
+.tooltipWindow23 {
+  @include tooltip;
+  margin-top: -115px;
+}
+
 .tooltipWindowButtons {
   @include tooltip;
   margin: -75px 0 0 -85px;
 }
 
-.tooltipWindowButtons3 {
+.tooltipWindowButtons8 {
   @include tooltip;
-  margin: -75px 0 0 -85px;
+  margin: -135px 0 0 -85px;
+}
+
+.tooltipWindowButtons23 {
+  @include tooltip;
+  margin: -120px 0 0 -85px;
 }
 
 @media screen and (max-width: $desktop) {
@@ -312,8 +327,8 @@
     line-height: 45px;
   }
 
-  .tooltipWindowButtons3 {
-    margin: -75px 0 0 -145px;
+  .tooltipWindowButtons23 {
+    margin: -120px 0 0 -145px;
   }
 }
 

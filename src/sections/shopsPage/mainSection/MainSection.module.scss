@@ -64,6 +64,12 @@
   justify-content: center;
   margin: 50px auto 105px;
   gap: 30px 20px;
+
+  li:nth-child(50) {
+    img {
+      transform: scale(0.9);
+    }
+  }
 }
 
 .dropdownWrapper {
@@ -184,6 +190,18 @@
     margin: 40px 0 0;
     padding: 0 10px;
     gap: 30px 15px;
+
+    li:nth-child(23) {
+      img {
+        transform: scale(0.5);
+      }
+    }
+
+    li:nth-child(48) {
+      img {
+        transform: scale(0.5);
+      }
+    }
   }
 
   .orderWrapperMobile {

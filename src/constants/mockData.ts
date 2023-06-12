@@ -1,3 +1,4 @@
+//Shops images
 import zaraImage from '@assets/images/png/shopsImages/zara.png';
 import mediaMarketImage from '@assets/images/png/shopsImages/mediaMarkt.png';
 import notinoImage from '@assets/images/png/shopsImages/notino.png';
@@ -5,6 +6,71 @@ import answerImage from '@assets/images/png/shopsImages/answer.png';
 import zalandoImage from '@assets/images/png/shopsImages/zalando.png';
 import newBalanceImage from '@assets/images/png/shopsImages/newBalance.png';
 import allegroImage from '@assets/images/png/shopsImages/allegro.png';
+import adidasImage from '@assets/images/png/shopsImages/adidasLogo.png';
+import reebokLogo from '@assets/images/png/shopsImages/reebokLogo.png';
+import eastendLogo from '@assets/images/png/shopsImages/eastendLogo.png';
+import timberlandLogo from '@assets/images/png/shopsImages/timberlandLogo.png';
+import drmartensLogo from '@assets/images/png/shopsImages/drmartensLogo.png';
+import simbiosisLogo from '@assets/images/png/shopsImages/simbiosisLogo.png';
+import atafLogo from '@assets/images/png/shopsImages/atafLogo.png';
+import style50Logo from '@assets/images/png/shopsImages/50styleLogo.png';
+import eobuwieLogo from '@assets/images/png/shopsImages/eobuwieLogo.png';
+import worldboxLogo from '@assets/images/png/shopsImages/worldboxLogo.png';
+import warsawsneakerstoreLogo from '@assets/images/png/shopsImages/warsawsneakerstoreLogo.png';
+import skstoreLogo from '@assets/images/png/shopsImages/skstoreLogo.png';
+import sneakerstoreLogo from '@assets/images/png/shopsImages/sneakerstudioLogo.png';
+import sneakerpeekerLogo from '@assets/images/png/shopsImages/sneakerpeekerLogo.png';
+import runcolorsLogo from '@assets/images/png/shopsImages/runcolorsLogo.png';
+import basketzoneLogo from '@assets/images/png/shopsImages/basketzoneLogo.png';
+import sneakershopLogo from '@assets/images/png/shopsImages/sneakershopLogo.png';
+import sizeerLogo from '@assets/images/png/shopsImages/sizeerLogo.png';
+import sklepkoszykarzaLogo from '@assets/images/png/shopsImages/sklepkoszykarzaLogo.png';
+import gomezLogo from '@assets/images/png/shopsImages/gomezLogo.png';
+import supersklepLogo from '@assets/images/png/shopsImages/supersklepLogo.png';
+import modivoLogo from '@assets/images/png/shopsImages/modivoLogo.png';
+import royalshopLogo from '@assets/images/png/shopsImages/royalshopLogo.png';
+import uterqueLogo from '@assets/images/png/shopsImages/uterqueLogo.png';
+import viktacLogo from '@assets/images/png/shopsImages/viktacLogo.png';
+import massimoduttiLogo from '@assets/images/png/shopsImages/massimoduttiLogo.png';
+import streetsupplyLogo from '@assets/images/png/shopsImages/streetsupplyLogo.png';
+import mantoLogo from '@assets/images/png/shopsImages/mantoLogo.png';
+import strefatenisaLogo from '@assets/images/png/shopsImages/strefatenisaLogo.png';
+import rgolLogo from '@assets/images/png/shopsImages/rgolLogo.png';
+import teamsportsLogo from '@assets/images/png/shopsImages/11teamsportsLogo.png';
+import activeLogo from '@assets/images/png/shopsImages/activeLogo.png';
+import sportroomLogo from '@assets/images/png/shopsImages/sportroomLogo.png';
+import sportjamLogo from '@assets/images/png/shopsImages/sportjamLogo.png';
+import sephoraLogo from '@assets/images/png/shopsImages/sephoraLogo.png';
+import douglasLogo from '@assets/images/png/shopsImages/douglasLogo.png';
+import hairstoreLogo from '@assets/images/png/shopsImages/hairstoreLogo.png';
+import superpharmLogo from '@assets/images/png/shopsImages/superpharmLogo.png';
+import topesteticlogo from '@assets/images/png/shopsImages/topesteticlogo.png';
+import dolceLogo from '@assets/images/png/shopsImages/dolceLogo.png';
+import estylLogo from '@assets/images/png/shopsImages/estylLogo.png';
+import zegarkiLogo from '@assets/images/png/shopsImages/zegarkiLogo.png';
+import zegarowniaLogo from '@assets/images/png/shopsImages/zegarowniaLogo.png';
+import montresLogo from '@assets/images/png/shopsImages/montresLogo.png';
+import happytimeLogo from '@assets/images/png/shopsImages/happytimeLogo.png';
+import zegarekLogo from '@assets/images/png/shopsImages/zegarekLogo.png';
+import leroymerlinLogo from '@assets/images/png/shopsImages/leroymerlinLogo.png';
+import bricomanLogo from '@assets/images/png/shopsImages/bricomanLogo.png';
+import euroogrodLogo from '@assets/images/png/shopsImages/euroogrodLogo.png';
+import sklepbaterieLogo from '@assets/images/png/shopsImages/sklepbaterieLogo.png';
+import zielonalazienkaLogo from '@assets/images/png/shopsImages/zielonalazienkaLogo.png';
+import elazienkiLogo from '@assets/images/png/shopsImages/elazienkiLogo.png';
+import lazienkariumLogo from '@assets/images/png/shopsImages/lazienkariumLogo.png';
+import ipartsLogo from '@assets/images/png/shopsImages/ipartsLogo.png';
+import motostacjaLogo from '@assets/images/png/shopsImages/motostacjaLogo.png';
+import thomannLogo from '@assets/images/png/shopsImages/thomannLogo.png';
+import xkomLogo from '@assets/images/png/shopsImages/xkomLogo.png';
+import avansLogo from '@assets/images/png/shopsImages/avansLogo.png';
+import mallLogo from '@assets/images/png/shopsImages/mallLogo.png';
+import neo24Logo from '@assets/images/png/shopsImages/neo24Logo.png';
+import euroLogo from '@assets/images/png/shopsImages/euroLogo.png';
+import nikeLogo from '@assets/images/png/shopsImages/nikeLogo.png';
+import ikeaLogo from '@assets/images/png/shopsImages/ikeaLogo.png';
+
+//Goods images
 import headPhones from '@assets/images/png/goodsImages/headPhones.png';
 import table from '@assets/images/png/goodsImages/table.png';
 import jacket from '@assets/images/png/goodsImages/jacket.png';
@@ -25,115 +91,577 @@ import wheel from '@assets/images/png/goodsImages/wheel.png';
 export const SHOPS = [
   {
     id: 1,
-    category: 'одежда',
+    category: 'одежда, обувь, аксессуары',
     image: zaraImage,
     link: 'https://www.zara.com/pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Одежда, обувь и аксессуары',
   },
   {
     id: 2,
     category: 'техника',
     image: mediaMarketImage,
     link: 'https://mediamarkt.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Магазин техники',
   },
   {
     id: 3,
     category: 'парфюмерия',
     image: notinoImage,
     link: 'https://www.notino.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Магазин парфюмерии',
   },
   {
     id: 4,
-    category: 'одежда',
+    category: 'кроссовки',
     image: answerImage,
     link: 'https://answear.com/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Одежда, обувь и аксессуары',
   },
   {
     id: 5,
-    category: 'одежда',
+    category: 'одежда, обувь, аксессуары',
     image: zalandoImage,
     link: 'https://www.zalando.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Одежда, обувь и аксессуары',
   },
   {
     id: 6,
-    category: 'обувь',
+    category: 'кроссовки',
     image: newBalanceImage,
     link: 'https://nbsklep.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Официальный магазин New Balance',
   },
   {
     id: 7,
-    category: 'площадка',
+    category: 'прочие товары',
     image: allegroImage,
     link: 'https://allegro.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    description: 'Площадка с магазинами где можно найти всё',
   },
   {
     id: 8,
-    category: 'одежда',
-    image: zaraImage,
-    link: 'https://www.zara.com/pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: adidasImage,
+    link: 'https://www.adidas.pl/',
+    description: 'Официальный магазин Adidas',
   },
   {
     id: 9,
-    category: 'техника',
-    image: mediaMarketImage,
-    link: 'https://mediamarkt.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: reebokLogo,
+    link: 'https://www.reebok.pl/',
+    description: 'Официальный магазин Reebok',
   },
   {
     id: 10,
-    category: 'парфюмерия',
-    image: notinoImage,
-    link: 'https://www.notino.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: eastendLogo,
+    link: 'https://eastendshop.com/pl',
+    description: 'Официальный магазин Eastend',
   },
   {
     id: 11,
-    category: 'одежда',
-    image: answerImage,
-    link: 'https://answear.com/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: drmartensLogo,
+    link: 'https://sklepmartens.pl/',
+    description: 'Официальный магазин Dr.Martens',
   },
   {
     id: 12,
-    category: 'одежда',
-    image: zalandoImage,
-    link: 'https://www.zalando.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: timberlandLogo,
+    link: 'https://e-timberland.pl/',
+    description: 'Официальный магазин Timberland',
   },
   {
     id: 13,
-    category: 'обувь',
-    image: newBalanceImage,
-    link: 'https://nbsklep.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: simbiosisLogo,
+    link: 'https://www.symbiosis.com.pl/',
+    description: 'Symbiosis - интернет-магазин, предлагающий обувь и аксессуары высочайшего качества',
   },
   {
     id: 14,
-    category: 'площадка',
-    image: allegroImage,
-    link: 'https://allegro.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: atafLogo,
+    link: 'https://www.ataf.pl/',
+    description: 'Магазин кроссовок',
   },
   {
     id: 15,
-    category: 'одежда',
-    image: zaraImage,
-    link: 'https://www.zara.com/pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    category: 'кроссовки',
+    image: eobuwieLogo,
+    link: 'https://www.eobuwie.com.pl/',
+    description: 'Магазин кроссовок',
   },
   {
     id: 16,
+    category: 'кроссовки',
+    image: style50Logo,
+    link: 'https://50style.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 17,
+    category: 'кроссовки',
+    image: worldboxLogo,
+    link: 'https://worldbox.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 18,
+    category: 'кроссовки',
+    image: warsawsneakerstoreLogo,
+    link: 'https://warsawsneakerstore.com/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 19,
+    category: 'кроссовки',
+    image: skstoreLogo,
+    link: 'https://skstore.pl/',
+    description: 'Магазин обуви и одежды для баскетбола',
+  },
+  {
+    id: 20,
+    category: 'кроссовки',
+    image: sneakerstoreLogo,
+    link: 'https://sneakerstudio.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 21,
+    category: 'кроссовки',
+    image: sneakerpeekerLogo,
+    link: 'https://sneakerpeeker.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 22,
+    category: 'кроссовки',
+    image: runcolorsLogo,
+    link: 'https://runcolors.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 23,
+    category: 'кроссовки',
+    image: basketzoneLogo,
+    link: 'https://basketzone.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 24,
+    category: 'кроссовки',
+    image: sneakershopLogo,
+    link: 'https://sneakershop.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 25,
+    category: 'кроссовки',
+    image: sizeerLogo,
+    link: 'https://sklep.sizeer.com/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 26,
+    category: 'кроссовки',
+    image: sklepkoszykarzaLogo,
+    link: 'https://sklepkoszykarza.pl/',
+    description: 'Магазин кроссовок',
+  },
+  {
+    id: 27,
+    category: 'одежда, обувь, аксессуары',
+    image: answerImage,
+    link: 'https://answear.com/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 28,
+    category: 'одежда, обувь, аксессуары',
+    image: gomezLogo,
+    link: 'https://gomez.pl/',
+    description: 'Одежда и обувь премиум',
+  },
+  {
+    id: 29,
+    category: 'одежда, обувь, аксессуары',
+    image: eastendLogo,
+    link: 'https://eastendshop.com/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 30,
+    category: 'одежда, обувь, аксессуары',
+    image: supersklepLogo,
+    link: 'https://supersklep.pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 31,
+    category: 'одежда, обувь, аксессуары',
+    image: modivoLogo,
+    link: 'https://modivo.pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 32,
+    category: 'одежда, обувь, аксессуары',
+    image: atafLogo,
+    link: 'https://www.ataf.pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 33,
+    category: 'одежда, обувь, аксессуары',
+    image: style50Logo,
+    link: 'https://50style.pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 34,
+    category: 'одежда, обувь, аксессуары',
+    image: royalshopLogo,
+    link: 'https://royal-shop.pl/',
+    description: 'Одежда и обувь премиум',
+  },
+  {
+    id: 35,
+    category: 'одежда, обувь, аксессуары',
+    image: zaraImage,
+    link: 'https://www.zara.com/pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 36,
+    category: 'одежда, обувь, аксессуары',
+    image: uterqueLogo,
+    link: 'https://www.uterque.com/pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 37,
+    category: 'одежда, обувь, аксессуары',
+    image: viktacLogo,
+    link: 'https://www.vitkac.com/pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 38,
+    category: 'одежда, обувь, аксессуары',
+    image: massimoduttiLogo,
+    link: 'https://www.massimodutti.com/pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 39,
+    category: 'одежда, обувь, аксессуары',
+    image: streetsupplyLogo,
+    link: 'https://streetsupply.pl/',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 40,
+    category: 'спортивная одежда',
+    image: adidasImage,
+    link: 'https://www.adidas.pl/',
+    description: 'Официальный магазин Adidas',
+  },
+  {
+    id: 41,
+    category: 'спортивная одежда',
+    image: reebokLogo,
+    link: 'https://www.reebok.pl/',
+    description: 'Официальный магазин Reebok',
+  },
+  {
+    id: 42,
+    category: 'спортивная одежда',
+    image: newBalanceImage,
+    link: 'https://nbsklep.pl/',
+    description: 'Официальный магазин New Balance',
+  },
+  {
+    id: 43,
+    category: 'спортивная одежда',
+    image: mantoLogo,
+    link: 'https://www.mantoshop.pl/',
+    description: 'официальный магазин Manto',
+  },
+  {
+    id: 44,
+    category: 'спортивная одежда',
+    image: strefatenisaLogo,
+    link: 'https://strefatenisa.com.pl/',
+    description: 'Магазин одежды, обуви и аксессуаров для тенниса',
+  },
+  {
+    id: 45,
+    category: 'спортивная одежда',
+    image: rgolLogo,
+    link: 'https://www.r-gol.com/',
+    description: 'Магазин одежды, обуви и аксессуаров для футбола',
+  },
+  {
+    id: 46,
+    category: 'спортивная одежда',
+    image: teamsportsLogo,
+    link: 'https://11teamsports.pl/',
+    description: 'Магазин одежды, обуви и аксессуаров для футбола',
+  },
+  {
+    id: 47,
+    category: 'спортивная одежда',
+    image: skstoreLogo,
+    link: 'https://skstore.pl/',
+    description: 'Магазин обуви и одежды для баскетбола',
+  },
+  {
+    id: 48,
+    category: 'спортивная одежда',
+    image: basketzoneLogo,
+    link: 'https://basketzone.pl/',
+    description: 'магазин обуви и одежды для баскетбола',
+  },
+  {
+    id: 49,
+    category: 'спортивная одежда',
+    image: style50Logo,
+    link: 'https://50style.pl/',
+    description: 'Магазин спортивной одежды',
+  },
+  {
+    id: 50,
+    category: 'спортивная одежда',
+    image: activeLogo,
+    link: 'https://www.active.sklep.pl/',
+    description: 'Магазин спортивной одежды',
+  },
+  {
+    id: 51,
+    category: 'спортивная одежда',
+    image: sportroomLogo,
+    link: 'https://sportroom.pl/',
+    description: 'Магазин спортивной одежды',
+  },
+  {
+    id: 52,
+    category: 'спортивная одежда',
+    image: sportjamLogo,
+    link: 'http://www.sportjam.pl/',
+    description: 'Магазин спортивной одежды',
+  },
+  {
+    id: 53,
+    category: 'парфюмерия',
+    image: sephoraLogo,
+    link: 'https://www.sephora.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 54,
+    category: 'парфюмерия',
+    image: douglasLogo,
+    link: 'https://www.douglas.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 55,
+    category: 'парфюмерия',
+    image: hairstoreLogo,
+    link: 'https://www.hairstore.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 56,
+    category: 'парфюмерия',
+    image: superpharmLogo,
+    link: 'https://www.superpharm.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 57,
+    category: 'парфюмерия',
+    image: topesteticlogo,
+    link: 'https://www.topestetic.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 58,
+    category: 'парфюмерия',
+    image: dolceLogo,
+    link: 'https://www.dolce.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 59,
+    category: 'парфюмерия',
+    image: estylLogo,
+    link: 'https://estyl.pl/',
+    description: 'Магазин парфюмерии',
+  },
+  {
+    id: 60,
+    category: 'часы',
+    image: zegarkiLogo,
+    link: 'https://www.e-zegarki.pl/',
+    description: 'Магазин часов',
+  },
+  {
+    id: 61,
+    category: 'часы',
+    image: zegarowniaLogo,
+    link: 'https://zegarownia.pl/',
+    description: 'Магазин часов',
+  },
+  {
+    id: 62,
+    category: 'часы',
+    image: montresLogo,
+    link: 'https://montres.pl/',
+    description: 'Магазин часов',
+  },
+  {
+    id: 63,
+    category: 'часы',
+    image: happytimeLogo,
+    link: 'https://happytime.com.pl/',
+    description: 'Магазин часов',
+  },
+  {
+    id: 64,
+    category: 'часы',
+    image: zegarekLogo,
+    link: 'https://www.zegarek.net/',
+    description: 'Магазин часов',
+  },
+  {
+    id: 65,
+    category: 'строительство, мебель',
+    image: leroymerlinLogo,
+    link: 'https://leroymerlin.pl',
+    description: 'Строительный и мебельный магазин',
+  },
+  {
+    id: 66,
+    category: 'строительство, мебель',
+    image: bricomanLogo,
+    link: 'https://bricoman.pl',
+    description: 'Строительный и мебельный магазин',
+  },
+  {
+    id: 67,
+    category: 'строительство, мебель',
+    image: euroogrodLogo,
+    link: 'https://euroogrod.com.pl',
+    description: 'Строительный и мебельный магазин',
+  },
+  {
+    id: 68,
+    category: 'сантехника',
+    image: sklepbaterieLogo,
+    link: 'https://www.sklepbaterie.pl',
+    description: 'Магазин сантехники',
+  },
+  {
+    id: 69,
+    category: 'сантехника',
+    image: zielonalazienkaLogo,
+    link: 'https://www.zielonalazienka.pl',
+    description: 'Магазин сантехники',
+  },
+  {
+    id: 70,
+    category: 'сантехника',
+    image: elazienkiLogo,
+    link: 'https://elazienki.pl',
+    description: 'Магазин сантехники',
+  },
+  {
+    id: 71,
+    category: 'сантехника',
+    image: lazienkariumLogo,
+    link: 'https://lazienkarium.pl',
+    description: 'Магазин сантехники',
+  },
+  {
+    id: 72,
+    category: 'автозапчасти',
+    image: allegroImage,
+    link: 'https://allegro.pl',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 73,
+    category: 'автозапчасти',
+    image: ipartsLogo,
+    link: 'https://www.iparts.pl',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 74,
+    category: 'автозапчасти',
+    image: motostacjaLogo,
+    link: 'https://motostacja.com',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 75,
     category: 'техника',
-    image: mediaMarketImage,
-    link: 'https://mediamarkt.pl/',
-    description: 'Площадка с магазинами где можно найти всё.',
+    image: thomannLogo,
+    link: 'https://www.thomann.de/pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 76,
+    category: 'техника',
+    image: xkomLogo,
+    link: 'https://www.x-kom.pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 77,
+    category: 'техника',
+    image: avansLogo,
+    link: 'https://www.avans.pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 78,
+    category: 'техника',
+    image: mallLogo,
+    link: 'https://www.mall.pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 79,
+    category: 'техника',
+    image: neo24Logo,
+    link: 'https://www.neo24.pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 80,
+    category: 'техника',
+    image: euroLogo,
+    link: 'https://www.euro.com.pl',
+    description: 'Магазин техники',
+  },
+  {
+    id: 81,
+    category: 'одежда, обувь, аксессуары',
+    image: nikeLogo,
+    link: 'https://www.nike.com/pl/w',
+    description: 'Одежда, обувь и аксессуары',
+  },
+  {
+    id: 82,
+    category: 'строительство, мебель',
+    image: ikeaLogo,
+    link: 'https://www.ikea.com/pl/pl/',
+    description: 'Строительный и мебельный магазин',
   },
 ];
 
@@ -266,15 +794,15 @@ export const CATEGORIES = [
   },
   {
     id: 2,
-    category: 'детские товары',
+    category: 'кроссовки',
   },
   {
     id: 3,
-    category: 'компьютеры и ноутбуки',
+    category: 'одежда, обувь, аксессуары',
   },
   {
     id: 4,
-    category: 'обувь',
+    category: 'спортивная одежда',
   },
   {
     id: 5,
@@ -282,26 +810,26 @@ export const CATEGORIES = [
   },
   {
     id: 6,
-    category: 'одежда',
+    category: 'часы',
   },
   {
     id: 7,
-    category: 'строительство',
+    category: 'строительство, мебель',
   },
   {
     id: 8,
-    category: 'обувь',
+    category: 'сантехника',
   },
   {
     id: 9,
-    category: 'парфюмерия',
+    category: 'автозапчасти',
   },
   {
     id: 10,
-    category: 'одежда',
+    category: 'техника',
   },
   {
     id: 11,
-    category: 'строительство',
+    category: 'прочие товары',
   },
 ];

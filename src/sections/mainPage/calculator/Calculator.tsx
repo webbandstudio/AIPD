@@ -4,40 +4,52 @@ import React, { useEffect, useState } from 'react';
 import styles from './Calculator.module.scss';
 import sticker from '@assets/images/png/stickers/calculatorSticker.png';
 import infoIcon from '@assets/images/svg/icons/infoIcon.svg';
-import { VAT_PERCENTAGES } from '@constants/constants';
+import { VATS } from '@constants/constants';
 
 interface IVat {
-  text: string;
+  percentage: string;
+  description: string;
   handleActiveVat: (vat: string) => void;
   activeVat: string;
 }
 
-const VatElement:React.FC<IVat> = ({ text, handleActiveVat, activeVat }) => {
+const vatTooltipStyle = (percentage: string, isButtons = false) => {
+  switch (percentage) {
+    case '5%':
+      return isButtons ? styles.tooltipWindowButtons : styles.tooltipWindow;
+    case '8%':
+      return isButtons ? styles.tooltipWindowButtons8 : styles.tooltipWindow8;
+    case '23%':
+      return isButtons ? styles.tooltipWindowButtons23 : styles.tooltipWindow23;
+  }
+};
+
+const VatElement:React.FC<IVat> = ({ percentage, description, handleActiveVat, activeVat }) => {
   const [isHovering, setIsHovered] = useState(false);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
 
-  const isActive = activeVat === text;
+  const isActive = activeVat === percentage;
 
   return (
     <div
       className={isActive ? styles.vatElementWrapperActive : styles.vatElementWrapperNonActive}
-      onClick={() => handleActiveVat(text)}
+      onClick={() => handleActiveVat(percentage)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {isHovering && <div className={text === '23%' ? styles.tooltipWindowButtons3 : styles.tooltipWindowButtons}>
-        <label>{`VAT ${text} применяется на авто товары, колеса и стекла`}</label>
+      {isHovering && <div className={vatTooltipStyle(percentage, true)}>
+        <label>{`VAT ${percentage} применяется на ${description}`}</label>
       </div>}
       <p className={`p1 ${isActive ? styles.vatElementTextActive : styles.vatElementTextNonActive}`}>
-        {text}
+        {percentage}
       </p>
     </div>
   );
 };
 
 const Calculator = () => {
-  const [activeVat, setActiveVat] = useState(VAT_PERCENTAGES[0]);
+  const [activeVat, setActiveVat] = useState(VATS[0].percentage);
   const [isHovering, setIsHovered] = useState(false);
   const [price, setPrice] = useState(1000);
   const [commission, setCommission] = useState(0);
@@ -101,9 +113,9 @@ const Calculator = () => {
             <div className={styles.tooltipWrapper}>
               <p className={`p1 ${styles.descriptionText}`}>{`VAT ${activeVat} к возврату, pln`}</p>
               <figure>
-                {isHovering && <div className={styles.tooltipWindow}>
-                  <label>{`VAT ${activeVat} применяется на авто товары, колеса и стекла`}</label>
-                </div>}
+                {isHovering && <figcaption className={vatTooltipStyle(activeVat)}>
+                  <label>{`VAT ${activeVat} применяется ${VATS.find(({ percentage }) => percentage === activeVat)?.description}`}</label>
+                </figcaption>}
                 <Image
                   src={infoIcon}
                   alt="info icon"
@@ -123,9 +135,10 @@ const Calculator = () => {
         </section>
         <aside className={styles.vatWrapper}>
           <p>VAT:</p>
-          {VAT_PERCENTAGES.map(vat => <VatElement
-            key={vat}
-            text={vat}
+          {VATS.map(({ percentage, description }) => <VatElement
+            key={percentage}
+            percentage={percentage}
+            description={description}
             activeVat={activeVat}
             handleActiveVat={handleActiveVat}
           />)}
