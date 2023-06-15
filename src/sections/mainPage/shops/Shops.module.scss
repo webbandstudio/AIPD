@@ -117,9 +117,31 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     margin-top: 50px;
+
+    li {
+      display: contents;
+
+      img {
+        scale: 1.4;
+      }
+    }
+  }
+
+  .allShops1 {
+    margin: -172px -212% 0 0;
+  }
+
+  .allShops2 {
+    margin-top: -172px;
   }
 
   .arrow {
     display: none;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .allShops1 {
+    margin-right: -218%;
   }
 }

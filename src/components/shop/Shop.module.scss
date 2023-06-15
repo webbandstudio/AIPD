@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 269px;
+  width: 270px;
   height: 150px;
   background: $white;
   color: $black;
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: $smallTablet) {
   .wrapper {
-    width: 167px;
+    width: 100%;
   }
 
   .imageWrapper {
@@ -57,14 +57,15 @@
     position: absolute;
     width: 100%;
     height: auto;
-    transform: scale(0.8);
+    transform: scale(0.5);
     top: 0;
     bottom: 0;
     margin: auto;
   }
 
   .description {
-    max-width: 167px;
+    width: 100%;
+    padding: 0 5px;
   }
 
   .labelWrapper {

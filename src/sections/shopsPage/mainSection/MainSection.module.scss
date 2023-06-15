@@ -191,16 +191,14 @@
     padding: 0 10px;
     gap: 30px 15px;
 
-    li:nth-child(23) {
+    li:nth-child(9), li:nth-child(18), li:nth-child(23), li:nth-child(48) {
       img {
-        transform: scale(0.5);
+        transform: scale(0.2);
       }
     }
 
-    li:nth-child(48) {
-      img {
-        transform: scale(0.5);
-      }
+    li {
+      width: 100%;
     }
   }
 
@@ -208,3 +206,14 @@
     margin: 60px 0 45px 20px;
   }
 }
+
+@media screen and (max-width: $mobile - 30px) {
+  .shopsWrapper {
+    li:nth-child(9), li:nth-child(18), li:nth-child(23), li:nth-child(48) {
+      img {
+        transform: scale(0.5);
+      }
+    }
+  }
+}
+
