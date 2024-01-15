@@ -16,9 +16,8 @@ const DeliveryInstruction = () => {
     <section id="instruction" className={styles.container}>
       <div className={styles.headlineShadow} />
       <h2 className={styles.header}>
-        запрыгивай в телегу и <br />
-        заказывай в пару нажатий.<br />
-        это
+        Заказывайте через <br />
+        телеграм-бот, быстро и <br />
         <span className={styles.hyperStickerWrapper}>
           <Image className={styles.hyperSticker} src={stickerHyper} alt="hyper" />
         </span>

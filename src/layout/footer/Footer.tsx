@@ -27,14 +27,17 @@ const Footer = () => {
                 <Image className={styles.houseImage} src={house} alt="house" />
                 <div className={styles.contentText}>
                   <p>Склад в польше:</p>
-                  <Link href={plTelephoneNumber}>+48 571 352 966</Link>
+                  <Link href={plTelephoneNumber}>Тел: +48573923356</Link>
+                  <p>Время работы:</p>
+                  <p>Пн-Пт 09:00-18:00</p>
                 </div>
               </div>
               <div className={styles.specialGroupContent}>
                 <Image className={styles.accountImage} src={account} alt="account" />
                 <div className={styles.contentText}>
-                  <p>Менеджер в Беларуси:</p>
-                  <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
+                  <p>Инфолиния заказов:</p>
+                  <Link href={blTelephoneNumber}>Тел: +48572117937</Link>
+                  <p>E-mail: sales@aipd.pl</p>
                 </div>
               </div>
             </div>
@@ -43,8 +46,9 @@ const Footer = () => {
             <div className={styles.groupContent}>
               <Image className={styles.accountImage} src={account} alt="account" />
               <div className={styles.contentText}>
-                <p>Менеджер в Беларуси:</p>
-                <Link href={blTelephoneNumber}>+375 (33) 99 33 473</Link>
+                <p>Инфолиния заказов:</p>
+                <Link href={blTelephoneNumber}>Тел: +48572117937</Link>
+                <p>E-mail: sales@aipd.pl</p>
               </div>
             </div>
           </li>
@@ -81,9 +85,14 @@ const Footer = () => {
           </li>
         </ul>
         <aside className={styles.otherInfo}>
-          <p>
-            AIPD © 2023 Условия использования
-          </p>
+          <aside className={styles.documentsLinksWrapper}>
+            <Link href="" target="_blank">
+              Регламент компании
+            </Link>
+            <Link href="" target="_blank">
+              Политика конфиденциальности
+            </Link>
+          </aside>
           <Link href="https://zametniy.com/" target="_blank">
             Дизайн – Zametniy.com
           </Link>

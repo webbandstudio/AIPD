@@ -114,6 +114,11 @@
   }
 }
 
+.documentsLinksWrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
 @media screen and (max-width: $desktop) {
   .shopInfo {
     display: flex;

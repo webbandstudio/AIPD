@@ -71,7 +71,7 @@ const Calculator = () => {
   useEffect(() => {
     const vat = Number(activeVat.slice(0, activeVat.length - 1));
     const currentCommission = Number((price * 0.09).toFixed(2));
-    const commission = currentCommission < 39 ? 39 : currentCommission;
+    const commission = currentCommission < 30 ? 30 : currentCommission;
     const priceWithCommission = price + commission;
     const returnVat = Number(((priceWithCommission / (100 + vat)) * vat).toFixed(2));
     const result = Number((priceWithCommission - returnVat).toFixed(2));
@@ -87,10 +87,11 @@ const Calculator = () => {
       <div className={styles.calculatorWrapper}>
         <aside className={styles.titleCourse}>
           <h2 className={styles.title}>
-            прикинь выгоду сам
+            посчитайте выгоду сами
             <Image className={styles.barcodeImage} src={sticker} alt="barcode sticker" />
           </h2>
           <div className={styles.coursesDesktop}>
+            <p>Минимальная сумма комиссии: 30 pln</p>
             <p>Актуальные курсы валют</p>
             <p>1 USD = 4.21pln</p>
             <p>1 EUR = 4.35pln</p>
@@ -102,7 +103,7 @@ const Calculator = () => {
             <input type="number" onChange={handlePrice} value={price} />
           </div>
           <div className={styles.textGroup}>
-            <p className={`p1 ${styles.descriptionText}`}>комиссия сервиса, 9%</p>
+            <p className={`p1 ${styles.descriptionText}`}>комиссия сервиса, 6%</p>
             <p className={`p1 ${styles.descriptionResult}`}>{commission.toFixed(2)}</p>
           </div>
           <div className={styles.textGroup}>

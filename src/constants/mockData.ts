@@ -69,6 +69,20 @@ import neo24Logo from '@assets/images/png/shopsImages/neo24Logo.png';
 import euroLogo from '@assets/images/png/shopsImages/euroLogo.png';
 import nikeLogo from '@assets/images/png/shopsImages/nikeLogo.png';
 import ikeaLogo from '@assets/images/png/shopsImages/ikeaLogo.png';
+import oponyplLogo from '@assets/images/png/shopsImages/oponyplLogo.png';
+import eworLogo from '@assets/images/png/shopsImages/eworNewLogo.png';
+import felgidoLogo from '@assets/images/png/shopsImages/felgidoLogo.png';
+import alusyplLogo from '@assets/images/png/shopsImages/alusypl.png';
+import oponeoLogo from '@assets/images/png/shopsImages/oponeoLogo.png';
+import gmotoLogo from '@assets/images/png/shopsImages/gmotoLogo.png';
+import felgeoLogo from '@assets/images/png/shopsImages/felgeoLogo.png';
+import olekmotocykleLogo from '@assets/images/png/shopsImages/olekmotocykleLogo.png';
+import dlaautaLogo from '@assets/images/png/shopsImages/dlaautaLogo.png';
+import czesci24Logo from '@assets/images/png/shopsImages/czesci24Logo.png';
+import maxtondesignLogo from '@assets/images/png/shopsImages/maxtondesignLogo.png';
+import mtuningLogo from '@assets/images/png/shopsImages/mtuningLogo.png';
+import sklepoponLogo from '@assets/images/png/shopsImages/sklepoponLogo.png';
+import moreleLogo from '@assets/images/png/shopsImages/moreleLogo.png';
 
 //Goods images
 import headPhones from '@assets/images/png/goodsImages/headPhones.png';
@@ -76,9 +90,9 @@ import table from '@assets/images/png/goodsImages/table.png';
 import jacket from '@assets/images/png/goodsImages/jacket.png';
 import laptop from '@assets/images/png/goodsImages/laptop.png';
 import sneakerYeezy from '@assets/images/png/goodsImages/sneakerYeezy.png';
-import sneakerZigKinetica from '@assets/images/png/goodsImages/sneakerZigKinetica.png';
+import porsheWheel from '@assets/images/png/goodsImages/porsheWheel.png';
 import sneakerNewBalance from '@assets/images/png/goodsImages/sneakerNewBalance.png';
-import sneakerAirJordanMid from '@assets/images/png/goodsImages/sneakerAirJordanMid.png';
+import proKitBmw from '@assets/images/png/goodsImages/proKitBmw.png';
 import playStation from '@assets/images/png/goodsImages/playStation.png';
 import sneakerAdidasForum from '@assets/images/png/goodsImages/sneakerAdidasForum.png';
 import perfume from '@assets/images/png/goodsImages/parfume.png';
@@ -663,6 +677,104 @@ export const SHOPS = [
     link: 'https://www.ikea.com/pl/pl/',
     description: 'Строительный и мебельный магазин',
   },
+  {
+    id: 83,
+    category: 'автозапчасти',
+    image: oponyplLogo,
+    link: 'https://www.opony.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 84,
+    category: 'автозапчасти',
+    image: eworLogo,
+    link: 'https://ewor.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 85,
+    category: 'автозапчасти',
+    image: felgidoLogo,
+    link: 'https://felgido.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 86,
+    category: 'автозапчасти',
+    image: alusyplLogo,
+    link: 'https://www.alusy.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 87,
+    category: 'автозапчасти',
+    image: oponeoLogo,
+    link: 'https://www.oponeo.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 88,
+    category: 'автозапчасти',
+    image: gmotoLogo,
+    link: 'https://gmoto.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 89,
+    category: 'автозапчасти',
+    image: felgeoLogo,
+    link: 'https://felgeo.pl/ ',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 90,
+    category: 'автозапчасти',
+    image: olekmotocykleLogo,
+    link: 'https://shop.olekmotocykle.com/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 91,
+    category: 'автозапчасти',
+    image: dlaautaLogo,
+    link: 'https://www.dlaauta.eu/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 92,
+    category: 'автозапчасти',
+    image: czesci24Logo,
+    link: 'https://czesci24.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 93,
+    category: 'автозапчасти',
+    image: maxtondesignLogo,
+    link: 'https://maxtondesign.com/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 94,
+    category: 'автозапчасти',
+    image: mtuningLogo,
+    link: 'https://mtuning.pl/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 95,
+    category: 'автозапчасти',
+    image: sklepoponLogo,
+    link: 'https://www.sklepopon.com/',
+    description: 'Магазин автозапчастей',
+  },
+  {
+    id: 96,
+    category: 'автозапчасти',
+    image: moreleLogo,
+    link: 'https://www.morele.net/',
+    description: 'Магазин автозапчастей',
+  },
 ];
 
 export const GOODS = [
@@ -697,10 +809,10 @@ export const GOODS = [
     image: sneakerYeezy,
   },
   {
-    id: 'Zig Kinetica 2.5 Edge',
-    title: 'Zig Kinetica 2.5 Edge',
-    economy: 50,
-    image: sneakerZigKinetica,
+    id: 'Руль Porsche 997 911',
+    title: 'Руль Porsche 997 911',
+    economy: 130,
+    image: porsheWheel,
   },
   {
     id: 'New Balance U327WED',
@@ -709,10 +821,10 @@ export const GOODS = [
     image: sneakerNewBalance,
   },
   {
-    id: 'Air Jordan 1 Mid',
-    title: 'Air Jordan 1 Mid',
-    economy: 50,
-    image: sneakerAirJordanMid,
+    id: 'Eibach Pro-Kit BMW',
+    title: 'Eibach Pro-Kit BMW',
+    economy: 60,
+    image: proKitBmw,
   },
   {
     id: 'Sony Playstation 5',
