@@ -70,8 +70,8 @@ const Calculator = () => {
 
   useEffect(() => {
     const vat = Number(activeVat.slice(0, activeVat.length - 1));
-    const currentCommission = Number((price * 0.09).toFixed(2));
-    const commission = currentCommission < 30 ? 30 : currentCommission;
+    const currentCommission = Number((price * 0.06).toFixed(2));
+    const commission = currentCommission < 39 ? 39 : currentCommission;
     const priceWithCommission = price + commission;
     const returnVat = Number(((priceWithCommission / (100 + vat)) * vat).toFixed(2));
     const result = Number((priceWithCommission - returnVat).toFixed(2));
@@ -91,7 +91,7 @@ const Calculator = () => {
             <Image className={styles.barcodeImage} src={sticker} alt="barcode sticker" />
           </h2>
           <div className={styles.coursesDesktop}>
-            <p>Минимальная сумма комиссии: 30 pln</p>
+            <p>Минимальная сумма комиссии: 39 pln</p>
             <p>Актуальные курсы валют</p>
             <p>1 USD = 4.21pln</p>
             <p>1 EUR = 4.35pln</p>
