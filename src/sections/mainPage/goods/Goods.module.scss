@@ -1,12 +1,12 @@
 $goodsBackgroundColors: (
-  $red,
+  $greyBlue,
   $mediumPurple,
   $grey,
   $blue,
   $orange,
   $lightRed,
   $lightYellow,
-  $darkPurple,
+  $white,
   $blue,
   $darkGreen,
   $darkBlue,
@@ -55,6 +55,10 @@ $goodsBackgroundColors: (
         color: $black;
       }
 
+      @else if $i == 8 {
+        color: $black;
+      }
+
       @else {
         color: $white;
       }
@@ -95,6 +99,12 @@ $goodsBackgroundColors: (
   .goods {
     margin: 40px 0 0;
     gap: 10px;
+
+    li:nth-child(8) {
+      img {
+        scale: 0.6;
+      }
+    }
   }
 
   .header {

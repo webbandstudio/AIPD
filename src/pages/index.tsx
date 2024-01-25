@@ -17,7 +17,13 @@ const Home = () => {
         <title>
           {`Polish delivery site | ${META_SITE_NAME}`}
         </title>
-        <meta name="description" content="Polish delivery site on which you can see how we work, calculate how profitable it is and learn more about us" key="desc" />
+        <meta
+          name="description"
+          content="Polish delivery site on which you can see how we work, calculate how profitable it is and learn more about us"
+          key="desc"
+        />
+        {/*TODO: create better logo*/}
+        {/*<link rel="icon" href="/logo.ico" />*/}
       </Head>
       <Delivery />
       <Shops />

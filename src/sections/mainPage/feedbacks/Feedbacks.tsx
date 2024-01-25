@@ -60,7 +60,7 @@ const Feedbacks = () => {
       <aside className={styles.feedbacksText}>
         <h2 className={styles.title}> реальные отзывы клиентов</h2>
         <p className={`p2 ${styles.description}`}>
-          За 5 лет работы, нам уже доверилось более 1,000 клиентов.
+          За 5 лет работы, нам уже доверилось более 5,000 клиентов.
         </p>
         <TelegramOrder text="Присоединиться" />
       </aside>

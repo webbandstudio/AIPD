@@ -2,10 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 
 import styles from './Delivery.module.scss';
-import routeImg from '@assets/images/png/route.png';
 import couponImg from '@assets/images/png/routeCoupon.png';
 import starIcon from '@assets/images/png/starIcon.png';
-import headPhonesImg from '@assets/images/png/headPhonesBackground.png';
+import wheelImg from '@assets/images/png/wheelBackground.png';
 import sneakerImg from '@assets/images/png/sneakerBackground.png';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 import littleHeadPhones from '@assets/images/png/littleHeadPhones.png';
@@ -15,7 +14,6 @@ import mobileSneakerImg2 from '@assets/images/png/mobileSneaker2.png';
 import playStationImg from '@assets/images/png/playStation.png';
 import { TAGS_TEXT } from '@constants/constants';
 import Tag from '@sections/mainPage/delivery/tag/Tag';
-import plFlagImage from '@assets/images/png/flagPl.png';
 
 const mobileImages = [
   {
@@ -53,7 +51,7 @@ const mobileImages = [
 const desktopImages = [
   {
     style: styles.headPhonesImg,
-    image: headPhonesImg,
+    image: wheelImg,
     alt: 'background headphones',
     id: 201,
   },
@@ -87,17 +85,11 @@ const Delivery = () => {
       </div>
       <div className={styles.container}>
         <figure className={styles.routeImg}>
-          <Image src={routeImg} alt="route" />
           <Image className={styles.couponImg} src={couponImg} alt="coupon" />
         </figure>
-        <h1 className={styles.mainText}>Dоставка товаров <br /> из <span>
-          <Image
-            src={plFlagImage}
-            className={styles.polandFlag}
-            alt="poland flag"
-          /></span> польши</h1>
+        <h1 className={styles.mainText}>Товары из Польши</h1>
         <div className={styles.telegramWrapperDesktop}>
-          <TelegramOrder text="Оформить заказ в Телеграм" />
+          <TelegramOrder text="Заказать в телеграм-боте" />
         </div>
         <div className={styles.telegramWrapperMobile}>
           <TelegramOrder text="Оформить заказ" />

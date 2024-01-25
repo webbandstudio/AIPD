@@ -11,7 +11,7 @@ const Shops = () => {
 
   return (
     <section className={styles.shopsSection}>
-      <h2 className={styles.title}>Доставляем ото всюду</h2>
+      <h2 className={styles.title}>Каталог магазинов</h2>
       <ul className={styles.shopsWrapper}>
         {shopsPart.map(({ id, category, image, link }) =>
           <Shop key={id} label={category} image={image} link={link} />

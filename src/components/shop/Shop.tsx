@@ -17,7 +17,11 @@ const Shop: React.FC<IShop> = ({ label, image, link, description }) => {
       <Link href={link} className={styles.wrapper} target="_blank">
         {!description && <label className={styles.labelWrapper}>{label}</label>}
         <figure className={styles.imageWrapper}>
-          <Image className={styles.innerImage} src={image} alt="shop" />
+          <Image
+            className={`${styles['innerImage']} ${styles[`${link === 'https://ewor.pl/' ? 'backgroundBlack' : ''}`]}`}
+            src={image}
+            alt="shop"
+          />
         </figure>
       </Link>
       {description && <p className={styles.description}>{description}</p>}
