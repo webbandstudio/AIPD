@@ -5,12 +5,19 @@ import styles from './Calculator.module.scss';
 import sticker from '@assets/images/png/stickers/calculatorSticker.png';
 import infoIcon from '@assets/images/svg/icons/infoIcon.svg';
 import { VATS } from '@constants/constants';
+import { RatesService } from '@services/rate';
 
 interface IVat {
   percentage: string;
   description: string;
   handleActiveVat: (vat: string) => void;
   activeVat: string;
+}
+
+interface IRate {
+  id: number;
+  name: string;
+  value_in_pln: string;
 }
 
 const vatTooltipStyle = (percentage: string, isButtons = false) => {
@@ -55,6 +62,7 @@ const Calculator = () => {
   const [commission, setCommission] = useState(0);
   const [returnedVat, setReturnedVat] = useState(0);
   const [totalResult, setTotalResult] = useState(0);
+  const [rates, setRates] = useState<IRate[]>([]);
 
   const handleActiveVat = (vat: string) => setActiveVat(vat);
   const onMouseEnter = () => setIsHovered(true);
@@ -81,6 +89,12 @@ const Calculator = () => {
     setTotalResult(result);
   }, [activeVat, price]);
 
+  useEffect(() => {
+    const rates = async () => await RatesService.getRates().then(result => setRates(result));
+
+    rates();
+  }, []);
+
   return (
     <section id="calculator" className={styles.border}>
       <div className={styles.borderLeft} />
@@ -93,8 +107,9 @@ const Calculator = () => {
           <div className={styles.coursesDesktop}>
             <p>Минимальная сумма комиссии: 39 pln</p>
             <p>Актуальные курсы валют</p>
-            <p>1 USD = 4.21pln</p>
-            <p>1 EUR = 4.35pln</p>
+            {rates && rates.map(({ id, name, value_in_pln }) =>
+              <p key={id}>{`1 ${name} = ${value_in_pln}pln`}</p>
+            )}
           </div>
         </aside>
         <section className={styles.calculations}>

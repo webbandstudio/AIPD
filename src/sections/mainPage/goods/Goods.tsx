@@ -7,7 +7,7 @@ const Goods = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.header}>
-        Мы уже реализовали<br /><span>более 5,000</span> товаров
+        Мы уже реализовали<br /><span>более 5,000</span> заказов
       </h2>
       <ul className={styles.goods}>
         {GOODS.map(({ title, economy, id, image }) =>

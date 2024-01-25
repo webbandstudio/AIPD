@@ -2,10 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 
 import styles from './Delivery.module.scss';
-import routeImg from '@assets/images/png/route.png';
 import couponImg from '@assets/images/png/routeCoupon.png';
 import starIcon from '@assets/images/png/starIcon.png';
-import headPhonesImg from '@assets/images/png/headPhonesBackground.png';
+import wheelImg from '@assets/images/png/wheelBackground.png';
 import sneakerImg from '@assets/images/png/sneakerBackground.png';
 import TelegramOrder from '@components/telegramOrder/TelegramOrder';
 import littleHeadPhones from '@assets/images/png/littleHeadPhones.png';
@@ -52,7 +51,7 @@ const mobileImages = [
 const desktopImages = [
   {
     style: styles.headPhonesImg,
-    image: headPhonesImg,
+    image: wheelImg,
     alt: 'background headphones',
     id: 201,
   },
@@ -88,7 +87,7 @@ const Delivery = () => {
         <figure className={styles.routeImg}>
           <Image className={styles.couponImg} src={couponImg} alt="coupon" />
         </figure>
-        <h1 className={styles.mainText}>Выкуп товаров в Польше</h1>
+        <h1 className={styles.mainText}>Товары из Польши</h1>
         <div className={styles.telegramWrapperDesktop}>
           <TelegramOrder text="Заказать в телеграм-боте" />
         </div>

@@ -85,7 +85,7 @@ import sklepoponLogo from '@assets/images/png/shopsImages/sklepoponLogo.png';
 import moreleLogo from '@assets/images/png/shopsImages/moreleLogo.png';
 
 //Goods images
-import headPhones from '@assets/images/png/goodsImages/headPhones.png';
+import engineOil from '@assets/images/png/goodsImages/engineOil.png';
 import table from '@assets/images/png/goodsImages/table.png';
 import jacket from '@assets/images/png/goodsImages/jacket.png';
 import laptop from '@assets/images/png/goodsImages/laptop.png';
@@ -95,12 +95,12 @@ import sneakerNewBalance from '@assets/images/png/goodsImages/sneakerNewBalance.
 import proKitBmw from '@assets/images/png/goodsImages/proKitBmw.png';
 import playStation from '@assets/images/png/goodsImages/playStation.png';
 import sneakerAdidasForum from '@assets/images/png/goodsImages/sneakerAdidasForum.png';
-import perfume from '@assets/images/png/goodsImages/parfume.png';
 import washingMachine from '@assets/images/png/goodsImages/washingMachine.png';
 import television from '@assets/images/png/goodsImages/television.png';
-import sneakerAirJordan from '@assets/images/png/goodsImages/sneakerAirJordan.png';
 import earPhones from '@assets/images/png/goodsImages/earPhones.png';
 import wheel from '@assets/images/png/goodsImages/wheel.png';
+import breakWheel from '@assets/images/png/goodsImages/breakWheel.png';
+import sportWheel from '@assets/images/png/goodsImages/sportWheel.png';
 
 export const SHOPS = [
   {
@@ -779,10 +779,10 @@ export const SHOPS = [
 
 export const GOODS = [
   {
-    id: 'Airpods Max',
-    title: 'Airpods Max',
-    economy: 240,
-    image: headPhones,
+    id: 'Масло Mobil 5W30',
+    title: 'Масло Mobil 5W30',
+    economy: 40,
+    image: engineOil,
   },
   {
     id: 'IKEA HEMNES',
@@ -839,10 +839,10 @@ export const GOODS = [
     image: sneakerAdidasForum,
   },
   {
-    id: 'Giorgio Armani Si',
-    title: 'Giorgio Armani Si',
-    economy: 240,
-    image: perfume,
+    id: 'Шины Pirelli P Zero',
+    title: 'Шины Pirelli P Zero',
+    economy: 180,
+    image: sportWheel,
   },
   {
     id: 'SAMSUNG WW90T634DLH',
@@ -857,10 +857,10 @@ export const GOODS = [
     image: television,
   },
   {
-    id: 'Nike AirJordan 1',
-    title: 'Nike AirJordan 1',
-    economy: 50,
-    image: sneakerAirJordan,
+    id: 'Тормозной диски ATE',
+    title: 'Тормозной диски ATE',
+    economy: 30,
+    image: breakWheel,
   },
   {
     id: 'BEATS Studio Buds',

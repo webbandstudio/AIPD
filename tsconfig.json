@@ -28,6 +28,7 @@
       "@assets/*": ["./src/public/assets/*"],
       "@sections/*": ["./src/sections/*"],
       "@analytics/*": ["./src/analytics/*"],
+      "@services/*": ["./src/services/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
