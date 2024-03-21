@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import styles from './DeliveryInstruction.module.scss';
 import stickerHyper from '@assets/images/png/stickers/stickerHyper.png';
-import iphone from '@assets/images/png/iphone.png';
+import iphone from '@assets/images/png/telegramFlowImage.png';
 import commissionSticker from '@assets/images/png/stickers/commission.png';
 import fiveYearSticker from '@assets/images/png/stickers/fiveYearSticker.png';
 import horizontalLine from '@assets/images/png/horisontalLine.png';

@@ -9,7 +9,13 @@ import house from '@assets/images/svg/icons/house.svg';
 import account from '@assets/images/svg/icons/account.svg';
 import address from '@assets/images/svg/icons/address.svg';
 import instagram from '@assets/images/svg/icons/instagram.svg';
-import { blTelephoneNumber, googleMapsLink, instagramLink, plTelephoneNumber } from '@constants/links';
+import {
+  email,
+  googleMapsLink,
+  instagramLink,
+  plTelephoneNumber,
+  telegramAccount,
+} from '@constants/links';
 
 const Footer = () => {
   return (
@@ -26,7 +32,7 @@ const Footer = () => {
               <div className={styles.groupContent}>
                 <Image className={styles.houseImage} src={house} alt="house" />
                 <div className={styles.contentText}>
-                  <p>Склад в польше:</p>
+                  <p>Склад в Польше:</p>
                   <Link href={plTelephoneNumber}>Тел: +48573923356</Link>
                   <p>Время работы:</p>
                   <p>Пн-Пт 09:00-18:00</p>
@@ -36,8 +42,8 @@ const Footer = () => {
                 <Image className={styles.accountImage} src={account} alt="account" />
                 <div className={styles.contentText}>
                   <p>Инфолиния заказов:</p>
-                  <Link href={blTelephoneNumber}>Тел: +48572117937</Link>
-                  <p>E-mail: sales@aipd.pl</p>
+                  <Link href={telegramAccount} target="_blank">Тел: +48572117937</Link>
+                  <Link href={email} target="_blank">E-mail: sales@aipd.pl</Link>
                 </div>
               </div>
             </div>
@@ -47,8 +53,8 @@ const Footer = () => {
               <Image className={styles.accountImage} src={account} alt="account" />
               <div className={styles.contentText}>
                 <p>Инфолиния заказов:</p>
-                <Link href={blTelephoneNumber}>Тел: +48572117937</Link>
-                <p>E-mail: sales@aipd.pl</p>
+                <Link href={telegramAccount} target="_blank">Тел: +48572117937</Link>
+                <Link href={email} target="_blank">E-mail: sales@aipd.pl</Link>
               </div>
             </div>
           </li>
