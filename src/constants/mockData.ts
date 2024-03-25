@@ -112,10 +112,10 @@ export const SHOPS = [
   },
   {
     id: 2,
-    category: 'техника',
-    image: mediaMarketImage,
-    link: 'https://mediamarkt.pl/',
-    description: 'Магазин техники',
+    category: 'автозапчасти',
+    image: mtuningLogo,
+    link: 'https://mtuning.pl/',
+    description: 'Магазин автозапчастей',
   },
   {
     id: 3,
@@ -133,10 +133,10 @@ export const SHOPS = [
   },
   {
     id: 5,
-    category: 'одежда, обувь, аксессуары',
-    image: zalandoImage,
-    link: 'https://www.zalando.pl/',
-    description: 'Одежда, обувь и аксессуары',
+    category: 'автозапчасти',
+    image: felgidoLogo,
+    link: 'https://felgido.pl/',
+    description: 'Магазин автозапчастей',
   },
   {
     id: 6,
@@ -693,10 +693,10 @@ export const SHOPS = [
   },
   {
     id: 85,
-    category: 'автозапчасти',
-    image: felgidoLogo,
-    link: 'https://felgido.pl/',
-    description: 'Магазин автозапчастей',
+    category: 'одежда, обувь, аксессуары',
+    image: zalandoImage,
+    link: 'https://www.zalando.pl/',
+    description: 'Одежда, обувь и аксессуары',
   },
   {
     id: 86,
@@ -756,10 +756,10 @@ export const SHOPS = [
   },
   {
     id: 94,
-    category: 'автозапчасти',
-    image: mtuningLogo,
-    link: 'https://mtuning.pl/',
-    description: 'Магазин автозапчастей',
+    category: 'техника',
+    image: mediaMarketImage,
+    link: 'https://mediamarkt.pl/',
+    description: 'Магазин техники',
   },
   {
     id: 95,
