@@ -12,7 +12,7 @@ import instagram from '@assets/images/svg/icons/instagram.svg';
 import {
   email,
   googleMapsLink,
-  instagramLink,
+  instagramLink, pleTelNumber,
   plTelephoneNumber,
   telegramAccount,
 } from '@constants/links';
@@ -42,8 +42,8 @@ const Footer = () => {
                 <Image className={styles.accountImage} src={account} alt="account" />
                 <div className={styles.contentText}>
                   <p>Инфолиния заказов:</p>
-                  <Link href={telegramAccount} target="_blank">Тел: +48572117937</Link>
-                  <Link href={email} target="_blank">E-mail: sales@aipd.pl</Link>
+                  <Link href={pleTelNumber} target="_blank">Тел: +48572117937</Link>
+                  <Link href={email} target="_blank">E-mail: sale@aipd.pl</Link>
                 </div>
               </div>
             </div>
@@ -53,8 +53,8 @@ const Footer = () => {
               <Image className={styles.accountImage} src={account} alt="account" />
               <div className={styles.contentText}>
                 <p>Инфолиния заказов:</p>
-                <Link href={telegramAccount} target="_blank">Тел: +48572117937</Link>
-                <Link href={email} target="_blank">E-mail: sales@aipd.pl</Link>
+                <Link href={pleTelNumber} target="_blank">Тел: +48572117937</Link>
+                <Link href={email} target="_blank">E-mail: sale@aipd.pl</Link>
               </div>
             </div>
           </li>
