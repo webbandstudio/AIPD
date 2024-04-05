@@ -12,9 +12,9 @@ import instagram from '@assets/images/svg/icons/instagram.svg';
 import {
   email,
   googleMapsLink,
-  instagramLink, pleTelNumber,
+  instagramLink,
+  pleTelNumber,
   plTelephoneNumber,
-  telegramAccount,
 } from '@constants/links';
 
 const Footer = () => {
